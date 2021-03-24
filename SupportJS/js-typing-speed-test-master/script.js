@@ -52,7 +52,7 @@ function start() {
         timerRunning = true;
         interval = setInterval(runTimer, 10);
     }
-    console.log(textEnterdLength);
+    console.log(interval);
 }
 
 // Reset everything:
