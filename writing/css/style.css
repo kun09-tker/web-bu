@@ -1,0 +1,31 @@
+#data-inner{
+    margin: 10%;
+    padding: 2%;
+    height: 60px;
+    border: solid 2px;
+    font-size: 30px;
+}
+#input-text{
+    transform: translate(14%, -200%);
+}
+.span{
+    display: inline-block;
+}
+.correct{
+    color: green;
+    background-color: rgb(214, 248, 217);
+    transition: background-color .2s
+}
+.incorrect{
+    color: red;  
+    background-color: rgb(240, 215, 215);
+    transition: background-color .2s
+}
+.fomat{
+    border-radius: 5px;
+    background-color: lightgray;
+}
+.fomatErro{
+    border-radius: 5px;
+    background-color:rgb(255, 218, 218);
+}
