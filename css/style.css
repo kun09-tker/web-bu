@@ -10,15 +10,15 @@ body{
     line-height: 1.7;
     color: #777777;
     padding: 10px;
-}
+} 
 header{
     background-image: 
     url("../public/genshin-impact-original.jpg");
-    background-size: cover;
+    background-size:cover;
     background-position: center;
     position: relative;
     height: 95vh;
-    clip-path: ellipse(100% 82% at 49% 18%);
+    clip-path: ellipse(100% 80% at 49% 18%);
 }
 .text-box{
     position: absolute;
