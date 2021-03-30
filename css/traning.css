@@ -13,6 +13,9 @@
     transform: translate(0,5rem);
     border:  solid 2px aqua;
     background: linear-gradient(0deg, rgba(125,244,239,0.36363636363636365) 100%, rgba(208,212,212,1) 100%);
+    background-image: url(../public/39230524_p0_master1200.jpg),url(../public/download.jpg);
+    background-position: right bottom, left top;
+    background-repeat: repeat,no-repeat;
 }
 .content{
     display: flex;
