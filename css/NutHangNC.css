@@ -114,5 +114,16 @@
 @media screen and (max-width: 600px) {
     .hangpg .container{
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     } 
+    .container{
+        width: 100vw; 
+    }
+    .hangpg__card{
+        width: 60%;
+    }
+    .hangpg h1{
+        text-align: center;
+    }
 }

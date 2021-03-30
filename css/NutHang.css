@@ -1,11 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .hangpg__card{
     width: 23%;
     height: 80px;   
     display: flex;
     justify-content: center;
     border: 2px solid #dadada;
-    box-sizing: border-box;
-    letter-spacing: -.01em;
     margin-bottom: 20px;
 }
 .hangpg__card-content{
@@ -113,5 +116,16 @@
 @media screen and (max-width: 600px) {
     .hangpg .container{
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     } 
+    .container{
+        width: 100vw; 
+    }
+    .hangpg__card{
+        width: 60%;
+    }
+    .hangpg h1{
+        text-align: center;
+    }
 }
