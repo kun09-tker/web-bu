@@ -5,8 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Result</title>
+    <link rel="stylesheet" href="../css/result.css">
 </head>
 <body>
-    
+    <div id="auswertung-result" class="col-md-6" style="display: block;">
+        <h3>
+            Result 
+        </h3>
+        <table class="table table-striped" id="result-table">
+            <tbody>
+                <tr><td id="wpm" class="name" colspan="2" title="Words per Minute: 1 word equals 5 keystrokes">
+                    <strong>72 WPM</strong>
+                    <small>(words per minute)</small>
+                </td></tr>
+                <tr id="keystrokes"><td class="name">Keystrokes</td><td class="value"><small>(<span class="correct">360</span> | <span class="wrong">10</span>)</small>&nbsp;370</td></tr>
+                <tr id="accuracy"><td class="name">Accuracy</td><td class="value"> <strong>91.6%</strong></td></tr>
+                <tr id="correct"><td class="name">Correct words</td><td class="value"> <strong>69</strong></td></tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
+
