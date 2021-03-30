@@ -1,0 +1,104 @@
+/* *{
+    box-sizing: border-box;
+} */
+h2{
+    font-size: larger;
+}
+.container{
+    width: 1140px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+.hangpg{
+    padding-top: 100px;
+    width: 100%;
+}
+.hangpg h1{
+    width: 100%;
+    display: block;
+    text-align: left;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+}
+.card {
+    margin-bottom: 1.25rem;
+    box-shadow: rgb(53 64 82 / 4%) 0 2px 4px 0;
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(110,117,130,.2);
+    border-radius: 3px;
+}
+.card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem 1.25rem;
+}
+#word-section > span {
+    display: inline-block;
+    margin-left: 0.2em;
+}
+.current-word {
+    background-color: #dddddd;
+}
+#word-section {
+    font-size: 1.5em;
+    font-family: "Palatino Linotype","Arial","Times New Roman",sans-serif;
+    height: 5em;
+    line-height: 2em;
+    border-radius: 0.25em;
+    position: relative;
+    overflow: hidden;
+}
+section {
+    display: block;
+}
+#type-section {
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 1.25rem;
+}
+section {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0.5em;
+}
+#typebox {
+    width: 64%;
+    color: #000;
+    padding: 0.5em;
+    box-shadow: 0 0 2px #383838;
+    font-family: "Courier New";
+}
+#type-section > * {
+    font-size: 1.5em;
+    display: inline-block;
+    border-radius: 0.25em;
+    border: none;
+    vertical-align: middle;
+}
+#timer {
+    width: 4em;
+    background-color: #467F21;
+    margin-right: 0;
+    color: #fff;
+}
+#timer, #restart {
+    margin: 0.2em;
+    line-height: 2.2em;
+    height: 2.2em;
+    color: #fff;
+}
+#restart {
+    width: 2em;
+    background-color: #68A143;
+}

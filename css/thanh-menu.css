@@ -5,7 +5,7 @@
 
 #body {
 	background-size: cover;
-	height: 2000px;
+	height: 1000px;
 	/* background-image: url(../public/maxresdefault.jpg); */
 }
 
@@ -65,6 +65,10 @@
 	border-radius: 15px;
 	color: black;
 	font-family: Arial, Helvetica, sans-serif;
+}
+.active a{
+	text-decoration: none;
+	color: #000000;
 }
 
 .Account_btn {
