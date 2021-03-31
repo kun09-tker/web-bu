@@ -20,7 +20,8 @@ else{
         for(let i = 0; i < a.length; i++){
             train += `<span class="span">${a[i]}</span>`;
         }
-        img.src = "../public/typing/"+ a.charCodeAt(i) + ".png";
+        img.src = "../public/typing/"+ a.charCodeAt(0) +".png";
+       // img.src = "../public/typing/"+ a.charCodeAt(i) + ".png";
         document.querySelector(".content__text").innerHTML = train
         const text = document.querySelectorAll('.span');
         text[0].classList.add('focus');
