@@ -75,23 +75,31 @@ window.addEventListener('DOMContentLoaded', () => {
                 let keypress = wpm[0];
                 wpm[1] = Math.round((wpm[4] + wpm[5]) / 5).toString();
                 wpm[0] = (Math.round((1 - (Er / keypress)) * 10000) / 100).toString();
-                console.log("wpm: " + wpm[1]);
-                console.log('Correct: ' + wpm[2]);
-                console.log('Incorrect: ' + wpm[3]);
-                console.log('Ac: ' + wpm[0] + "%");
-                let result = wpm.map((value)=>(
-                    `<p class="p">${value}</p>`
-                ))
+                //console.log("wpm: " + wpm[1]);
+                document.querySelector(".strong1").innerHTML = wpm[1] + "WPM";
+                //console.log('Correct: ' + wpm[2]);
+                document.querySelector(".correct1").innerHTML = keypress;
+                //console.log('Incorrect: ' + wpm[3]);
+                document.querySelector(".wrong").innerHTML = Er
+                document.querySelector(".total").innerHTML = "&nbsp;" +(Er + keypress).toString()
+                document.querySelector(".strong2").innerHTML = wpm[0] + "%"
+                document.querySelector(".strong3").innerHTML = wpm[2];
+                document.querySelector("#auswertung-result").classList.add("col");
+                document.querySelector("#auswertung-result").classList.remove("hide");
+                //console.log('Ac: ' + wpm[0] + "%");
                // result.join(" ");
-                document.querySelector('#result').innerHTML = result;
+               // document.querySelector('#result').innerHTML = result;
                 timeOut = false;
-                
+                document.querySelector("#word-section").classList.add("hide");
+                let car = document.querySelector(".card-body");
+                car.classList.add("final");
+                car.innerHTML = "Chúc mừng bạn vừa hoàn thành bài kiểm tra !!!"
             }
 
         } else {
             let currentTime = "00:" + leadingZero(timer[0]);
             theTimer.innerHTML = currentTime;
-            timer[1]++;
+            if(timeOut) timer[1]++;
             timer[0] = 59 - Math.floor(timer[1]/100)
         }
     }
