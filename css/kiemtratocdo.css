@@ -7,6 +7,8 @@ h2{
 .container{
     width: 1140px;
     display: flex;
+    width: 90vw;
+    min-width: 90vw;
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin: 0 auto;
@@ -63,7 +65,9 @@ section {
     display: block;
 }
 #type-section {
+    display: flex;
     text-align: center;
+    justify-self: center;
     margin-bottom: 100px;
     margin-top: 1.25rem;
 }

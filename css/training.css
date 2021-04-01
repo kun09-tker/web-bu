@@ -29,18 +29,18 @@
     align-items:flex-end;
 }
 .content__img{
-    width: 57rem;
-    height: 17rem;
+    width: 430px;
+    height: 300px;
 }
 .content__text{
-    margin-top: 3rem;
+    margin-top: 70px;
     display: flex;
-    width: 35rem;
+    width: 85vw;
     position: absolute;
     align-self: flex-start;
     justify-self:center;
     border: solid 1px;
-    height: 6rem;
+    height: 50px;
 }
 
 .focus{
@@ -55,4 +55,15 @@
 }
 .wrong{
     background-color: rgb(245, 63, 63);
+}
+.erro{
+    display: flex;
+    align-self: start;
+    margin: 25px;
+    padding: 8px;
+    color: red;
+    border: solid 1px rgba(255, 0, 0, 0.281);
+    border-radius: 20px;
+    position: absolute;
+
 }
