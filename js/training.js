@@ -15,6 +15,7 @@ else{
     else{
         let train ="";
         let  i = 0;
+        let wrong = 0;
         let numberOfitem = a.length;
         for(let i = 0; i < 50; i++) a+=a[Math.floor(Math.random()*numberOfitem)];
         for(let i = 0; i < a.length; i++){
@@ -32,7 +33,14 @@ else{
                 ++i;
                 text[i].classList.add('focus');
                 text[i].classList.remove('span');
+               // console.log(event.key.charCodeAt(0));
+                
                 img.src = "../public/typing/"+ a.charCodeAt(i) + ".png";        
+           }
+           else wrong++;
+           if(wrong > 10){
+            alert("Bạn gõ sai hơn 5 lần rồi. Thử lại nhá :))");
+            location.reload();
             }
         })
     }

@@ -1,12 +1,15 @@
 //correct - wrong ^ 1.1 - 0.1 * (keystroke - all)
-var a = ["muoi", "bbb", "cccc", "hshdsh", "sdsads", "sadhs","sdasd","76whshgd","aafsd"];
+var a = ["muoi", "bbb", "cccc", "hshdsh", "sdsads", "sadhs","sdasd","76whshgd","aafsd","dsad","sddd","dasd","fadfsf","Fdafa","afsdfsdf"];
 var b = a.map((value) => (
     `<span class="span">${value}</span>`
 ));
 b = b.join(" ");
+document.querySelector('#restart').addEventListener("click",()=>{
+    location.reload();
+});
 document.querySelector('#word-section').innerHTML = b;
 window.addEventListener('DOMContentLoaded', () => {
-    let timer = [0, 0, 0, 0];
+    let timer = [1,0];
     let index = 0;
     var wpm = [0, 0, 0, 0, 0, 0];
     // Run a standard minute/second/hundredths timer:
@@ -18,7 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
     //document.querySelector("#input-text").keypress(function (event) {
     document.querySelector("#typebox").addEventListener('keypress', (event) => {
         wpm[0]++;
-        if (wpm[0] == 1) setInterval(runTimer, -100);
+        if (wpm[0] == 1) setInterval(runTimer, 10);
 
         y.oninput = () => {
             if (y.value != " ") {
@@ -65,7 +68,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     let timeOut = true;
     const runTimer = () => {
-        if (timer[0] == 1 && timer[1] == 0 && timer[2] == 0) {
+        if (timer[0] == 0) {
             theTimer.innerHTML = "Time up";
             if (timeOut) {
                 let Er = wpm[1];
@@ -86,18 +89,16 @@ window.addEventListener('DOMContentLoaded', () => {
             }
 
         } else {
-            let currentTime = leadingZero(timer[0]) + ":" + leadingZero(timer[1]) + ":" + leadingZero(timer[2]);
+            let currentTime = "00:" + leadingZero(timer[0]);
             theTimer.innerHTML = currentTime;
-            timer[3]++;
-            timer[0] = Math.floor((timer[3] / 100) / 60);
-            timer[1] = Math.floor((timer[3] / 100) - (timer[0] * 60));
-            timer[2] = Math.floor(timer[3] - (timer[1] * 100) - (timer[0] * 6000));
+            timer[1]++;
+            timer[0] = 59 - Math.floor(timer[1]/100)
         }
     }
 });
 
 const compairTwoString = (son, parent) => {
-    // console.log(index);
     if (parent.search(son) != -1) return true;
     return false;
 }
+
