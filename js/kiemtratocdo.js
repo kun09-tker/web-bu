@@ -1,12 +1,15 @@
 //correct - wrong ^ 1.1 - 0.1 * (keystroke - all)
-var a = ["muoi", "bbb", "cccc", "hshdsh", "sdsads", "sadhs","sdasd","76whshgd","aafsd"];
+var a = ["muoi", "bbb", "cccc", "hshdsh", "sdsads", "sadhs","sdasd","76whshgd","aafsd","dsad","sddd","dasd","fadfsf","Fdafa","afsdfsdf"];
 var b = a.map((value) => (
     `<span class="span">${value}</span>`
 ));
 b = b.join(" ");
+document.querySelector('#restart').addEventListener("click",()=>{
+    location.reload();
+});
 document.querySelector('#word-section').innerHTML = b;
 window.addEventListener('DOMContentLoaded', () => {
-    let timer = [0, 0, 0, 0];
+    let timer = [1,0];
     let index = 0;
     var wpm = [0, 0, 0, 0, 0, 0];
     // Run a standard minute/second/hundredths timer:
@@ -18,7 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
     //document.querySelector("#input-text").keypress(function (event) {
     document.querySelector("#typebox").addEventListener('keypress', (event) => {
         wpm[0]++;
-        if (wpm[0] == 1) setInterval(runTimer, -100);
+        if (wpm[0] == 1) setInterval(runTimer, 10);
 
         y.oninput = () => {
             if (y.value != " ") {
@@ -65,39 +68,45 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     let timeOut = true;
     const runTimer = () => {
-        if (timer[0] == 1 && timer[1] == 0 && timer[2] == 0) {
+        if (timer[0] == 0) {
             theTimer.innerHTML = "Time up";
             if (timeOut) {
                 let Er = wpm[1];
                 let keypress = wpm[0];
                 wpm[1] = Math.round((wpm[4] + wpm[5]) / 5).toString();
                 wpm[0] = (Math.round((1 - (Er / keypress)) * 10000) / 100).toString();
-                console.log("wpm: " + wpm[1]);
-                console.log('Correct: ' + wpm[2]);
-                console.log('Incorrect: ' + wpm[3]);
-                console.log('Ac: ' + wpm[0] + "%");
-                let result = wpm.map((value)=>(
-                    `<p class="p">${value}</p>`
-                ))
+                //console.log("wpm: " + wpm[1]);
+                document.querySelector(".strong1").innerHTML = wpm[1] + "WPM";
+                //console.log('Correct: ' + wpm[2]);
+                document.querySelector(".correct1").innerHTML = keypress;
+                //console.log('Incorrect: ' + wpm[3]);
+                document.querySelector(".wrong").innerHTML = Er
+                document.querySelector(".total").innerHTML = "&nbsp;" +(Er + keypress).toString()
+                document.querySelector(".strong2").innerHTML = wpm[0] + "%"
+                document.querySelector(".strong3").innerHTML = wpm[2];
+                document.querySelector("#auswertung-result").classList.add("col");
+                document.querySelector("#auswertung-result").classList.remove("hide");
+                //console.log('Ac: ' + wpm[0] + "%");
                // result.join(" ");
-                document.querySelector('#result').innerHTML = result;
+               // document.querySelector('#result').innerHTML = result;
                 timeOut = false;
-                
+                document.querySelector("#word-section").classList.add("hide");
+                let car = document.querySelector(".card-body");
+                car.classList.add("final");
+                car.innerHTML = "Chúc mừng bạn vừa hoàn thành bài kiểm tra !!!"
             }
 
         } else {
-            let currentTime = leadingZero(timer[0]) + ":" + leadingZero(timer[1]) + ":" + leadingZero(timer[2]);
+            let currentTime = "00:" + leadingZero(timer[0]);
             theTimer.innerHTML = currentTime;
-            timer[3]++;
-            timer[0] = Math.floor((timer[3] / 100) / 60);
-            timer[1] = Math.floor((timer[3] / 100) - (timer[0] * 60));
-            timer[2] = Math.floor(timer[3] - (timer[1] * 100) - (timer[0] * 6000));
+            if(timeOut) timer[1]++;
+            timer[0] = 59 - Math.floor(timer[1]/100)
         }
     }
 });
 
 const compairTwoString = (son, parent) => {
-    // console.log(index);
     if (parent.search(son) != -1) return true;
     return false;
 }
+

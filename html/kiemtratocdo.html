@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="../css/thanh-menu.css">
     <link rel="stylesheet" href="../css/kiemtratocdo.css">
 </head>
+
 <body>
     <div id="body">
         <div class="menu">
@@ -23,8 +25,9 @@
                     <div class="Account">
                         <div class="Account_btn">Tài khoản</div>
                         <div class="Account_dropdown">
-                            <a href=""><img src="../public/sign-in.png">&nbsp Đăng nhập</a>
-                            <a href=""><img src="../public/add_profile_user_icon_148635.png">&nbsp Đăng ký</a>
+                            <div class="box"><a href=""><img src="../public/sign-in.png">&nbsp Đăng nhập</a></div>
+                            <div class="box"><a href=""><img src="../public/add_profile_user_icon_148635.png">&nbsp Đăng
+                                    ký</a></div>
                         </div>
                     </div>
                 </li>
@@ -41,15 +44,45 @@
                     </div>
                 </div>
                 <section id="type-section">
-                    <input id="typebox" name="typebox" type="text" tabindex="1" autofocus="" onkeyup="typingTest(event)">
-                    <div id="timer" class="type-btn"><span>00:00:00</span></div>
-                    <button id="restart" class="type-btn" tabindex="2" onclick="restartTest()">
+                    <input id="typebox" name="typebox" type="text" tabindex="1" autofocus="">
+                    <div id="timer" class="type-btn"><span>01:00</span></div>
+                    <button id="restart" class="type-btn" tabindex="2">
                         <span id="restart-symbol">↻</span>
                     </button>
                 </section>
+                <div id="auswertung-result" class="hide" style="display: block;">
+                    <h3>
+                        Result
+                    </h3>
+                    <table class="table table-striped" id="result-table">
+                        <tbody>
+                            <tr>
+                                <td id="wpm" class="name" colspan="2"
+                                    title="Words per Minute: 1 word equals 5 keystrokes">
+                                    <strong class="strong1">72 WPM</strong>
+                                    <small>(words per minute)</small>
+                                </td>
+                            </tr>
+                            <tr id="keystrokes">
+                                <td class="name">Keystrokes</td>
+                                <td class="value"><small>(<span class="correct1">360</span> | <span
+                                            class="wrong">10</span>)</small><span class="total">&nbsp;370</span></td>
+                            </tr>
+                            <tr id="accuracy">
+                                <td class="name">Accuracy</td>
+                                <td class="value"> <strong class="strong2">91.6%</strong></td>
+                            </tr>
+                            <tr id="correct">
+                                <td class="name">Correct words</td>
+                                <td class="value"> <strong class="strong3">69</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
     <script src="../js/kiemtratocdo.js"></script>
 </body>
+
 </html>
