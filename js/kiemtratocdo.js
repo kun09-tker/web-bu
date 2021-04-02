@@ -42,7 +42,11 @@ window.addEventListener('DOMContentLoaded', () => {
         if (event.charCode == 32) {
             //$(".span").eq(index+1).addClass('fomat');
             span[index + 1].classList.add('fomat');
+            if(index >= 5){
+                span[index-5].remove();
+            }
             if (y.value.trim() == span[index].innerText) {
+                
                 //$(".span").eq(index).addClass('correct').removeClass('fomat');
                 wpm[2]++;
                 wpm[4] += span[index].innerText.length;

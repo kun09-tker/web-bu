@@ -4,7 +4,7 @@ if (a.search("%20") == 0) {
     a = a.substr(3);
     a = [a.slice(0, 1), " ", a.slice(1)].join('');
 }
-console.log(a);
+//console.log(a);
 
 if (a[0] == "*") {} else {
     if (a[0] == '[') {
@@ -14,7 +14,7 @@ if (a[0] == "*") {} else {
         let i = 0;
         let wrong = 0;
         let numberOfitem = a.length;
-        for (let i = 0; i < 75 + numberOfitem; i++) a += a[Math.floor(Math.random() * numberOfitem)];
+        for (let i = 0; i < 50 + numberOfitem; i++) a += a[Math.floor(Math.random() * numberOfitem)];
         a = a.substr(numberOfitem);
         for (let i = 0; i < a.length; i++) {
             if (a[i] == " ") train += `<span class="span">&nbsp</span>`;
