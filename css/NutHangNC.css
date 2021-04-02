@@ -45,7 +45,7 @@
     width: 1140px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: start;
     margin: 0 auto;
 }
 .hangpg{
