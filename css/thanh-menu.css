@@ -82,6 +82,7 @@
 	width: 110%;
 	cursor: pointer;
 	z-index: 1;
+	font-family: 'Times New Roman', Times, serif;
 }
 .Account_btn:hover::after{
 	display: block;
@@ -112,6 +113,7 @@
 	min-width: 135px;
 	box-shadow: 9px 9px 6px -4px #000000;
 	z-index: 1;
+	font-family: 'Times New Roman', Times, serif;
 }
 .box>a {
 	color: black;

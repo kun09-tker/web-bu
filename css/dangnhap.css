@@ -1,0 +1,179 @@
+element.style {
+    height: auto !important;
+}
+.container-tight {
+    width: 100%;
+    padding-right: .75rem;
+    padding-left: .75rem;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 30rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.py-6 {
+    padding-top: 10rem!important;
+    padding-bottom: 4.5rem!important;
+}
+body {
+    font-size: 15px;
+}
+body {
+    overflow-y: scroll;
+    letter-spacing: -.01em;
+    touch-action: manipulation;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "liga" 0;
+    position: relative;
+}
+body {
+    margin: 0;
+    /* font-family: var(--bs-font-sans-serif);
+    font-size: .875rem; */
+    font-weight: 400;
+    line-height: 1.7142857;
+    color: #354052;
+    background-color: #f5f7fb;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+.card {
+    margin-bottom: 1.25rem;
+    box-shadow: rgb(53 64 82 / 4%) 0 2px 4px 0;
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(110,117,130,.2);
+    border-radius: 3px;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+.card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem 1.25rem;
+}
+.text-center {
+    text-align: center!important;
+}
+
+.mb-5 {
+    margin-bottom: 3rem!important;
+}
+.h2, h2 {
+    line-height: 1.6;
+}
+.h2, h2 {
+    font-size: 1.25rem;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+.form-label {
+    font-size: .875rem;
+    font-weight: 500;
+    display: block;
+    margin-bottom: .5rem;
+}
+.form-control:-webkit-autofill {
+    box-shadow: 0 0 0 1000px #fff inset;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    min-height: calc(1.4285714em + .875rem + 2px);
+    padding: .4375rem .75rem;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.4285714;
+    color: #354052;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(110,117,130,.2);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 3px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+.small {
+    font-size: 87.5%;
+    font-weight: 400;
+}
+.float-right {
+    float: right!important;
+}
+a {
+    -webkit-text-decoration-skip: ink;
+    text-decoration-skip-ink: auto;
+}
+a {
+    color: #206bc4;
+    text-decoration: none;
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+label {
+    display: inline-block;
+}
+.form-footer {
+    margin-top: 2rem;
+}
+.btn:not([class^=btn-outline]):not([class*=" btn-outline"]):not([class^=btn-ghost]):not([class*=" btn-ghost"]):not(:focus):not(.focus) {
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 5%), inset 0 2px 0 -1px rgb(255 255 255 / 10%);
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}
+.btn {
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-block {
+    display: block;
+    width: 100%;
+}
+.btn {
+    display: inline-block;
+    font-weight: 500;
+    line-height: 1.4285714;
+    color: #354052;
+    /* text-align: center; */
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .4375rem 1rem;
+    font-size: .875rem;
+    border-radius: 3px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #22d1a5;
+    border-color: #22d1a5;
+}

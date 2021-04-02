@@ -17,6 +17,20 @@
     background-position: right bottom, left top;
     background-repeat: repeat,no-repeat;
 }
+.shap-er{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    height: 550px;
+    width: 90vw;
+    max-width: 90vw;
+    transform: translate(0,5rem);
+    border:  solid 2px rgba(255, 0, 0, 0.904);
+    box-shadow: inset 1px -1px 50px 2px #FF0000;    background: linear-gradient(0deg, rgba(125,244,239,0.36363636363636365) 100%, rgba(208,212,212,1) 100%);
+    background-image: url(../public/39230524_p0_master1200.jpg),url(../public/download.jpg);
+    background-position: right bottom, left top;
+    background-repeat: repeat,no-repeat;
+}
 .content{
     display: flex;
     position: relative;

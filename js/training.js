@@ -29,8 +29,11 @@ if (a[0] == "*") {} else {
         window.addEventListener('keypress', (event) => {
             console.log(event.key.charCodeAt(0));
             console.log(event.key);
+            document.querySelector("#shap").classList.add("shap");
+            document.querySelector("#shap").classList.remove("shap-er");
             if (a[i] == event.key[0]) {
                 text[i].classList.add('correct');
+                text[i].classList.remove('wrong');
                 ++i;
                 text[i].classList.add('focus');
                 text[i].classList.remove('span');
@@ -38,6 +41,10 @@ if (a[0] == "*") {} else {
 
                 img.src = "../public/typing/" + a.charCodeAt(i) + ".png";
             } else {
+                text[i].classList.add('wrong');
+                document.querySelector("#shap").classList.add("shap-er");
+                document.querySelector("#shap").classList.remove("shap");
+
                 document.querySelector(".erro").innerHTML = "Số lần gõ sai: " + wrong;
                 wrong++;
 
