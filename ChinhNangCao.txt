@@ -30,246 +30,228 @@
     <div class="hangpg">
         <div class="container">
             <h1>Viết hoa</h1>
-            <a href="training.html?*Shift " class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html?INTRO " class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">37</span>
+                    <span class="content-number-nc">30</span>
                     <div class="content-title">Shift Key Intro</div>
                 </div>
             </a>
-            <a href="training.html? FJjf" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html?FJ dkjjj" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">38</span>
+                    <span class="content-number-nc">31</span>
                     <div class="content-title">Viết hoa F & J</div>
                 </div>
             </a>
-            <a href="training.html? DKkd" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html?DK kdfkjs" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">39</span>
+                    <span class="content-number-nc">32</span>
                     <div class="content-title">Viết hoa D & K</div>
                 </div>
             </a>
             
-            <a href="training.html? SLsl" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html?SL fsdjk" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">40</span>
+                    <span class="content-number-nc">33</span>
                     <div class="content-title">Viết hoa S & L</div>
                 </div>
             </a>
-            <a href="training.html? A:a;" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html?A: dksjksldj" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">41</span>
+                    <span class="content-number-nc">34</span>
                     <div class="content-title">Viết hoa A & :</div>
                 </div>
             </a>
-            <a href="training.html? ASDFJKL:asdfjkl;" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html? ASDFGHJKL:" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">42</span>
+                    <span class="content-number-nc">35</span>
                     <div class="content-title">Ôn tập lại 8 kí tự hàng giữa</div>
                 </div>
             </a>
-            <a href="training.html? GHgh" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html?GH fpspo" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">43</span>
+                    <span class="content-number-nc">36</span>
                     <div class="content-title">Viết hoa G & H</div>
                 </div>
             </a>
-            <a href="training.html? ASDFGHJKL:asdfghjkl;" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html? ASDFGHJKL" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">44</span>
+                    <span class="content-number-nc">37</span>
                     <div class="content-title">ôn tập viết hoa hàng giữa</div>
                 </div>
             </a>
             <h1>Viết hoa hàng trên</h1>
-            <a href="training.html? RUru" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html?RU jljksjl" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">45</span>
+                    <span class="content-number-nc">38</span>
                     <div class="content-title">Viết hoa R & U</div>
                 </div>
             </a>
-            <a href="training.html? EIei" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html?EI ncx," class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">46</span>
+                    <span class="content-number-nc">39</span>
                     <div class="content-title">Viết hoa E & I</div>
                 </div>
             </a>
-            <a href="training.html? WOwo" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html?WO ncvh" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">47</span>
+                    <span class="content-number-nc">40</span>
                     <div class="content-title">Viết hoa W & O</div>
                 </div>
             </a>
-            <a href="training.html? QPqp" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html?QP nfknknnx" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">48</span>
+                    <span class="content-number-nc">41</span>
                     <div class="content-title">Viết hoa Q & P</div>
                 </div>
             </a>
-            <a href="training.html? QWERUIOPqweruiop" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html? QWERUIOP" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">49</span>
+                    <span class="content-number-nc">42</span>
                     <div class="content-title">Ôn lại 8 ký tự hàng trên</div>
                 </div>
             </a>
-            <a href="training.html? TYty" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html?TY hjdjdld" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">50</span>
+                    <span class="content-number-nc">43</span>
                     <div class="content-title">Viết hoa T & Y</div>
                 </div>
             </a>
-            <a href="training.html? QWERTYUIOPqwertyuiop" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html? QWERTYUIOP" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">51</span>
-                    <adiv class="content-title">Viết hoa hàng phím trên</adiv>
+                    <span class="content-number-nc">44</span>
+                    <div class="content-title">Viết hoa hàng phím trên</div>
                 </div>
             </a>
             <h1>Viết hoa hàng dưới</h1>
-            <a href="training.html? VMvm" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html?VM 789" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">52</span>
+                    <span class="content-number-nc">45</span>
                     <div class="content-title">Viết hoa V & M</div>
                 </div>
             </a>
-            <a href="training.html? C<,c" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html?C và bé" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">53</span>
-                    <div class="content-title">Viết hoa C & < </div>
+                    <span class="content-number-nc">46</span>
+                    <div class="content-title">Viết hoa C & dấu bé hơn</div>
                 </div>
             </a>
-            <a href="training.html? X>x." class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html?x và lớn" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">54</span>
-                    <div class="content-title">Viết hoa X & ></div>
+                    <span class="content-number-nc">47</span>
+                    <div class="content-title">Viết hoa X & dấu lớn hơn</div>
                 </div>
             </a>
-            <a href="training.html? Z?z/" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html?x và hỏi" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">55</span>
+                    <span class="content-number-nc">48</span>
                     <div class="content-title">Viết hoa Z & ?</div>
                 </div>
             </a>
-            <a href="training.html? ZXCVM<>?zxcvm,./" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html? ZXCVNM be lon" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">56</span>
+                    <span class="content-number-nc">49</span>
                     <div class="content-title">Ôn tập lại 8 ký tự hàng dưới</div>
                 </div>
             </a>
-            <a href="training.html? BNbn" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html?BN kfj" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">57</span>
+                    <span class="content-number-nc">50</span>
                     <div class="content-title">Viết hoa B & N</div>
                 </div>
             </a>
-            <a href="training.html? ZXCVMBN<>?zxbncvm,./" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html? Z X C V B N M bé lớn hỏi" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">58</span>
+                    <span class="content-number-nc">51</span>
                     <div class="content-title">Viết hoa hàng dưới</div>
                 </div>
             </a>
             <h1>Các con số</h1>
-            <a href="training.html? 47" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html?47 sadas" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">59</span>
+                    <span class="content-number-nc">52</span>
                     <div class="content-title">Phím 4 & 7</div>
                 </div>
             </a>
             
-            <a href="training.html? 38" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html?38 ssad" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">60</span>
+                    <span class="content-number-nc">53</span>
                     <div class="content-title">Phím 3 & 8</div>
                 </div>
             </a>
             
-            <a href="training.html? 29" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html?29 das" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">61</span>
+                    <span class="content-number-nc">54</span>
                     <div class="content-title">Phím 2 & 9</div>
                 </div>
             </a>
             
-            <a href="training.html? 10" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html?10 dsda " class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">62</span>
+                    <span class="content-number-nc">55</span>
                     <div class="content-title">Phím 1 & 0</div>
                 </div>
             </a>
-            <a href="training.html? 12" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html?12 dfsf " class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">63</span>
+                    <span class="content-number-nc">56</span>
                     <div class="content-title">Sử dụng 1 & 2</div>
                 </div>
             </a>
-            <a href="training.html? 32" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html?32 fd" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">64</span>
+                    <span class="content-number-nc">57</span>
                     <div class="content-title">Sử dụng 3 & 2</div>
                 </div>
             </a>
-            <a href="training.html? 45" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html?45 " class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">65</span>
+                    <span class="content-number-nc">58</span>
                     <div class="content-title">Sử dụng 4 & 5</div>
                 </div>
             </a>
-            <a href="training.html? 56" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html?56 rtert" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">66</span>
+                    <span class="content-number-nc">59</span>
                     <div class="content-title">Phím 5 & 6</div>
                 </div>
             </a>
-            <a href="training.html? 1234567890" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html?All 9999" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">67</span>
+                    <span class="content-number-nc">60</span>
                     <div class="content-title">Trò chơi: All Numbers</div>
                 </div>
             </a>
             <h1>Các ký tự đặc biệt</h1>
-            <a href="training.html? $&47" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html?$& hfdsh" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">68</span>
+                    <span class="content-number-nc">62</span>
                     <div class="content-title">$ và &</div>
                 </div>
             </a>
-            <a href="training.html? #*38" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html?#* cbmx" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">69</span>
+                    <span class="content-number-nc">63</span>
                     <div class="content-title"># và *</div>
                 </div>
             </a>
-            <a href="training.html? @(29"class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html?@( kdjla"class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">70</span>
+                    <span class="content-number-nc">64</span>
                      <div class="content-title">@ và (</div>
                 </div>
             </a>
-            <a href="training.html? !)10" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html?!) dh" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">71</span>
+                    <span class="content-number-nc">65</span>
                     <div class="content-title">! và )</div>
                 </div>
             </a>
-            <a href="training.html? !@#$&*()12347890" class="hangpg__card btn btn-white btn-animated">
+            <a href="training.html?~_" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
-                    <span class="content-number-nc">72</span>
-                    <div class="content-title">Ôn tập 8 phím đã học</div>
-                </div>
-            </a>
-            <a href="training.html? %^56" class="hangpg__card btn btn-white btn-animated">
-                <div class="hangpg__card-content">
-                    <span class="content-number-nc">73</span>
-                    <div class="content-title">% và ^</div>
-                </div>
-            </a>
-            <a href="training.html? !@#$%^&*()1234567890" class="hangpg__card btn btn-white btn-animated">
-                <div class="hangpg__card-content">
-                    <span class="content-number-nc">74</span>
-                    <div class="content-title">Ôn tập các kí tự đặc biệt</div>
-                </div>
-            </a>
-            <a href="training.html? 1234567890!@#$%^&*()qwertyuiopQWERTYUIOPasdfghjkl;ASDFGHJKL:zxcvbnm,./ZXCVBNM,./zxcvbnm<>?" class="hangpg__card btn btn-white btn-animated">
-                <div class="hangpg__card-content">
-                    <span class="content-number-nc">72</span>
-                    <div class="content-title">Tổng kết: Ôn tấp tất cả</div>
+                    <span class="content-number-nc">66</span>
+                    <div class="content-title">~ và _</div>
                 </div>
             </a>
         </div>
