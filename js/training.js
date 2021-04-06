@@ -12,7 +12,7 @@ if (a[0] == "*") {} else {
     } else {
         let train = "";
         let i = 0;
-        let wrong = 0;
+        let wrong = 1;
         let numberOfitem = a.length;
         for (let i = 0; i < 50 + numberOfitem; i++) a += a[Math.floor(Math.random() * numberOfitem)];
         a = a.substr(numberOfitem);
@@ -41,11 +41,12 @@ if (a[0] == "*") {} else {
 
                 img.src = "../public/typing/" + a.charCodeAt(i) + ".png";
             } else {
+                document.querySelector(".erro").innerHTML = "Số lần gõ sai: " + wrong;
                 text[i].classList.add('wrong');
                 document.querySelector("#shap").classList.add("shap-er");
                 document.querySelector("#shap").classList.remove("shap");
 
-                document.querySelector(".erro").innerHTML = "Số lần gõ sai: " + wrong;
+               
                 wrong++;
 
             }
