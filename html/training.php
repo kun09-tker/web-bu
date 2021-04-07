@@ -1,3 +1,13 @@
+<?php
+
+use function PHPSTORM_META\type;
+$lesson = []; 
+if (isset($_GET["type"]) && $lesson[$_GET["type"]]!=null) {
+    $type = $_GET["type"];
+} else {
+    header("Location: Trangchu.html");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,8 +15,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/training.css">
-    <link rel="stylesheet" href="../css/thanh-menu.css">
+    <link rel="stylesheet" href="../css/training.css?v=<?php echo time()?>">
+    <link rel="stylesheet" href="../css/thanh-menu.css?v=<?php echo time()?>">
     <title>Document</title>
 </head>
 
@@ -38,7 +48,8 @@
             <div class="erro">Số lần gõ sai: 0</div>
         </div>
     </div>
-    <script src="../js/training.js" ></script>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/training.js?v=<?php echo time()?>" ></script>
 </body>
 
 </html>
