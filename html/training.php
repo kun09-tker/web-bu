@@ -1,9 +1,9 @@
 <?php
 
 use function PHPSTORM_META\type;
-$lesson = []; 
-if (isset($_GET["type"]) && $lesson[$_GET["type"]]!=null) {
-    $type = $_GET["type"];
+$lesson = ["fj","f j","dk","sl","a;","a sdfjkl;","asdf","jkl;","hg","a sdfghjkl;","ru","ei","wo","qp"," qweruiop","qwer","uiop","ty","q wertyuiop","qwerasdftg","yuiophjkl;","q wertyuiopasdfghjkl;","vm","c,","x.","z/","z xcvm,./","zxcv","m,./","bn","z xcvbnm,./","qwertasdfghzxcvb","yuiophjkl;nm,./","qwertyuiopasdfghjkl;zxcvbnm,./"]; 
+if (isset($_GET["lesson"]) && $lesson[$_GET["lesson"]]!=null) {
+    $type = $_GET["lesson"];
 } else {
     header("Location: Trangchu.html");
 }
