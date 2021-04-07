@@ -1,7 +1,7 @@
 <?php
 
 use function PHPSTORM_META\type;
-$lesson = ["fj","f j","dk","sl","a;","a sdfjkl;","asdf","jkl;","hg","a sdfghjkl;","ru","ei","wo","qp"," qweruiop","qwer","uiop","ty","q wertyuiop","qwerasdftg","yuiophjkl;","q wertyuiopasdfghjkl;","vm","c,","x.","z/","z xcvm,./","zxcv","m,./","bn","z xcvbnm,./","qwertasdfghzxcvb","yuiophjkl;nm,./","qwertyuiopasdfghjkl;zxcvbnm,./"]; 
+$lesson = ["fj","f j","dk","sl","a;","a sdfjkl;","asdf","jkl;","hg","a sdfghjkl;","ru","ei","wo","qp","q weruiop","qwer","uiop","ty","q wertyuiop","q werasdftg","y uiophjkl;","q wertyuiopasdfghjkl;","vm","c,","x.","z/","z xcvm,./","zxcv","m,./","bn","z xcvbnm,./","q wertasdfghzxcvb","y uiophjkl;nm,./","q wertyuiopasdfghjkl;zxcvbnm,./"]; 
 if (isset($_GET["lesson"]) && $lesson[$_GET["lesson"]]!=null) {
     $type = $_GET["lesson"];
 } else {
