@@ -1,19 +1,14 @@
 img = document.querySelector(".content__img")
 function getData() {
-    var type = $("#type").val();
-
+    var lesson = $("#lesson").val();
     $.ajax({
         url: "./../html/data.php",
         method: "POST",
         data: {
-            type: type,
+            type: lesson,
         },
         success: function (b) {
             var a = b;
-            if (a.search("%20") == 0) {
-                a = a.substr(3);
-                a = [a.slice(0, 1), " ", a.slice(1)].join('');
-            }
             let train = "";
             let i = 0;
             let wrong = 0;
@@ -63,5 +58,5 @@ function getData() {
         }
     });
 }
-
 getData();
+

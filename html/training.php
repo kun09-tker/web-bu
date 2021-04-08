@@ -8,9 +8,9 @@ $lesson = ["fj","f j","dk","sl","a;","a sdfjkl;","asdf","jkl;","hg","a sdfghjkl;
 "Z XCVM<>?zxcvm,./","BNbn","Z XCVMBN<>?zxbncvm,./","47","38",
 "29","10","12","32","45","56","1 234567890","$&47","#*38","@(29",
 "!)10","! @#$&*()12347890","%^56","! @#$%^&*()1234567890",
-"1 234567890!@#$%^&*()qwertyuiopQWERTYUIOPasdfghjkl;ASDFGHJKL:zxcvbnm,./ZXCVBNM,./zxcvbnm<>?"]; 
+"1 234567890!@#$%^&*()qwertyuiopQWERTYUIOPasdfghjkl;ASDFGHJKL:zxcvbnm,./ZXCVBNM<>?"]; 
 if (isset($_GET["lesson"]) && $lesson[$_GET["lesson"]]!=null) {
-    $type = $_GET["lesson"];
+    $type = $lesson[$_GET["lesson"]];
 } else {
     header("Location: Trangchu.html");
 }
@@ -28,6 +28,7 @@ if (isset($_GET["lesson"]) && $lesson[$_GET["lesson"]]!=null) {
 </head>
 
 <body>
+<input type="hidden" id="lesson" value="<?php echo $type; ?>">
     <div class="menu">
         <ul>
             <li><img id="logo" src="../public/614d9ae7c9d44f89ab228c8ae55d3e92.png"></li>
