@@ -44,6 +44,7 @@ h2{
     border-radius: 3px;
 }
 .card-body {
+    width: 80em;
     flex: 1 1 auto;
     padding: 1.25rem 1.25rem;
 }

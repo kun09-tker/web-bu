@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kiểm tra tốc độ</title>
-    <link rel="stylesheet" href="../css/thanh-menu.css">
-    <link rel="stylesheet" href="../css/kiemtratocdo.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="../css/thanh-menu.css?v=<?php echo time()?>">
+    <link rel="stylesheet" href="../css/kiemtratocdo.css?v=<?php echo time()?>">
+    <link rel="stylesheet" href="../css/footer.css?v=<?php echo time()?>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css?v=<?php echo time()?>">
 </head>
 
 <body>
@@ -20,15 +20,15 @@
                 <li><a href="luyentapcoban.html">Cơ bản</a></li>
                 <li><a href="nangcao.html">Nâng cao</a></li>
                 <li class="active">
-                    <div><a href="kiemtratocdo.html">Kiểm tra tốc độ</a></div>
+                    <div><a href="./kiemtratocdo.php">Kiểm tra tốc độ</a></div>
                 </li>
                 <li><a href="">Trò chơi</a></li>
                 <li>
                     <div class="Account">
                         <div class="Account_btn">Tài khoản</div>
                         <div class="Account_dropdown">
-                            <div class="box"><a href="./dangnhap.html"><img src="../public/sign-in.png">&nbsp Đăng nhập</a></div>
-                            <div class="box"><a href="./dangky.html"><img src="../public/add_profile_user_icon_148635.png">&nbsp Đăng
+                            <div class="box"><a href="./dangnhap.php"><img src="../public/sign-in.png">&nbsp Đăng nhập</a></div>
+                            <div class="box"><a href="./dangky.php"><img src="../public/add_profile_user_icon_148635.png">&nbsp Đăng
                                     ký</a></div>
                         </div>
                     </div>

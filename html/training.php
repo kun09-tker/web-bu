@@ -36,14 +36,14 @@ if (isset($_GET["lesson"]) && $lesson[$_GET["lesson"]]!=null) {
                 <div><a href="luyentapcoban.html">Cơ bản</a></div>
             </li>
             <li><a href="nangcao.html">Nâng cao</a></li>
-            <li><a href="kiemtratocdo.html">Kiểm tra tốc độ</a></li>
+            <li><a href="./kiemtratocdo.php">Kiểm tra tốc độ</a></li>
             <li><a href="">Trò chơi</a></li>
             <li>
                 <div class="Account">
                     <div class="Account_btn">Tài khoản</div>
                     <div class="Account_dropdown">
-                        <div class="box"><a href="dangnhap.html"><img src="../public/sign-in.png">&nbsp Đăng nhập</a></div>
-                        <div class="box"><a href="dangky.html"><img src="../public/add_profile_user_icon_148635.png">&nbsp Đăng ký</a></div>
+                        <div class="box"><a href="dangnhap.php"><img src="../public/sign-in.png">&nbsp Đăng nhập</a></div>
+                        <div class="box"><a href="dangky.php"><img src="../public/add_profile_user_icon_148635.png">&nbsp Đăng ký</a></div>
                     </div>
                 </div>
             </li>

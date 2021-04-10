@@ -70,9 +70,9 @@
     background-color: rgba(133, 126, 126, 0.459);
 }
 .span{
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
-    background-color: white;
-
+    background-color: white
 }
 .correct{
     background-color:rgba(28, 236, 28, 0.747);
