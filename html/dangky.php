@@ -1,5 +1,5 @@
 <?php
-    require "./xuly.php";
+    require "../php/xuly.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,8 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TYPING</title>
-    <link rel="stylesheet" href="../css/dangky.css">
-    <link rel="stylesheet" href="../css/thanh-menu.css">
+    <link rel="stylesheet" href="../css/dangky.css?v=<?php echo time()?>">
+    <link rel="stylesheet" href="../css/thanh-menu.css?v=<?php echo time()?>">
 </head>
 <body>
     <div id="body">
@@ -37,11 +37,6 @@
                 <input type="hidden" name="csrfmiddlewaretoken" value="0mIYSKSmgKGfqN7oCb84PFcCFLcLo3FRj122ynEDVGovevY2TPt6CmwGJIabx2cy">
                 <div class="card-body">
                     <h2 class="mb-5 text-center">Đăng ký</h2>
-                    <?php
-                        foreach($erro as $item){
-                            echo "<p>$item</p>";
-                        }
-                    ?>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -60,10 +55,12 @@
                     <div class="form-group">
                         <label class="form-label">Username</label>
                         <input type="text" class="form-control" placeholder="Nhập username của bạn"  name="username" pattern="[A-Za-z0-9]+" minlength="5" title="Username chỉ chứa kí tự, số và tối thiểu 5 kí tự" required value="<?php echo $username?>">
+                        <p><?php if(isset($erro['user'])) echo $erro['user']?></p>
                     </div>
                     <div class="form-group">
                         <label class="form-label">Email</label>                        
                         <input type="email" class="form-control" placeholder="Nhập email của bạn" name="email" value="<?php echo $email?>">
+                        <p><?php if(isset($erro['email'])) echo $erro['email']?></p>
                     </div>
                     <div class="form-group">
                         <label class="form-label">Mật khẩu</label>    
@@ -74,6 +71,7 @@
                             Xác nhận mật khẩu
                         </label>    
                         <input type="password" class="form-control" placeholder="Nhập lại password của bản" name="re_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required value="<?php echo $re_password?>">
+                        <p><?php if(isset($erro['re_password'])) echo $erro['re_password']?></p>
                     </div>
                     <div class="form-footer">
                         <button type="submit" class="btn btn-primary btn-block" name="dangky">Đăng ký</button>

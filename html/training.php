@@ -1,19 +1,15 @@
 <?php
-// thấy chưa
-use function PHPSTORM_META\type;
-$lesson = ["fj","f j","dk","sl","a;","a sdfjkl;","asdf","jkl;","hg","a sdfghjkl;","ru","ei","wo","qp","q weruiop","qwer","uiop","ty","q wertyuiop","q werasdftg","y uiophjkl;","q wertyuiopasdfghjkl;","vm","c,","x.","z/","z xcvm,./","zxcv","m,./","bn","z xcvbnm,./","q wertasdfghzxcvb","y uiophjkl;nm,./","q wertyuiopasdfghjkl;zxcvbnm,./",
-"FJjf","DKkd","SLsl","A:a;","A SDFJKL:asdfjkl;",
-"GHgh","A SDFGHJKL:asdfghjkl;","RUru","EIei","WOwo","QPqp","Q WERUIOPqweruiop",
-"TYty","Q WERTYUIOPqwertyuiop","VMvm","C<,c","X>x.","Z?z/",
-"Z XCVM<>?zxcvm,./","BNbn","Z XCVMBN<>?zxbncvm,./","47","38",
-"29","10","12","32","45","56","1 234567890","$&47","#*38","@(29",
-"!)10","! @#$&*()12347890","%^56","! @#$%^&*()1234567890",
-"1 234567890!@#$%^&*()qwertyuiopQWERTYUIOPasdfghjkl;ASDFGHJKL:zxcvbnm,./ZXCVBNM<>?"]; 
-if (isset($_GET["lesson"]) && $lesson[$_GET["lesson"]]!=null) {
-    $type = $lesson[$_GET["lesson"]];
-} else {
-    header("Location: Trangchu.html");
-}
+    use function PHPSTORM_META\type;
+    $con = mysqli_connect("localhost","root","","typing");
+    if (isset($_GET["lesson"]) && $_GET["lesson"] >=0 && $_GET["lesson"] < 72) {
+        $lesson = "";
+        $lesson = $_GET['lesson'];
+        $content = $con->query("SELECT content from lesson where id= $lesson");
+        $row = $content->fetch_assoc();
+        $tent = $row["content"];
+    } else {
+        header("Location: Trangchu.html");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +24,6 @@ if (isset($_GET["lesson"]) && $lesson[$_GET["lesson"]]!=null) {
 </head>
 
 <body>
-<input type="hidden" id="lesson" value="<?php echo $type; ?>">
     <div class="menu">
         <ul>
             <li><img id="logo" src="../public/614d9ae7c9d44f89ab228c8ae55d3e92.png"></li>
@@ -54,10 +49,10 @@ if (isset($_GET["lesson"]) && $lesson[$_GET["lesson"]]!=null) {
             <div class="content__text "></div>
             <img class="content__img"></img>
             <div class="erro">Số lần gõ sai: 0</div>
+            <p id='lesson' style="display:none" ><?php echo $tent ?></p>
         </div>
     </div>
-    <script src="../js/jquery.js"></script>
-    <script src="../js/training.js?v=<?php echo time()?>" ></script>
+    <script src='../js/jquery.js'></script>
+    <script src='../js/training.js?'></script>
 </body>
-
 </html>

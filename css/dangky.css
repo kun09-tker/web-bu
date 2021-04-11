@@ -149,6 +149,9 @@ label {
 .form-label {
     margin-bottom: .5rem;
 }
+p{
+    color: red;   
+}
 label {
     display: inline-block;
 }

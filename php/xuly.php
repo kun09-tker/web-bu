@@ -9,7 +9,7 @@
     $erro = array();
     $check=true;
     if(isset($_POST["dangky"])){
-        echo "<h1>HI</h1>";
+       // echo "<h1>HI</h1>";
         $firstname = $_POST["first_name"];
         $lastname = $_POST["last_name"];
         $email = $_POST["email"];
