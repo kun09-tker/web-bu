@@ -6,6 +6,7 @@
     $username="";
     $password="";
     $re_password="";
+    $email_or_username = "hghgjghgjgjh";
     $erro = array();
     $check=true;
     if(isset($_POST["dangky"])){
@@ -39,5 +40,10 @@
             $sender = "From: vhnvohoainam@gmail.com";
             mail($email,$subject,$message,$sender);
         } 
+    }
+    else if(isset($_POST["dangnhap"])){
+        $email_or_username = $_GET["email_or_user"];
+        //$password = $_GET["password"];
+        $resultEmailOrUserCheck = $con->query("SELECT username From user where username = '$email_or_username'");
     }
 ?>

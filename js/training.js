@@ -40,7 +40,7 @@ window.addEventListener('keypress', (event) => {
         wrong++;
 
     }
-    if (wrong > 10) {
+    if (wrong > 11) {
         alert("Bạn gõ sai hơn 10 lần rồi. Thử lại nhá :))");
         location.reload();
     }

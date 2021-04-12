@@ -1,15 +1,5 @@
 <?php
-    use function PHPSTORM_META\type;
-    $con = mysqli_connect("localhost","root","","typing");
-    if (isset($_GET["lesson"]) && $_GET["lesson"] >=0 && $_GET["lesson"] < 72) {
-        $lesson = "";
-        $lesson = $_GET['lesson'];
-        $content = $con->query("SELECT content from lesson where id= $lesson");
-        $row = $content->fetch_assoc();
-        $tent = $row["content"];
-    } else {
-        header("Location: Trangchu.html");
-    }
+    require "../php/lesson.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,8 +41,11 @@
             <div class="erro">Số lần gõ sai: 0</div>
             <p id='lesson' style="display:none" ><?php echo $tent ?></p>
         </div>
+        <a href="<?php echo $url_next ?>">Next</a>
+        <a href="<?php echo $url_again ?>">Again</a>
+        <a href="<?php echo $url_prev ?>">Previous</a>
     </div>
-    <script src='../js/jquery.js'></script>
-    <script src='../js/training.js?'></script>
+    <script src='../js/jquery.js?v=<?php echo time()?>'></script>
+    <script src='../js/training.js?v=<?php echo time()?>'></script>
 </body>
 </html>

@@ -4,32 +4,33 @@
     box-sizing: border-box;
 }
 .shap{
+    border-radius: 10px;
     display: flex;
     align-items: center;
     margin: 0 auto;
-    height: 550px;
+    height: 600px;
     width: 90vw;
     max-width: 90vw;
-    transform: translate(0,5rem);
+    transform: translate(0,10rem);
     border:  solid 2px aqua;
     background: linear-gradient(0deg, rgba(125,244,239,0.36363636363636365) 100%, rgba(208,212,212,1) 100%);
-    background-image: url(../public/39230524_p0_master1200.jpg),url(../public/download.jpg);
-    background-position: right bottom, left top;
-    background-repeat: repeat,no-repeat;
+    background-image: url(../public/39230524_p0_master1200.jpg);
+    background-size: cover;;
 }
 .shap-er{
+    border-radius: 10px;
     display: flex;
     align-items: center;
     margin: 0 auto;
-    height: 550px;
+    height: 600px;
     width: 90vw;
     max-width: 90vw;
     transform: translate(0,5rem);
     border:  solid 2px rgba(255, 0, 0, 0.904);
     box-shadow: inset 1px -1px 50px 2px #FF0000;    background: linear-gradient(0deg, rgba(125,244,239,0.36363636363636365) 100%, rgba(208,212,212,1) 100%);
-    background-image: url(../public/39230524_p0_master1200.jpg),url(../public/download.jpg);
-    background-position: right bottom, left top;
-    background-repeat: repeat,no-repeat;
+    background-image: url(../public/39230524_p0_master1200.jpg);
+    background-attachment: fixed;
+    background-size: cover;
 }
 .content{
     display: flex;
@@ -56,6 +57,7 @@
     justify-self:center;
     border: solid 1px;
     height: 60px;
+    overflow-x: hidden;
 }
 .content__text >*{
     padding-top: 10px;
@@ -67,13 +69,16 @@
 }
 
 .focus{
+    display: flex;
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgba(133, 126, 126, 0.459);
 }
 .span{
-    font-family: Arial, Helvetica, sans-serif;
     display: flex;
-    background-color: white
+    font-family: Arial, Helvetica, sans-serif;
+     
+    background-color: white;
+    
 }
 .correct{
     background-color:rgba(28, 236, 28, 0.747);
