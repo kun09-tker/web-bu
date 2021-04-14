@@ -16,8 +16,8 @@
         <div class="menu">
             <ul>
                 <li><img id="logo" src="../public/614d9ae7c9d44f89ab228c8ae55d3e92.png"></li>
-                <li><a href="luyentapcoban.html">Cơ bản</a></li>
-                <li><a href="nangcao.html">Nâng cao</a></li>
+                <li><a href="luyentapcoban.php">Cơ bản</a></li>
+                <li><a href="nangcao.php">Nâng cao</a></li>
                 <li><a href="./kiemtratocdo.php">Kiểm tra tốc độ</a></li>
                 <li><a href="">Trò chơi</a></li>
                 <li>
@@ -35,9 +35,8 @@
 			<form class="card card-md" method="post">
 				<div class="card-body">
 					<h2 class="mb-5 text-center">Đăng nhập</h2>
-					<!-- <input type="hidden" name="csrfmiddlewaretoken" value="KZrfyg04UeX67NXeVTjIWJ0YVF38lRp73ELjeTMlzaFmVvOScxEKJqk2ZC1yuQWO"> -->
+					
 					<div class="form-group">
-					<h1><?php echo $email_or_username?></h1>
 						<label class="form-label">Email hoặc Username</label>
 						<input type="text" class="form-control" placeholder="Nhập email hoặc username" name="email_or_user"  value="<?php echo $email_or_username?>"> 
 					</div>

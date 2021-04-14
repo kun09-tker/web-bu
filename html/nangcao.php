@@ -14,7 +14,7 @@
     <div class="menu">
         <ul>
             <li><img id="logo" src="../public/614d9ae7c9d44f89ab228c8ae55d3e92.png"></li>
-            <li><a href="luyentapcoban.html">Cơ bản</a></li>
+            <li><a href="luyentapcoban.php">Cơ bản</a></li>
             <li class="active"><div>Nâng cao</div></li>
             <li><a href="./kiemtratocdo.php">Kiểm tra tốc độ</a></li>
             <li><a href="">Trò chơi</a></li>

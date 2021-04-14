@@ -6,7 +6,7 @@
     $username="";
     $password="";
     $re_password="";
-    $email_or_username = "hghgjghgjgjh";
+    $email_or_username = "";
     $erro = array();
     $check=true;
     if(isset($_POST["dangky"])){

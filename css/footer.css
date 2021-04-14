@@ -19,7 +19,6 @@
 } */
 .row {
     display: flex;
-    flex-wrap: wrap;
 }
 #footer .main-footer .introduction {
     padding-top: 0;
