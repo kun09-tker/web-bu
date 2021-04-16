@@ -135,7 +135,6 @@ section {
     visibility: hidden;
 }
 .final{
-    display: flex;
     text-align: center;
     border-radius: 20px;
     background-color: #11c589d2;

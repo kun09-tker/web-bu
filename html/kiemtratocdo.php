@@ -140,7 +140,7 @@
         </footer>
 
     </div>
-    <script src="../js/kiemtratocdo.js"></script>
+    <script src="../js/kiemtratocdo.js?v=<?php echo time()?>"></script>
 </body>
 
 </html>
