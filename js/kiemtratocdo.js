@@ -22,7 +22,6 @@ window.addEventListener('DOMContentLoaded', () => {
     document.querySelector("#typebox").addEventListener('keypress', (event) => {
         wpm[0]++;
         if (wpm[0] == 1) setInterval(runTimer, 10);
-
         y.oninput = () => {
             if (y.value != " ") {
                 //console.log(y.value);
@@ -77,7 +76,7 @@ window.addEventListener('DOMContentLoaded', () => {
             if (timeOut) {
                 let Er = wpm[1];
                 let keypress = wpm[0];
-                wpm[1] = Math.round((wpm[4] + wpm[5]) / 5).toString();
+                wpm[1] = Math.round(keypress / 5).toString();
                 wpm[0] = (Math.round((1 - (Er / keypress)) * 10000) / 100).toString();
                 //console.log("wpm: " + wpm[1]);
                 document.querySelector(".strong1").innerHTML = wpm[1] + "WPM";
