@@ -41,10 +41,13 @@
             <div class="erro">Số lần gõ sai: 0</div>
             <p id='lesson' style="display:none" ><?php echo $tent ?></p>
         </div>
-        <a href="<?php echo $url_next ?>">Next</a>
-        <a href="<?php echo $url_again ?>">Again</a>
-        <a href="<?php echo $url_prev ?>">Previous</a>
+        <div class="button">
+            <a href="<?php echo $url_next ?>">Next</a>
+            <a href="<?php echo $url_again ?>">Again</a>
+            <a href="<?php echo $url_prev ?>">Previous</a>
+        </div>        
     </div>
+    
     <script src='../js/jquery.js?v=<?php echo time()?>'></script>
     <script src='../js/training.js?v=<?php echo time()?>'></script>
 </body>
