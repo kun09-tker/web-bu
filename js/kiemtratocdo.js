@@ -1,4 +1,6 @@
 //correct - wrong ^ 1.1 - 0.1 * (keystroke - all)
+var beepOne = new Audio();
+beepOne.src = "../public/press.mp3";
 var a = ["about","above","add","after","again","air","all","almost","along","also","always","America","an","and","animal","another","answer","any","are","around","as","ask","at","away","back","be","because","been","before","began","begin","being","below","between","big","book","both","boy","but","by","call","came","can","car","carry","change","children","city","close","come","could","country","cut","day","did","different","do","does","don't","down","each","earth","eat","end","enough","even","every","example","eye","face","family","far","father","feet","few","find","first","follow","food","for","form","found","four","from","get","girl","give","go","good","got","great","group","grow","had","hand","hard","has","have","he","head","hear","help","her","here","high","him","his","home","house","how","idea","if","important","in","Indian","into","is","it","its","it's","just","keep","kind","know","land","large","last","later","learn","leave","left","let","letter","life","light","like","line","list","little","live","long","look","made","make","man","many","may","me","mean","men","might","mile","miss","more","most","mother","mountain","move","much","must","my","name","near","need","never","new","next","night","no","not","now","number","of","off","often","oil","old","on","once","one","only","open","or","other","our","out","over","own","page","paper","part","people","picture","place","plant","play","point","put","question","quick","quickly","quite","read","really","right","river","run","said","same","saw","say","school","sea","second","see","seem","sentence","set","she","should","show","side","small","so","some","something","sometimes","song","soon","sound","spell","start","state","still","stop","story","study","such","take","talk","tell","than","that","the","their","them","then","there","these","they","thing","think","this","those","thought","three","through","time","to","together","too","took","tree","try","turn","two","under","until","up","us","use","very","walk","want","was","watch","water","way","we","well","went","were","what","when","where","which","while","white","who","why","will","with","without","word","work","world","would","write","year","you","young","your"];
 var b = a.map((value) => (
     `<span class="span">${value}</span>`
@@ -41,15 +43,13 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
         if (event.charCode == 32) {
-            wpm[0] += count;
-            count = 0;
             //$(".span").eq(index+1).addClass('fomat');
             span[index + 1].classList.add('fomat');
             if(index >= 5){
                 span[index-5].remove();
             }
             if (y.value.trim() == span[index].innerText) {
-                
+                wpm[0] += count;
                 //$(".span").eq(index).addClass('correct').removeClass('fomat');
                 wpm[2]++;
                 wpm[4] += span[index].innerText.length;
@@ -64,7 +64,8 @@ window.addEventListener('DOMContentLoaded', () => {
                 span[index].classList.remove('fomatErro');
             }
             index++;
-            y.value = ""
+            y.value = "";
+            count = 0;
         }
     });
     var leadingZero = (time) => {
@@ -80,15 +81,15 @@ window.addEventListener('DOMContentLoaded', () => {
             if (timeOut) {
                 let Er = wpm[1];
                 let keypress = wpm[0];
-                wpm[1] = Math.round(keypress / 5).toString();
-                wpm[0] = Math.max(0,(Math.round((1 - (Er / keypress)) * 10000) / 100)).toString();
+                wpm[1] = Math.round((wpm[4]+wpm[5]) / 5).toString();
+                wpm[0] = Math.max(0,(Math.round((wpm[4] /(wpm[4]+wpm[5])) * 10000) / 100)).toString();
                 //console.log("wpm: " + wpm[1]);
                 document.querySelector(".strong1").innerHTML = wpm[1] + "WPM";
                 //console.log('Correct: ' + wpm[2]);
-                document.querySelector(".correct1").innerHTML = keypress;
+                document.querySelector(".correct1").innerHTML = wpm[4];
                 //console.log('Incorrect: ' + wpm[3]);
-                document.querySelector(".wrong").innerHTML = Er
-                document.querySelector(".total").innerHTML = "&nbsp;" +(Er + keypress).toString()
+                document.querySelector(".wrong").innerHTML = wpm[5];
+                document.querySelector(".total").innerHTML = "&nbsp;" +(wpm[4]+wpm[5]).toString()
                 document.querySelector(".strong2").innerHTML = wpm[0] + "%"
                 document.querySelector(".strong3").innerHTML = wpm[2];
                 document.querySelector("#auswertung-result").classList.add("col");

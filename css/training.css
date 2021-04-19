@@ -11,7 +11,7 @@
     height: 600px;
     width: 90vw;
     max-width: 90vw;
-    transform: translate(0,10rem);
+    transform: translate(0,5rem);
     border:  solid 2px aqua;
     background: linear-gradient(0deg, rgba(125,244,239,0.36363636363636365) 100%, rgba(208,212,212,1) 100%);
     background-image: url(../public/39230524_p0_master1200.jpg);

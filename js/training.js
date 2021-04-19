@@ -1,3 +1,5 @@
+var beepOne = new Audio();
+beepOne.src = "../public/press.mp3";
 img = document.querySelector(".content__img")
 let a = document.querySelector("#lesson").textContent;
 let train = "";
@@ -17,6 +19,9 @@ document.querySelector(".content__text").innerHTML = train
 const text = document.querySelectorAll('.span');
 text[0].classList.add('focus');
 text[0].classList.remove('span');
+window.addEventListener('keydown',(event) =>{
+    beepOne.play();
+})
 window.addEventListener('keypress', (event) => {
     console.log(event.key.charCodeAt(0));
     console.log(event.key);
