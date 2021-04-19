@@ -12,6 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 216px;
 }
 .avatar {
     width: 100px;
@@ -32,8 +33,26 @@ body {
     justify-content: center;
     padding-top: 7px;
     padding-bottom: 10px;
-    background-color: aqua;
     display: flex;
+}
+.stamp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.0rem;
+    height: 2.0rem;
+    line-height: 2.5rem;
+    padding: 0 .25rem;
+    font-size: .875rem;
+    font-weight: 500;
+    color: #6e7582;
+    text-align: center;
+    background: #00bcd4;
+    border-radius: 3px;
+}
+.hoat-anh {
+    margin-left: 12px;
+    margin-right: 10px;
 }
 .icon{
     font-size: 1.25rem;

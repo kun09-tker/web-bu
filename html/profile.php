@@ -12,17 +12,17 @@
         <div class="avatar"></div>
         <h2>Name</h2>
         <div class="type">
-            <span>
+            <div class="hoat-anh stamp">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-md" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><circle cx="8.5" cy="7" r="4"></circle><path d="M2 21v-2a4 4 0 0 1 4 -4h5a4 4 0 0 1 4 4v2"></path><path d="M16 11l2 2l4 -4"></path></svg>
                 <path stroke="none" d="M0 0h24v24H0z"></path>
                 <circle cx="8.5" cy="7" r="4"></circle>
                 <path d="M2 21v-2a4 4 0 0 1 4 -4h5a4 4 0 0 1 4 4v2"></path>
                 <path d="M16 11l2 2l4 -4"></path>
                 </svg>
-            </span>
+            </div>
+
             <div>
                 <div class="strong">loại tài khoản:Miễn phí</div>
-                <div>Hạn dùng:không giới hạn</div>
             </div>
         </div>
     </div>
