@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <title>TYPING</title>
     <link rel="stylesheet" type="text/css" href="../css/thanh-menu.css" />
-    <link rel="stylesheet" href="../css/NutHang.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="../css/NutHang.css?v=<?php echo time()?>">
+    <link rel="stylesheet" href="../css/footer.cs?v=<?php echo time()?>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css?v=<?php echo time()?>">
 </head>
 
 <body>

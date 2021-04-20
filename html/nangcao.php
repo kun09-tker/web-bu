@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TYPING</title>
-    <link rel="stylesheet" href="../css/thanh-menu.css">
-    <link rel="stylesheet" href="../css/NutHangNC.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="../css/thanh-menu.css?v=<?php echo time()?>">
+    <link rel="stylesheet" href="../css/NutHangNC.css?v=<?php echo time()?>">
+    <link rel="stylesheet" href="../css/footer.css?v=<?php echo time()?>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css?v=<?php echo time()?>">
 </head>
 <body>
     <div class="menu">
