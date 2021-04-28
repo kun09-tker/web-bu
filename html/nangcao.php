@@ -1,35 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TYPING</title>
-    <link rel="stylesheet" href="../css/thanh-menu.css?v=<?php echo time()?>">
-    <link rel="stylesheet" href="../css/NutHangNC.css?v=<?php echo time()?>">
-    <link rel="stylesheet" href="../css/footer.css?v=<?php echo time()?>">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css?v=<?php echo time()?>">
+    <link rel="stylesheet" href="../css/thanh-menu.css?v=<?php echo time() ?>">
+    <link rel="stylesheet" href="../css/NutHangNC.css?v=<?php echo time() ?>">
+    <link rel="stylesheet" href="../css/footer.css?v=<?php echo time() ?>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css?v=<?php echo time() ?>">
 </head>
+
 <body>
-    <div class="menu">
-        <ul>
-            <li><img id="logo" src="../public/614d9ae7c9d44f89ab228c8ae55d3e92.png"></li>
-            <li><a href="luyentapcoban.php">Cơ bản</a></li>
-            <li class="active"><div>Nâng cao</div></li>
-            <li><a href="./kiemtratocdo.php">Kiểm tra tốc độ</a></li>
-            <li><a href="">Trò chơi</a></li>
-            <li>
-                <div class="Account">
-                    <div class="Account_btn">Tài khoản</div>
-                    <div class="Account_dropdown">
-                        <div class="box"><a href="dangnhap.php"><img src="../public/sign-in.png">&nbsp Đăng nhập</a></div>
-                        <div class="box"><a href="dangky.php"><img src="../public/add_profile_user_icon_148635.png">&nbsp Đăng ký</a></div>
-                    </div>
-                </div>
-            </li>
-        </ul>
-        <!-- thấy chưa -->
-    </div>
+    <?php
+    include './menu.php'
+    ?>
+    <script>
+        let menu = document.querySelectorAll('.none');
+        for (let i = 0; i < menu.length; i++) {
+            if (i != 1) {
+                menu[i].classList.add('none');
+                menu[i].classList.remove('active');
+            } else {
+                menu[i].classList.add('active');
+                menu[i].classList.remove('none');
+            }
+        }
+    </script>
     <div class="hangpg">
         <div class="container">
             <h1>Viết hoa</h1>
@@ -51,7 +49,7 @@
                     <div class="content-title">Viết hoa D & K</div>
                 </div>
             </a>
-            
+
             <a href="training.php?lesson=36" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
                     <span class="content-number-nc">40</span>
@@ -136,9 +134,8 @@
                 <div class="hangpg__card-content">
                     <span class="content-number-nc">53</span>
                     <div class="content-title">Viết hoa C & < </div>
-                </div>
-            </a>
-            <a href="training.php?lesson=50" class="hangpg__card btn btn-white btn-animated">
+                    </div>
+            </a> <a href="training.php?lesson=50" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
                     <span class="content-number-nc">54</span>
                     <div class="content-title">Viết hoa X & ></div>
@@ -175,21 +172,21 @@
                     <div class="content-title">Phím 4 & 7</div>
                 </div>
             </a>
-            
+
             <a href="training.php?lesson=56" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
                     <span class="content-number-nc">60</span>
                     <div class="content-title">Phím 3 & 8</div>
                 </div>
             </a>
-            
+
             <a href="training.php?lesson=57" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
                     <span class="content-number-nc">61</span>
                     <div class="content-title">Phím 2 & 9</div>
                 </div>
             </a>
-            
+
             <a href="training.php?lesson=58" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
                     <span class="content-number-nc">62</span>
@@ -239,10 +236,10 @@
                     <div class="content-title"># và *</div>
                 </div>
             </a>
-            <a href="training.php?lesson=66"class="hangpg__card btn btn-white btn-animated">
+            <a href="training.php?lesson=66" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
                     <span class="content-number-nc">70</span>
-                     <div class="content-title">@ và (</div>
+                    <div class="content-title">@ và (</div>
                 </div>
             </a>
             <a href="training.php?lesson=67" class="hangpg__card btn btn-white btn-animated">
@@ -290,21 +287,19 @@
                                 TYPING là nền tảng tương tác trực tuyến hỗ trợ người dùng học đánh máy
                                 và đánh giá kỹ năng đánh máy một cách nhanh chóng và chính xác.
                             </p>
-                            <a href="https://www.facebook.com/Web-bu-104521588410916" title="Facebook" target="_blank"
-                                class="social-button">                    
+                            <a href="https://www.facebook.com/Web-bu-104521588410916" title="Facebook" target="_blank" class="social-button">
                                 <i class="fab fa-facebook-square icon_social"></i>
                             </a>
-                            <a href="https://www.youtube.com/channel/UCpt3dSDGk5fC7uU9OeFG5ig" title="Youtube"
-                                target="_blank" class="social-button">
-                                <i class="fab fa-youtube-square icon_social"></i>                                
-                            </a>                        
+                            <a href="https://www.youtube.com/channel/UCpt3dSDGk5fC7uU9OeFG5ig" title="Youtube" target="_blank" class="social-button">
+                                <i class="fab fa-youtube-square icon_social"></i>
+                            </a>
                         </div>
                         <div class="col-xs-12 col-sm-4 col-md-2 links footer-column">
                             <h4>Liên kết</h4>
-                            <p><a href="./luyentapcoban.html" class="link-menu" title="Học tập">Cơ bản</a></p> 
-                            <p><a href="./nangcao.html" class="link-menu" title="Luyện tập">Nâng cao</a></p> 
-                            <p><a href="./kiemtratocdo.html" class="link-menu" title="Cuộc thi">Kiểm tra tốc độ</a></p> 
-                            <p><a href="" class="link-menu" title="Trò chơi">Trò chơi</a></p> 
+                            <p><a href="./luyentapcoban.html" class="link-menu" title="Học tập">Cơ bản</a></p>
+                            <p><a href="./nangcao.html" class="link-menu" title="Luyện tập">Nâng cao</a></p>
+                            <p><a href="./kiemtratocdo.html" class="link-menu" title="Cuộc thi">Kiểm tra tốc độ</a></p>
+                            <p><a href="" class="link-menu" title="Trò chơi">Trò chơi</a></p>
                         </div>
                         <div class="col-xs-12 col-sm-4 col-md-2 about footer-column">
                             <h4>Thông tin</h4>
@@ -324,8 +319,7 @@
             </div>
             <div class="col-xs-12 right-reserved">
                 <span class="powerby">
-                    <img src="../public/614d9ae7c9d44f89ab228c8ae55d3e92.png" alt="FPT Software"
-                        class="fpt-logo">
+                    <img src="../public/614d9ae7c9d44f89ab228c8ae55d3e92.png" alt="FPT Software" class="fpt-logo">
                     Cung cấp bởi WEB-BU
                 </span>
                 <span class="copyright">© 2021</span>
@@ -333,4 +327,5 @@
         </footer>
     </div>
 </body>
+
 </html>

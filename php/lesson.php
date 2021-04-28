@@ -23,6 +23,5 @@
         $url_prev = $url.strval($lesson-1);
     }
     else {
-        header("Location: Trangchu.html");
+        header("Location: Trangchu.php");
     }
-?>

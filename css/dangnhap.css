@@ -113,6 +113,17 @@ button, input, optgroup, select, textarea {
     font-size: inherit;
     line-height: inherit;
 }
+.erro{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 97%;
+    height: 3rem;
+    background-color: rgb(243, 213, 213);
+    border: 1px solid rgb(236, 145, 145);
+}
 .small {
     font-size: 87.5%;
     font-weight: 400;
@@ -127,9 +138,6 @@ a {
 a {
     color: #206bc4;
     text-decoration: none;
-}
-.form-group {
-    margin-bottom: 1rem;
 }
 label {
     display: inline-block;

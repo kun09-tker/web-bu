@@ -6,38 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kiểm tra tốc độ</title>
-    <link rel="stylesheet" href="../css/thanh-menu.css?v=<?php echo time()?>">
-    <link rel="stylesheet" href="../css/kiemtratocdo.css?v=<?php echo time()?>">
-    <link rel="stylesheet" href="../css/footer.css?v=<?php echo time()?>">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css?v=<?php echo time()?>">
+    <link rel="stylesheet" href="../css/thanh-menu.css?v=<?php echo time() ?>">
+    <link rel="stylesheet" href="../css/kiemtratocdo.css?v=<?php echo time() ?>">
+    <link rel="stylesheet" href="../css/footer.css?v=<?php echo time() ?>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css?v=<?php echo time() ?>">
 </head>
 
 <body>
     <div id="body">
-        <div class="menu">
-            <ul>
-                <li><img id="logo" src="../public/614d9ae7c9d44f89ab228c8ae55d3e92.png"></li>
-                <li><a href="luyentapcoban.php">Cơ bản</a></li>
-                <li><a href="nangcao.php">Nâng cao</a></li>
-                <li class="active">
-                    <div><a href="./kiemtratocdo.php">Kiểm tra tốc độ</a></div>
-                </li>
-                <li><a href="">Trò chơi</a></li>
-                <li>
-                    <div class="Account">
-                        <div class="Account_btn">Tài khoản</div>
-                        <div class="Account_dropdown">
-                            <div class="box"><a href="./dangnhap.php"><img src="../public/sign-in.png">&nbsp Đăng
-                                    nhập</a></div>
-                            <div class="box"><a href="./dangky.php"><img
-                                        src="../public/add_profile_user_icon_148635.png">&nbsp Đăng
-                                    ký</a></div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
+        <?php
+        include './menu.php'
+        ?>
+        <script>
+            let menu = document.querySelectorAll('.none');
+            for (let i = 0; i < menu.length; i++) {
+                if (i != 2) {
+                    menu[i].classList.add('none');
+                    menu[i].classList.remove('active');
+                } else {
+                    menu[i].classList.add('active');
+                    menu[i].classList.remove('none');
+                }
+            }
+        </script>
         <div class="hangpg">
             <div class="container">
                 <h1>Kiểm tra tốc độ đánh máy</h1>
@@ -62,16 +53,14 @@
                     <table class="table table-striped" id="result-table">
                         <tbody>
                             <tr>
-                                <td id="wpm" class="name" colspan="2"
-                                    title="Words per Minute: 1 word equals 5 keystrokes">
+                                <td id="wpm" class="name" colspan="2" title="Words per Minute: 1 word equals 5 keystrokes">
                                     <strong class="strong1">72 WPM</strong>
                                     <small>(words per minute)</small>
                                 </td>
                             </tr>
                             <tr id="keystrokes">
                                 <td class="name">Keystrokes</td>
-                                <td class="value"><small>(<span class="correct1"></span> | <span
-                                            class="wrong"></span>)</small><span class="total"></span></td>
+                                <td class="value"><small>(<span class="correct1"></span> | <span class="wrong"></span>)</small><span class="total"></span></td>
                             </tr>
                             <tr id="accuracy">
                                 <td class="name">Accuracy</td>
@@ -100,12 +89,10 @@
                                 TYPING là nền tảng tương tác trực tuyến hỗ trợ người dùng học đánh máy
                                 và đánh giá kỹ năng đánh máy một cách nhanh chóng và chính xác.
                             </p>
-                            <a href="https://www.facebook.com/Web-bu-104521588410916" title="Facebook" target="_blank"
-                                class="social-button">
+                            <a href="https://www.facebook.com/Web-bu-104521588410916" title="Facebook" target="_blank" class="social-button">
                                 <i class="fab fa-facebook-square icon_social"></i>
                             </a>
-                            <a href="https://www.youtube.com/channel/UCpt3dSDGk5fC7uU9OeFG5ig" title="Youtube"
-                                target="_blank" class="social-button">
+                            <a href="https://www.youtube.com/channel/UCpt3dSDGk5fC7uU9OeFG5ig" title="Youtube" target="_blank" class="social-button">
                                 <i class="fab fa-youtube-square icon_social"></i>
                             </a>
                         </div>
@@ -141,7 +128,7 @@
             </div>
         </footer>
     </div>
-    <script src="../js/kiemtratocdo.js?v=<?php echo time()?>"></script>
+    <script src="../js/kiemtratocdo.js?v=<?php echo time() ?>"></script>
 </body>
 
 </html>
