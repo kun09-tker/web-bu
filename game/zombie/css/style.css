@@ -1,0 +1,103 @@
+#box
+{
+  margin:auto;
+  height:400px;
+  background-image: url(../css/public/Grass.jpg);
+  overflow:hidden;
+  position:relative;
+  font-family:"Georgia";
+  font-size:50px;
+  color:#fff;
+}
+
+#box > div
+{
+  display:inline-block;
+  position:absolute;
+  width:50px;
+  text-align:center;
+  transition-property:right;
+  transition-duration:100ms;
+  transition-timing-function:linear;
+  transition-delay:0;
+}
+
+#message
+{
+  display:block;
+  text-align:center;
+  position:relative;
+  font-size:125px;
+  top:50%;
+  z-index:0;
+  color:rgba(0,0,0,0.6);
+  -webkit-transform:translateY(-50%);
+  -ms-transform:translateY(-50%);
+  transform:translateY(-50%);
+  text-shadow:2px 2px 3px rgba(255,255,255,0.1)
+}
+
+.panel
+{
+  max-width:1000px;
+  margin:auto;
+}
+
+.panel-body
+{
+  padding:0;
+}
+
+.btn {
+  margin-left: 10px;
+}
+
+.container {
+  max-width: 1000px;
+}
+.zombie{
+  display: flex;
+  align-items: center;
+  background-image: url('../css/public/virus.png');
+  background-size:cover;
+  height: 6rem;
+  width: 3rem;
+  font-size: 3rem;
+}
+.die{
+  display: flex;
+  align-items: center;
+  background-image: url('../css/public/virus.png');
+  background-size:cover;
+  height: 6rem;
+  width: 3rem;
+  font-size: 3rem;
+  animation-name: zombieDies1, zombieDies2;
+  animation-duration: 500ms, 1000ms;
+  animation-delay: 0ms, 500ms; /* add this */
+  animation-timing-function: ease-in, ease-out;
+  animation-iteration-count: 1, 1;
+  transform: rotate(-90deg);
+  opacity: 0;
+}
+
+@keyframes zombieDies1{
+  from{
+    opacity: 1;
+      transform: rotate(0deg);
+  }
+  to{
+    opacity: 1;
+    transform: rotate(-90deg);
+  }
+}
+@keyframes zombieDies2{
+  from{
+    opacity: 1;
+    transform: rotate(-90deg);
+  }
+  to{
+    opacity: 0;
+    transform: rotate(-90deg);
+  }
+}

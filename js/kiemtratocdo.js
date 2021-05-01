@@ -11,7 +11,7 @@ var a = ["about", "above", "add", "after", "again", "air", "all", "almost", "alo
 var numberArr = a.length
 
 let word = [];
-for(let i = 0; i < 500 ; i++){
+for (let i = 0; i < 500; i++) {
     word[i] = a[Math.floor(Math.random() * numberArr)];
 }
 var b = word.map((value) => (
@@ -59,11 +59,11 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         if (event.charCode == 32) {
             start = span[index].offsetTop;
-            end = span[index+1].offsetTop;
-           // console.log(start + " " + end);
-            
+            end = span[index + 1].offsetTop;
+            // console.log(start + " " + end);
+
             span[index + 1].classList.add('fomat');
-            if (start!=end) {
+            if (start != end) {
                 dem++;
                 if (dem == 2) {
                     for (let i = vitri; i <= index; i++) {
@@ -103,7 +103,7 @@ window.addEventListener('DOMContentLoaded', () => {
         if (timer[0] == 0) {
             theTimer.innerHTML = "Time up";
             if (timeOut) {
-                wpm[1] = Math.round((wpm[4] + wpm[5]) / 5).toString();
+                wpm[1] = Math.round(wpm[4] / 5).toString();
                 wpm[0] = Math.max(0, (Math.round((wpm[4] / (wpm[4] + wpm[5])) * 10000) / 100)).toString();
                 //console.log("wpm: " + wpm[1]);
                 document.querySelector(".strong1").innerHTML = wpm[1] + "WPM";
