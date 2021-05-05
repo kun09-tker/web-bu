@@ -1,3 +1,7 @@
+<?php
+if (isset($_SESSION["userInWeb"])) session_start();
+require "../php/xuly.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,8 +58,17 @@
                 <div class="hangpg__card-content">
                     <span class="content-number"><img src="../game/TouchTypeTraining/fav.ico"></span>
                     <div class="content-title">
-                        <p style="margin: unset ;"><strong>Touch Type raining</strong></p>
+                        <p style="margin: unset ;"><strong>Touch Type Training</strong></p>
                         <p1 style="margin: unset ;">Luyện đánh máy</p1>
+                    </div>
+                </div>
+            </a>
+            <a href="../game/wordpluck/index.php" class="hangpg__card btn btn-white btn-animated">
+                <div class="hangpg__card-content">
+                    <span class="content-number"><img src="../game/wordpluck/images/output-onlinepngtools.png"></span>
+                    <div class="content-title">
+                        <p style="margin: unset ;"><strong>Word Pluck</strong></p>
+                        <p1 style="margin: unset ;">Những giọt mưa rơi</p1>
                     </div>
                 </div>
             </a>

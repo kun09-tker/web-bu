@@ -1,3 +1,7 @@
+<?php
+if (isset($_SESSION["userInWeb"])) session_start();
+require "../php/xuly.php";
+?>
 <!DOCTYPE html>
 <html>
 <head>

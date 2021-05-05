@@ -1,8 +1,5 @@
 <?php
 session_start();
-if (isset($_SESSION["userInWeb"])) {
-	header("location: ./luyentapcoban.php");
-}
 require "../php/xuly.php";
 ?>
 
@@ -25,7 +22,7 @@ require "../php/xuly.php";
 		?>
 
 		<div class="container-tight py-6">
-			<form class="card card-md" method="post" action="./dangnhap.php">
+			<form class="card card-md" method="post" action="">
 				<div class="card-body">
 					<h2 class="mb-5 text-center">Đăng nhập</h2>
 					<input type="hidden" name="csrfmiddlewaretoken" value="KZrfyg04UeX67NXeVTjIWJ0YVF38lRp73ELjeTMlzaFmVvOScxEKJqk2ZC1yuQWO">
@@ -36,7 +33,7 @@ require "../php/xuly.php";
 					<div class="form-group">
 						<label class="form-label nav">
 							Mật khẩu
-							<a href="/user/forgot-password/" class="float-right small">Quên mật khẩu?</a>
+							<a href="./forgot-password.php" class="float-right small">Quên mật khẩu?</a>
 						</label>
 						<input type="password" class="form-control" placeholder="Password" autocomplete="off" name="password" id="password">
 						<div class="erro">
@@ -51,12 +48,13 @@ require "../php/xuly.php";
 					</div>
 					<div class="form-footer">
 						<button type="submit" class="btn btn-primary btn-block" name="dangnhap">Đăng nhập</button>
+
 					</div>
 				</div>
 			</form>
 			<div class="text-center text-muted">
 				Chưa có tài khoản?
-				<a href="./dangky.html">Đăng ký</a>
+				<a href="./dangky.php">Đăng ký</a>
 			</div>
 		</div>
 	</div>

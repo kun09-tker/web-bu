@@ -1,3 +1,6 @@
+<?php
+if (isset($_SESSION["userInWeb"])) session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 

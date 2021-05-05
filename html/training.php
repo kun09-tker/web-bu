@@ -1,4 +1,5 @@
 <?php
+if (isset($_SESSION["userInWeb"])) session_start();
 require "../php/lesson.php";
 ?>
 <!DOCTYPE html>

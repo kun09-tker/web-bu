@@ -1,8 +1,5 @@
 <?php
 session_start();
-if (isset($_SESSION["userInWeb"])) {
-    header("location: ./luyentapcoban.php");
-}
 require "../php/xuly.php";
 ?>
 <!DOCTYPE html>
@@ -30,20 +27,20 @@ require "../php/xuly.php";
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="form-label">Tên</label>
-                            <input type="text" class="form-control" placeholder="Nhập tên của bạn" name="first_name" pattern="^[^0-9]+$" minlength="5" title="Tên không được chứa số và tối thiểu 5 kí tự" required value="<?php echo $lastname ?>">
+                            <input type="text" class="form-control" placeholder="Nhập tên của bạn" name="first_name" pattern="^[^0-9]+$" minlength="1" title="Tên không được chứa số và tối thiểu 1 kí tự" required value="<?php echo $firstname ?>">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="form-label">Họ</label>
-                            <input type="text" class="form-control" placeholder="Nhập họ của bạn" name="last_name" pattern="^[^0-9]+$" minlength="5" title="Họ không được chứa số và tối thiểu 5 kí tự" required value="<?php echo $firstname ?>">
+                            <input type="text" class="form-control" placeholder="Nhập họ của bạn" name="last_name" pattern="^[^0-9]+$" minlength="1" title="Họ không được chứa số và tối thiểu 1 kí tự" required value="<?php echo $lastname ?>">
                         </div>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label class="form-label">Username</label>
-                    <input type="text" class="form-control" placeholder="Nhập username của bạn" name="username" pattern="[A-Za-z0-9]+" minlength="5" title="Username chỉ chứa kí tự, số và tối thiểu 5 kí tự" required value="<?php echo $username ?>">
+                    <input type="text" class="form-control" placeholder="Nhập username của bạn" name="username" pattern="[\w,./_=?-]+" minlength="5" maxlength="20" title="Username không có khoảng trắng và tối thiểu 5 kí tự tối đa 20 kí tự" required value="<?php echo $username ?>">
                     <p><?php if (isset($erro['user'])) echo $erro['user'] ?></p>
                 </div>
                 <div class="form-group">
@@ -53,7 +50,7 @@ require "../php/xuly.php";
                 </div>
                 <div class="form-group">
                     <label class="form-label">Mật khẩu</label>
-                    <input type="password" class="form-control" placeholder="Nhập password của bạn" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Bao gồm chữ thường, chữ hoa và số ví dụ : Letanloc123 " required value="<?php echo $password ?>">
+                    <input type="password" class="form-control" placeholder="Nhập password của bạn" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Bao gồm chữ thường, chữ hoa và số, ít nhất 8 kí tự ví dụ : Letanloc123 " required value="<?php echo $password ?>">
                 </div>
                 <div class="form-group">
                     <label class="form-label">
@@ -70,8 +67,6 @@ require "../php/xuly.php";
         <div class="text-center text-muted">
             Đã có tài khoản? <a href="./dangnhap.php">Đăng nhập</a>
         </div>
-    </div>
-
     </div>
 
 </body>

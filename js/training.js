@@ -4,7 +4,6 @@ img = document.querySelector(".content__img")
 let a = document.querySelector("#lesson").textContent;
 let numberLesson = document.querySelector('#numberLesson');
 let none = document.querySelectorAll(".none");
-
 if (numberLesson.textContent <= 33) {
     none[0].classList.add('active');
     none[0].classList.remove('none');
@@ -28,7 +27,7 @@ let wrong = 1;
 let numberOfitem = a.length;
 
 
-for (let i = 0; i <= 80; i++) {
+for (let i = 0; i <= 2; i++) {
     rand += a[Math.floor(Math.random() * numberOfitem)];
 }
 rand += " ";
@@ -102,6 +101,17 @@ window.addEventListener('keypress', (event) => {
         if (i >= text.length - 2) {
             animation();
             window.clearInterval(interval);
+            //alert("Dasd");
+            JQuery.ajax({
+                url: 'http://localhost/web-bu/php/training.php',
+                type: 'post',
+                data: {
+                    lesson: numberLesson,
+                },
+                success: function (data) {
+                    console.log(data);
+                }
+            });
         }
         start = text[i].offsetTop;
         end = text[i + 1].offsetTop;
