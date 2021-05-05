@@ -5,7 +5,8 @@ require "../php/xuly.php";
 ?>
 <div class="menu">
     <ul>
-        <li><img id="logo" src="../public/614d9ae7c9d44f89ab228c8ae55d3e92.png"></li>
+        <li>
+        <a href="Trangchu.php"><img id="logo" src="../public/614d9ae7c9d44f89ab228c8ae55d3e92.png"></a></li>
         <li><a class="none" href="luyentapcoban.php">Cơ bản</a></li>
         <li><a class="none" href="nangcao.php">Nâng cao</a></li>
         <li><a class="none" href="kiemtratocdo.php">Kiểm tra tốc độ</a></li>

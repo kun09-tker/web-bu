@@ -388,10 +388,10 @@ if (isset($_SESSION["userInWeb"])) session_start();
                         </div>
                         <div class="col-xs-12 col-sm-4 col-md-2 links footer-column">
                             <h4>Liên kết</h4>
-                            <p><a href="./luyentapcoban.html" class="link-menu" title="Học tập">Cơ bản</a></p>
-                            <p><a href="./nangcao.html" class="link-menu" title="Luyện tập">Nâng cao</a></p>
-                            <p><a href="./kiemtratocdo.html" class="link-menu" title="Cuộc thi">Kiểm tra tốc độ</a></p>
-                            <p><a href="" class="link-menu" title="Trò chơi">Trò chơi</a></p>
+                            <p><a href="./luyentapcoban.php" class="link-menu" title="Học tập">Cơ bản</a></p>
+                            <p><a href="./nangcao.php" class="link-menu" title="Luyện tập">Nâng cao</a></p>
+                            <p><a href="./kiemtratocdo.php" class="link-menu" title="Cuộc thi">Kiểm tra tốc độ</a></p>
+                            <p><a href="./trochoi.php" class="link-menu" title="Trò chơi">Trò chơi</a></p>
                         </div>
                         <div class="col-xs-12 col-sm-4 col-md-2 about footer-column">
                             <h4>Thông tin</h4>
