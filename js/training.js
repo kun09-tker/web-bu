@@ -1,3 +1,18 @@
+const accepted = async () => {
+    await $.ajax({
+        type: 'POST',
+        url: "../php/acceptLesson.php",
+        success: (data) => {
+            let array = JSON.parse(data);
+            if (array.includes(numberLesson.textContent)) {
+                document.querySelectorAll('.accept')[1].style.visibility = 'visible';
+            }
+        }
+    });
+}
+
+
+
 var beepOne = new Audio();
 beepOne.src = "../public/press.mp3";
 img = document.querySelector(".content__img")
@@ -23,11 +38,15 @@ let index = 0;
 let train = "";
 let rand = "";
 let i = 0;
-let wrong = 1;
+let wrong = 0;
+let numberTest = 46;
+let acc = 0;
 let numberOfitem = a.length;
 
+accepted();
 
-for (let i = 0; i <= 2; i++) {
+
+for (let i = 0; i < numberTest; i++) {
     rand += a[Math.floor(Math.random() * numberOfitem)];
 }
 rand += " ";
@@ -89,8 +108,48 @@ let stopWatch = () => {
     }
     document.querySelector('.timerInfo').innerHTML = displayHours + ":" + displayMinutes + ":" + displaySeconds;
 }
+let thapphan = 0;
+let nguyen = 0;
+let CountAcc = () => {
+    // console.log(acc);
 
-window.addEventListener('keypress', (event) => {
+    if (nguyen * 100 + thapphan >= acc * 10000) {
+        window.clearInterval(interval);
+        let tmp = "";
+        let displayAcc = "";
+        if (acc < 1000) {
+            tmp = "&nbsp;";
+        }
+        if ((acc * 10000) % 100 == 0) {
+            displayAcc = (acc * 100).toString() + ".00";
+        }
+        else {
+            displayAcc = parseFloat((acc * 10000) / 100).toString();
+        }
+        document.querySelector('.acc').innerHTML = tmp + "&nbsp;&nbsp;" + displayAcc + " %";
+    }
+    else {
+        thapphan += 25;
+        if (thapphan / 100 === 1) {
+            thapphan = 0;
+            nguyen++;
+        }
+        if (thapphan < 10) {
+            displaySeconds = "0" + thapphan.toString();
+        }
+        else {
+            displaySeconds = thapphan;
+        }
+        if (nguyen < 10) {
+            displayMinutes = "&nbsp;" + nguyen.toString();
+        }
+        else {
+            displayMinutes = nguyen;
+        }
+        document.querySelector('.acc').innerHTML = "&nbsp;&nbsp;" + displayMinutes + "." + displaySeconds + " %";
+    }
+}
+window.addEventListener('keypress', async (event) => {
     count++;
     if (count == 1) interval = window.setInterval(stopWatch, 1000);
     //console.log(i + " " + text.length);
@@ -101,14 +160,21 @@ window.addEventListener('keypress', (event) => {
         if (i >= text.length - 2) {
             animation();
             window.clearInterval(interval);
-            //alert("Dasd");
-            JQuery.ajax({
-                url: 'http://localhost/web-bu/php/training.php',
-                type: 'post',
+            //acc = Math.max(0, (Math.round((1 - wrong / numberTest) * 10000)) / 10000);
+            acc = Math.max(0, parseFloat(1 - wrong / numberTest).toFixed(4));
+            console.log(acc);
+
+            //console.log(hours * 60 * 60 + minutes * 60 + seconds + " " + (acc).toString());
+            interval = window.setInterval(CountAcc, 1);
+            await $.ajax({
+                type: "POST",
+                url: '../php/training.php',
                 data: {
-                    lesson: numberLesson,
+                    lesson: numberLesson.textContent,
+                    time: hours * 60 * 60 + minutes * 60 + seconds,
+                    acc: parseFloat((acc * 10000) / 100).toString(),
                 },
-                success: function (data) {
+                success: (data) => {
                     console.log(data);
                 }
             });
@@ -134,13 +200,9 @@ window.addEventListener('keypress', (event) => {
         document.querySelector("#shap").classList.add("shap-er");
         document.querySelector("#shap").classList.remove("shap");
 
-        document.querySelector(".erro").innerHTML = "Số lần gõ sai: " + wrong;
+        document.querySelector(".erro").innerHTML = "Số lần gõ sai: " + (wrong + 1).toString();
         wrong++;
 
-    }
-    if (wrong > 11) {
-        alert("Bạn gõ sai hơn 10 lần rồi. Thử lại nhá :))");
-        location.reload();
     }
 })
 

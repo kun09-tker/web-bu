@@ -1,5 +1,6 @@
 <?php
 session_start();
+error_reporting(0);
 require "../php/xuly.php";
 ?>
 <!DOCTYPE html>
@@ -21,9 +22,9 @@ require "../php/xuly.php";
         <div class="text-box">
             <h3 class="heading-primary">
                 <span class="heading-primary-main">TYPING</span>
-                <span class="heading-primary-sub">Nơi bạn trau dồi kỹ năng gõ phím</span>
+                <span class="heading-primary-sub">Nơi bạn trau dồi kỹ năng cào phím</span>
             </h3>
-            <a href="luyentapcoban.php" class="btn btn-white btn-animated">Bắt Đầu</a>
+            <a href="luyentapcoban.php" class="btn btn-white btn-animated">Get started</a>
         </div>
     </header>
 </body>

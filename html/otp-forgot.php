@@ -1,5 +1,6 @@
 <?php
 session_start();
+error_reporting(0);
 require "../php/xuly.php";
 ?>
 
@@ -29,7 +30,7 @@ require "../php/xuly.php";
 					<div class="form-group">
 						<p style="color: gray;">Vui lòng kiểm tra email của bạn để nhận mã OTP để kích hoạt tài khoản.</p>
 						<label class="form-label">OTP </label>
-						<input type="text" class="form-control" placeholder="Nhập OTP" name="OTP" id="OTP">
+						<input type="number" class="form-control" placeholder="Nhập OTP" name="OTP" id="OTP">
 						<p style="color:red"><?php if (isset($erro['otp'])) echo $erro['otp'] ?></p>
 						<script>
 							console.log(<?php echo $code ?>);

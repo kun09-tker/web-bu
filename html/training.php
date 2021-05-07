@@ -1,5 +1,6 @@
 <?php
-if (isset($_SESSION["userInWeb"])) session_start();
+session_start();
+//error_reporting(0);
 require "../php/lesson.php";
 ?>
 <!DOCTYPE html>
@@ -19,8 +20,15 @@ require "../php/lesson.php";
     include './menu.php'
     ?>
     <div id="shap" class="shap">
-        <div class="timerInfo">
-            00:00:00
+        <div class="top">
+            <div class="accept acceptnull">
+            </div>
+            <div class="timerInfo">
+                00:00:00
+            </div>
+            <div class="accept">
+                &#x2714;&nbsp;Đã hoàn thành
+            </div>
         </div>
         <div class="content">
             <div class="content__text "></div>
@@ -30,6 +38,9 @@ require "../php/lesson.php";
             <p id='numberLesson' style="display: none;"><?php echo $lesson ?></p>
         </div>
         <div class="content1">
+            <div class="acc">&nbsp;
+                &nbsp;
+                00.00 %</div>
             <div class="shapTick">
                 <div class="content-elip">
                     <div class="tick1"></div>

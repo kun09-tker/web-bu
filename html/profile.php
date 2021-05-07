@@ -1,5 +1,6 @@
 <?php
-if (isset($_SESSION["userInWeb"])) session_start();
+ session_start();
+ error_reporting(0);
 require "../php/xuly.php";
 ?>
 <!DOCTYPE html>

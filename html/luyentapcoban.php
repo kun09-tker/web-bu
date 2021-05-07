@@ -1,5 +1,7 @@
 <?php
-if (isset($_SESSION["userInWeb"])) session_start();
+session_start();
+error_reporting(0);
+require "../php/acceptLesson.php";
 ?>
 <!DOCTYPE html>
 <html>
@@ -32,7 +34,7 @@ if (isset($_SESSION["userInWeb"])) session_start();
         </script>
         <div class="hangpg">
             <div class="container">
-                <h1>Hàng phím giữa</h1>
+                <h1>Hàng phím giữa </h1>
                 <!-- <a href="training.php?*intro" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">1</span>
@@ -420,5 +422,7 @@ if (isset($_SESSION["userInWeb"])) session_start();
 
     </div>
 </body>
+<script src='../js/jquery.js?v=<?php echo time() ?>'></script>
+<script src="../js/acceptLessonBasic.js?php echo time() ?>"></script>
 
 </html>

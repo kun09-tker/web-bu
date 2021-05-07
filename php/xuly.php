@@ -1,14 +1,17 @@
 <?php
-if (isset($_SESSION["userInWeb"])) session_start();
+session_start();
+error_reporting(0);
 //session_destroy();
 $con = mysqli_connect("localhost", "root", "", "typing");
 $check = true;
 $firstname = "";
 $lastname = "";
 $email = "";
+if (isset($_SESSION["e"])) $email = $_SESSION["e"];
 $username = "";
 $md5password = "";
 $code = 0;
+if (isset($_SESSION["otp"])) $code = $_SESSION["otp"];
 $password = "";
 $re_password = "";
 $otp = "";
@@ -49,6 +52,7 @@ if (isset($_POST["dangky"])) {
         $_SESSION["ls"] = $lastname;
         $_SESSION["pass"] = $password;
         $_SESSION["e"] = $email;
+        $_SESSION["count"] = 0;
         header("location: ../html/otp.php");
     }
 }
@@ -60,7 +64,7 @@ if (isset($_POST["forgotPassword"])) {
     $sender = "From: ah09program@gmail.com";
     mail($email, $subject, $message, $sender);
     $_SESSION["otp"] = $code;
-    $_SESSION["email"] = $email;
+    $_SESSION["e"] = $email;
     $_SESSION["count"] = 0;
 }
 if (isset($_POST["forgotOTP"])) {
@@ -74,7 +78,7 @@ if (isset($_POST["forgotOTP"])) {
     }
     if ($count > 4) {
         $_SESSION["otp"] = NULL;
-        $_SESSION["email"] = NULL;
+        $_SESSION["e"] = NULL;
         header("location: ../html/Trangchu.php");
     }
     if (count($erro) == 0) {
@@ -86,7 +90,7 @@ if (isset($_POST["forgotOTP"])) {
 if (isset($_POST["changePassword"])) {
     $password = $_POST["password"];
     $re_password = $_POST["re_password"];
-    $email = $_SESSION["email"];
+    $email = $_SESSION["e"];
     if ($password !== $re_password) {
         $erro['re_password'] = "Mật khẩu nhập lại không khớp";
         $check = false;
@@ -96,11 +100,10 @@ if (isset($_POST["changePassword"])) {
         $update = "UPDATE user SET password = '$md5password' WHERE email = '$email'";
         $con->query($update);
         header("location: ../html/dangnhap.php");
-        $_SESSION["email"] = NULL;
+        $_SESSION["e"] = NULL;
     }
 }
 if (isset($_POST["active"])) {
-
     $otp = $_POST["otp"];
     $code = $_SESSION["otp"];
     $firstname = $_SESSION["fi"];
@@ -109,12 +112,13 @@ if (isset($_POST["active"])) {
     $username = $_SESSION["user"];
     $md5password = md5($_SESSION["pass"]);
     if ($code != $otp) {
-        $erro['otp'] = "Mã otp không đúng";
-        $count++;
+        $erro['otp'] = "Mã OTP không đúng";
+        $count = $_SESSION["count"] + 1;
+        $_SESSION["count"] = $count;
     }
-    if ($count > 2) {
-        echo '<script>alert("Mã OTP đã hết hạn");</script>';
+    if ($count > 4) {
         $_SESSION["otp"] = NULL;
+        $_SESSION["e"] = NULL;
         header("location: ../html/Trangchu.php");
     }
     if (count($erro) == 0) {
