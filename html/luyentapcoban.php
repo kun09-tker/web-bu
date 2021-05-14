@@ -1,7 +1,6 @@
 <?php
 session_start();
 error_reporting(0);
-require "../php/acceptLesson.php";
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,7 +11,6 @@ require "../php/acceptLesson.php";
     <link rel="stylesheet" type="text/css" href="../css/thanh-menu.css?v=<?php echo time() ?>" />
     <link rel="stylesheet" href="../css/NutHang.css?v=<?php echo time() ?>">
     <link rel="stylesheet" href="../css/footer.css?v=<?php echo time() ?>">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css?v=<?php echo time() ?>">
 </head>
 
 <body>
@@ -57,7 +55,7 @@ require "../php/acceptLesson.php";
                     <div class="hangpg__card-content">
                         <span class="content-number">2</span>
                         <div class="content-title">
-                            <p style="margin: unset ;">Space Bar</p>
+                            <p style="margin: unset ;">Phím Space</p>
                             <p1 style="margin: unset ;">Dùng ngón cái</p1>
                         </div>
                     </div>
@@ -159,7 +157,7 @@ require "../php/acceptLesson.php";
                     <div class="hangpg__card-content">
                         <span class="content-number">12</span>
                         <div class="content-title">
-                            <p style="margin: unset ;">phím e & i</p>
+                            <p style="margin: unset ;">Phím e & i</p>
                             <p1 style="margin: unset ;">Dùng ngón giữa trái và phải
                             </p1>
                         </div>
@@ -169,7 +167,7 @@ require "../php/acceptLesson.php";
                     <div class="hangpg__card-content">
                         <span class="content-number">13</span>
                         <div class="content-title">
-                            <p style="margin: unset ;">phím w & o</p>
+                            <p style="margin: unset ;">Phím w & o</p>
                             <p1 style="margin: unset ;">Dùng ngón áp út trái và phải</p1>
                         </div>
                     </div>
@@ -214,7 +212,7 @@ require "../php/acceptLesson.php";
                     <div class="hangpg__card-content">
                         <span class="content-number">18</span>
                         <div class="content-title">
-                            <p style="margin: unset ;">phím t & y</p>
+                            <p style="margin: unset ;">Phím t & y</p>
                             <p1 style="margin: unset ;">Dùng ngón trỏ trái và phải</p1>
                         </div>
                     </div>
@@ -251,7 +249,7 @@ require "../php/acceptLesson.php";
                         <span class="content-number">22</span>
                         <div class="content-title">
                             <p style="margin: unset ;">Ôn tập tổng hợp</p>
-                            <p1 style="margin: unset ;">Hàng trên và hang dưới</p1>
+                            <p1 style="margin: unset ;">Hàng trên và hàng dưới</p1>
                         </div>
                     </div>
                 </a>
@@ -270,7 +268,7 @@ require "../php/acceptLesson.php";
                     <div class="hangpg__card-content">
                         <span class="content-number">24</span>
                         <div class="content-title">
-                            <p style="margin: unset ;">phím c & ,</p>
+                            <p style="margin: unset ;">Phím c & ,</p>
                             <p1 style="margin: unset ;">Dùng ngón giữa trái và phải
                             </p1>
                         </div>
@@ -280,7 +278,7 @@ require "../php/acceptLesson.php";
                     <div class="hangpg__card-content">
                         <span class="content-number">25</span>
                         <div class="content-title">
-                            <p style="margin: unset ;">phím x & .</p>
+                            <p style="margin: unset ;">Phím x & .</p>
                             <p1 style="margin: unset ;">Dùng ngón áp út trái và phải</p1>
                         </div>
                     </div>
@@ -325,7 +323,7 @@ require "../php/acceptLesson.php";
                     <div class="hangpg__card-content">
                         <span class="content-number">30</span>
                         <div class="content-title">
-                            <p style="margin: unset ;">phím b & n</p>
+                            <p style="margin: unset ;">Phím b & n</p>
                             <p1 style="margin: unset ;">Dùng ngón trỏ trái và phải</p1>
                         </div>
                     </div>
@@ -344,7 +342,7 @@ require "../php/acceptLesson.php";
                         <span class="content-number">32</span>
                         <div class="content-title">
                             <p style="margin: unset ;">Tay trái</p>
-                            <p1 style="margin: unset ;">Hàng trên, hàng giữa và hàng dưới</p1>
+                            <p1 style="margin: unset ;">Hàng trên, giữa và dưới</p1>
                         </div>
                     </div>
                 </a>
@@ -353,7 +351,7 @@ require "../php/acceptLesson.php";
                         <span class="content-number">33</span>
                         <div class="content-title">
                             <p style="margin: unset ;">Tay phải</p>
-                            <p1 style="margin: unset ;">Hàng trên, hàng giữa và hàng dưới</p1>
+                            <p1 style="margin: unset ;">Hàng trên, giữa và dưới</p1>
                         </div>
                     </div>
                 </a>
@@ -362,7 +360,7 @@ require "../php/acceptLesson.php";
                         <span class="content-number">34</span>
                         <div class="content-title">
                             <p style="margin: unset ;">Ôn tập tổng hợp</p>
-                            <p1 style="margin: unset ;">Hàng trên, hàng giữa và hàng dưới</p1>
+                            <p1 style="margin: unset ;">Hàng trên, giữa và dưới</p1>
                         </div>
                     </div>
                 </a>
@@ -423,6 +421,6 @@ require "../php/acceptLesson.php";
     </div>
 </body>
 <script src='../js/jquery.js?v=<?php echo time() ?>'></script>
-<script src="../js/acceptLessonBasic.js?php echo time() ?>"></script>
+<script src="../js/acceptLesson.js?v=<?php echo time() ?>"></script>
 
 </html>

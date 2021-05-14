@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .hangpg__card{
-    width: 23%;
+    width: 30%;
     height: 80px;   
     display: flex;
     justify-content: center;
@@ -15,11 +15,12 @@
     margin-right: 20px;
 }
 .hangpg__card-content{
+    width: 90%;
     display: flex;
     align-items: center; 
 }
 .hangpg__card-content-title{
-    width: 1000%;
+    width: 100%;
     display: flex;
     align-items: center;
     color: #327a7afd;
@@ -34,6 +35,7 @@
     border-radius: 48%;
 }
 .content-title{
+    width: 100%;
     display: inline-block;
     text-decoration: none;
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -61,12 +63,33 @@
     font-weight: 500;
 }
 .content-title p{
+    width: 100%;
     font-size: 14px;
 }
 .content-title p1{
+    width: 100%;
     color: rgb(134, 134, 134);
     font-weight: 500;
     font-size: small;
+}
+.myProgress {
+    display: flex;
+    margin-top: -10px;
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 50px;
+}
+.acc{
+    color:black;
+    font-size: 10px;
+}  
+.myBar {
+    display: flex;
+    width: 0%;
+    height: 5px;
+    background-color: #04AA6D;
+    align-items: center;
+    border-radius: 50px;
 }
 .btn,
 .btn:link,
@@ -117,7 +140,7 @@
         width: 100vw; 
     }
     .hangpg__card{
-        width: 60%;
+        width: 50%;
     }
     .hangpg h1{
         text-align: center;

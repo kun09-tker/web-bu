@@ -8,10 +8,17 @@ if (isset($_SESSION["userInWeb"])) {
     $select = $con->query("SELECT* From pass_lesson where id_user = '$id'");
     if ($select) {
         while ($row = mysqli_fetch_row($select)) {
-            array_push($lessonArr, $row[1]);
+            $lesson = $row[1];
+            if ($lesson > 33) $lesson = $lesson -  43;
+            array_push($lessonArr, array(
+                "lesson" => $row[1],
+                "time"   => $row[2],
+                "acc"   => $row[3],
+                "day"   => $row[4],
+            ));
         }
     }
     $js = json_encode($lessonArr);
+    // echo "hello world";
     echo $js;
 }
-

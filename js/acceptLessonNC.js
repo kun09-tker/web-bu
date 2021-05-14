@@ -1,0 +1,46 @@
+var lesson = document.querySelectorAll('.content-number-nc');
+const accepted = async () => {
+    await $.ajax({
+        type: 'POST',
+        url: "../php/acceptLesson.php",
+        success: (data) => {
+            let array = JSON.parse(data);
+            for (let i = 0; i < array.length; i++) {
+                if (array[i].lesson > 33) {
+                    lesson[array[i].lesson - 34].style.backgroundColor = "green";
+                    lesson[array[i].lesson - 34].innerHTML = "&#x2714;";
+                }
+            }
+            var content_title = document.querySelectorAll(".content-title-nc");
+            for (let i = 0; i < content_title.length; i++) {
+                content_title[i].innerHTML += '<p class="acc">0%</p><div class="myProgress"><div class = "myBar"></div></div>';
+            }
+            var myBar = document.querySelectorAll(".myBar");
+            var accClass = document.querySelectorAll(".acc");
+            for (let i = 0; i < array.length; i++) {
+                if (array[i].lesson > 33) {
+                    let acc = array[i].acc;
+                    let myBar_i = myBar[array[i].lesson - 34];
+                    let accClass_i = accClass[array[i].lesson - 34];
+                    myBar_i.style.width = acc + '%';
+                    accClass_i.innerHTML = acc + '%';
+                    if (acc < 30) {
+                        myBar_i.style.backgroundColor = "red";
+                        accClass_i.style.color = "red";
+                    }
+                    else if (acc < 80) {
+                        myBar_i.style.backgroundColor = "orange";
+                        accClass_i.style.color = "orange";
+                    }
+                    else {
+                        myBar_i.style.backgroundColor = "green";
+                        accClass_i.style.color = "green";
+                    }
+                }
+            }
+        }
+    });
+}
+accepted();
+
+

@@ -4,20 +4,38 @@ const accepted = async () => {
         url: "../php/acceptLesson.php",
         success: (data) => {
             let array = JSON.parse(data);
-            if (array.includes(numberLesson.textContent)) {
-                document.querySelectorAll('.accept')[1].style.visibility = 'visible';
+            for (let i = 0; i < array.length; i++) {
+                if (array[i].lesson.includes(numberLesson.textContent)) {
+                    document.querySelectorAll('.accept')[1].style.visibility = 'visible';
+                }
             }
         }
     });
 }
-
-
-
+function noScroll() {
+    window.scrollTo(0, 0);
+}
+var target = "BODY";
+document.body.onclick = function (e) {
+    target = e.target.nodeName;
+    if (target == "BODY") window.removeEventListener("scroll", noScroll);
+    console.log(target);
+};
+window.onkeydown = (e) => {
+    if (target != "BODY") {
+        window.addEventListener('scroll', noScroll);
+    }
+    else {
+        window.removeEventListener("scroll", noScroll);
+        return !e.keyCode;
+    }
+}
 var beepOne = new Audio();
 beepOne.src = "../public/press.mp3";
 img = document.querySelector(".content__img")
 let a = document.querySelector("#lesson").textContent;
 let numberLesson = document.querySelector('#numberLesson');
+
 let none = document.querySelectorAll(".none");
 if (numberLesson.textContent <= 33) {
     none[0].classList.add('active');

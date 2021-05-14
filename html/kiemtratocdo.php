@@ -1,6 +1,6 @@
 <?php
- session_start();
- error_reporting(0);
+session_start();
+error_reporting(0);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <div id="body">
+    <header id="body">
         <?php
         include './menu.php'
         ?>
@@ -35,7 +35,9 @@
         </script>
         <div class="hangpg">
             <div class="container">
-                <h1>Kiểm tra tốc độ đánh máy</h1>
+                <h1>Kiểm tra tốc độ đánh máy </h1>
+                <button class="type-btn" id="data">Bộ test</button>
+                <div class="data" style="margin-left: 0.25rem;">...</div>
                 <div class="card">
                     <div class="card-body">
                         <section id="word-section">
@@ -131,8 +133,20 @@
                 <span class="copyright">© 2021</span>
             </div>
         </footer>
-    </div>
+    </header>
+    <script src='../js/jquery.js?v=<?php echo time() ?>'></script>
     <script src="../js/kiemtratocdo.js?v=<?php echo time() ?>"></script>
+    <script>
+        document.onclick = (e) => {
+            var find = e.target;
+            while (find.nodeName != "HEADER") {
+                find = find.parentElement;
+            }
+            if (find.id == "body") {
+                document.querySelector('.container_list').style.display = 'none';
+            }
+        }
+    </script>
 </body>
 
 </html>
