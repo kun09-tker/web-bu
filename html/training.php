@@ -58,7 +58,8 @@ require "../php/lesson.php";
                 <div class="button"><a href="<?php echo $url_next ?>">Next</a></div>
             </div>
         </div>
-        <div class="quiz-window">
+    </div>
+    <div class="ranking">
             <div class="quiz-window-header">
                 <div class="quiz-window-title">Bảng xếp hạng</div>
                 <button class="quiz-window-close">&times;</button>
@@ -72,14 +73,13 @@ require "../php/lesson.php";
                         <li class="guiz-awards-header-exactly">Độ chính xác</li>
                         <li class="guiz-awards-header-time">Thời gian</li>
                         <li class="guiz-awards-header-day">Ngày</li>
-
                     </ul>
                     <ul class="guiz-awards-row guiz-awards-row-even">
                         <li class="guiz-awards-star"><span class="star goldstar"></span></li>
                         <li class="guiz-awards-name">Golden Star
-                            <div class="guiz-awards-subtitle">90-100% correct answers</div>
+                        <div class="guiz-awards-subtitle">90-100% correct answers</div>
                         </li>
-                        <li class="guiz-awards-user">mồn lèo</li>
+                        <li class="guiz-awards-user">thiên xạ bặn chim </li>
                         <li class="guiz-awards-exactly">100%</li>
                         <li class="guiz-awards-time">12s</li>
                         <li class="guiz-awards-day">12-10-2020</li>
@@ -133,10 +133,8 @@ require "../php/lesson.php";
                         <li class="guiz-awards-day"><span class="null"></span></li>
                     </ul>
                 </div>
-                <!-- <div class="guiz-awards-buttons"><button class="guiz-awards-but-back"><i class="fa fa-angle-left"></i> Back</button></div> -->
             </div>
-        </div>
-    </div>
+            </div> <div class="quiz-window"></div>
     <script src='../js/jquery.js?v=<?php echo time() ?>'></script>
     <script src='../js/training.js?v=<?php echo time() ?>'></script>
 </body>

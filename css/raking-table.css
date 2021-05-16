@@ -1,7 +1,7 @@
 * {box-sizing: border-box;}
 *:hover, *:focus {outline:0}
 html {height: 100%;}
-body {
+body{
   position: relative;
   height: 100%;
   background: rgba(0,0,0,.3);
@@ -30,7 +30,10 @@ button, select, input {
   position: relative;
 }
 .quiz-window-title {
-  font-size: 26px;
+  font-size: 36px;
+  color:white;
+  background-color: #14b0bf;
+  height: 56px;
 }
 .quiz-window-close {
   position: absolute;
@@ -175,4 +178,9 @@ button, select, input {
   margin-right: 20px;
   position: relative;
   top: 2px;
+}
+.ranking{
+  margin-left: 71px;
+  margin-top: 80px;
+  width: 1378.400px;
 }
