@@ -7,7 +7,7 @@ error_reporting(0);
 
 <head>
     <meta charset="utf-8">
-    <title>TYPING</title>
+    <title>Typing_Web-bu</title>
     <link rel="stylesheet" type="text/css" href="../css/thanh-menu.css?v=<?php echo time() ?>" />
     <link rel="stylesheet" href="../css/NutHang.css?v=<?php echo time() ?>">
     <link rel="stylesheet" href="../css/footer.css?v=<?php echo time() ?>">
@@ -33,7 +33,7 @@ error_reporting(0);
         <div class="hangpg">
             <div class="container">
                 <h1>Hàng phím giữa </h1>
-                <!-- <a href="training.php?*intro" class="hangpg__card btn btn-white btn-animated">
+                <!-- <a href="./training.php?*intro" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">1</span>
                         <div class="content-title">
@@ -41,7 +41,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a> -->
-                <a href="training.php?lesson=0" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=0" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">1</span>
                         <div class="content-title">
@@ -51,7 +51,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a>
-                <a href="training.php?lesson=1" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=1" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">2</span>
                         <div class="content-title">
@@ -60,7 +60,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a>
-                <a href="training.php?lesson=2" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=2" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">3</span>
                         <div class="content-title">
@@ -69,7 +69,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a>
-                <a href="training.php?lesson=3" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=3" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">4</span>
                         <div class="content-title">
@@ -78,7 +78,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a>
-                <a href="training.php?lesson=4" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=4" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">5</span>
                         <div class="content-title">
@@ -87,7 +87,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a>
-                <a href="training.php?lesson=5" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=5" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">6</span>
                         <div class="content-title">
@@ -96,7 +96,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a>
-                <a href="training.php?lesson=6" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=6" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">7</span>
                         <div class="content-title">
@@ -105,7 +105,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a>
-                <a href="training.php?lesson=7" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=7" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">8</span>
                         <div class="content-title">
@@ -114,7 +114,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a>
-                <a href="training.php?lesson=8" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=8" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">9</span>
                         <div class="content-title">
@@ -123,7 +123,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a>
-                <a href="training.php?lesson=9" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=9" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">10</span>
                         <div class="content-title">
@@ -132,7 +132,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a>
-                <!-- <a href="training.php?*home" class="hangpg__card btn btn-white btn-animated">
+                <!-- <a href="./training.php?*home" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">12</span>
                         <div class="content-title">
@@ -143,7 +143,7 @@ error_reporting(0);
                 </a> -->
 
                 <h1>Hàng phím trên</h1>
-                <a href="training.php?lesson=10" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=10" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">11</span>
                         <div class="content-title">
@@ -153,7 +153,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a>
-                <a href="training.php?lesson=11" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=11" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">12</span>
                         <div class="content-title">
@@ -163,7 +163,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a>
-                <a href="training.php?lesson=12" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=12" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">13</span>
                         <div class="content-title">
@@ -172,7 +172,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a>
-                <a href="training.php?lesson=13" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=13" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">14</span>
                         <div class="content-title">
@@ -181,7 +181,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a>
-                <a href="training.php?lesson=14" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=14" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">15</span>
                         <div class="content-title">
@@ -190,7 +190,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a>
-                <a href="training.php?lesson=15" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=15" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">16</span>
                         <div class="content-title">
@@ -199,7 +199,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a>
-                <a href="training.php?lesson=16" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=16" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">17</span>
                         <div class="content-title">
@@ -208,7 +208,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a>
-                <a href="training.php?lesson=17" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=17" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">18</span>
                         <div class="content-title">
@@ -217,7 +217,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a>
-                <a href="training.php?lesson=18" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=18" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">19</span>
                         <div class="content-title">
@@ -226,7 +226,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a>
-                <a href="training.php?lesson=19" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=19" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">20</span>
                         <div class="content-title">
@@ -235,7 +235,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a>
-                <a href="training.php?lesson=20" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=20" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">21</span>
                         <div class="content-title">
@@ -244,7 +244,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a>
-                <a href="training.php?lesson=21" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=21" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">22</span>
                         <div class="content-title">
@@ -254,7 +254,7 @@ error_reporting(0);
                     </div>
                 </a>
                 <h1>Hàng phím dưới</h1>
-                <a href="training.php?lesson=22" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=22" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">23</span>
                         <div class="content-title">
@@ -264,7 +264,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a>
-                <a href="training.php?lesson=23" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=23" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">24</span>
                         <div class="content-title">
@@ -274,7 +274,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a>
-                <a href="training.php?lesson=24" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=24" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">25</span>
                         <div class="content-title">
@@ -283,7 +283,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a>
-                <a href="training.php?lesson=25" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=25" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">26</span>
                         <div class="content-title">
@@ -292,7 +292,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a>
-                <a href="training.php?lesson=26" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=26" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">27</span>
                         <div class="content-title">
@@ -301,7 +301,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a>
-                <a href="training.php?lesson=27" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=27" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">28</span>
                         <div class="content-title">
@@ -310,7 +310,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a>
-                <a href="training.php?lesson=28" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=28" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">29</span>
                         <div class="content-title">
@@ -319,7 +319,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a>
-                <a href="training.php?lesson=29" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=29" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">30</span>
                         <div class="content-title">
@@ -328,7 +328,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a>
-                <a href="training.php?lesson=30" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=30" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">31</span>
                         <div class="content-title">
@@ -337,7 +337,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a>
-                <a href="training.php?lesson=31" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=31" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">32</span>
                         <div class="content-title">
@@ -346,7 +346,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a>
-                <a href="training.php?lesson=32" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=32" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">33</span>
                         <div class="content-title">
@@ -355,7 +355,7 @@ error_reporting(0);
                         </div>
                     </div>
                 </a>
-                <a href="training.php?lesson=33" class="hangpg__card btn btn-white btn-animated">
+                <a href="./training.php?lesson=33" class="hangpg__card btn btn-white btn-animated">
                     <div class="hangpg__card-content">
                         <span class="content-number">34</span>
                         <div class="content-title">
@@ -393,19 +393,7 @@ error_reporting(0);
                             <p><a href="./kiemtratocdo.php" class="link-menu" title="Cuộc thi">Kiểm tra tốc độ</a></p>
                             <p><a href="./trochoi.php" class="link-menu" title="Trò chơi">Trò chơi</a></p>
                         </div>
-                        <div class="col-xs-12 col-sm-4 col-md-2 about footer-column">
-                            <h4>Thông tin</h4>
-                            <p><a href="/sharing" class="link-menu" title="Chia sẻ">Chia sẻ</a></p>
-                            <p><a href="/aboutus" title="Về chúng tôi">Về chúng tôi</a></p>
-                            <p><a href="/terms" title="Điều khoản sử dụng">Điều khoản sử dụng</a></p>
-                        </div>
-                        <div class="col-xs-12 col-sm-4 col-md-2 help footer-column">
-                            <h4>Trợ giúp</h4>
-                            <p><a href="/help" title="Hỗ trợ">Hỗ trợ</a></p>
-                            <p><a href="/discussion" title="Thảo luận">Thảo luận</a></p>
-                            <p><a href="mailto:support@codelearn.io" title="Liên hệ với chúng tôi">Liên hệ với chúng
-                                    tôi</a></p>
-                        </div>
+                       
                     </div>
                 </div>
             </div>

@@ -13,7 +13,7 @@ require "../php/xuly.php";
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../css/thanh-menu.css?v=<?php echo time() ?>">
 	<link rel="stylesheet" href="../css/dangnhap.css?v=<?php echo time() ?>">
-	<title>TYPING</title>
+	<title>Typing_Web-bu</title>
 </head>
 
 <body>
@@ -38,7 +38,8 @@ require "../php/xuly.php";
 						</label>
 						<input type="password" class="form-control" placeholder="Password" autocomplete="off" name="password" id="password">
 						<div class="erro">
-							Thông tin đăng nhập không chính xác
+							<?php if (!isset($erro["lock"])) echo "Thông tin đăng nhập không chính xác";
+							else echo "Tài khoản bị khóa" ?>
 						</div>
 						<?php
 						if (!$check) echo

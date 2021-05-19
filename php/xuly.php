@@ -144,9 +144,26 @@ if (isset($_POST["dangnhap"])) {
 
     if (mysqli_num_rows($resultEmailOrUserCheck) > 0) {
         $info = mysqli_fetch_assoc($resultEmailOrUserCheck);
-        if ($info["password"] == md5($password)) {
+        if ($info["is_verified"] != "no verified") $erro["lock"] = "lock";
+        if ($info["password"] == md5($password) && $info["is_verified"] == "no verified") {
             $_SESSION["userInWeb"] = $info["id"];
             header("location: ../html/luyentapcoban.php");
         } else $check = false;
     } else $check = false;
+}
+if (isset($_POST["dong_gop"])) {
+    $firstname = $_POST["name"];
+    $lastname = $_POST["content"];
+    $username = $_SESSION["userInWeb"];
+    $list = $con->query("SELECT* From list_test where Name = '$firstname'");
+    if ($list->num_rows > 0) {
+        $erro['name'] = "Tên này đã tồn tại";
+        $check = false;
+    }
+    if (count($erro) == 0) {
+        $sign_up = "INSERT INTO list_test (id_user,Name,Content) 
+        value ('$username','$firstname','$lastname')";
+        $con->query($sign_up);
+        echo '<script>alert("Thành công!. Cám ơn bạn đã đóng góp");</script>';
+    }
 }

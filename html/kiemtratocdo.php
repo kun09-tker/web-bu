@@ -9,11 +9,11 @@ error_reporting(0);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiểm tra tốc độ</title>
+    <title>Typing_Web-bu</title>
     <link rel="stylesheet" href="../css/thanh-menu.css?v=<?php echo time() ?>">
     <link rel="stylesheet" href="../css/kiemtratocdo.css?v=<?php echo time() ?>">
     <link rel="stylesheet" href="../css/footer.css?v=<?php echo time() ?>">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css?v=<?php echo time() ?>">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css?v=<?php echo time() ?>"> -->
 </head>
 
 <body>
@@ -34,17 +34,30 @@ error_reporting(0);
             }
         </script>
         <div class="hangpg">
+            <p class="saveName" style="display: none;"><?php if (isset($_SESSION["saveName"])) {
+                                                            echo $_SESSION["saveName"];
+                                                        } else {
+                                                            echo "DF";
+                                                        } ?></p>
             <div class="container">
                 <h1>Kiểm tra tốc độ đánh máy </h1>
                 <button class="type-btn" id="data">Bộ test</button>
-                <div class="data" style="margin-left: 0.25rem;">...</div>
+                <div class="data" style="margin-left: 0.25rem;">Bộ test đang dùng: <?php if (isset($_SESSION["saveName"])) {
+                                                                                        echo $_SESSION["saveName"];
+                                                                                    } else {
+                                                                                        echo "DF";
+                                                                                    } ?></div>
                 <div class="card">
                     <div class="card-body">
                         <section id="word-section">
-
                         </section>
                     </div>
                 </div>
+                <label>Xuất hiện chữ ngẫu nhiên</label>
+                <label class="switch">
+                    <input class="check" type="checkbox" checked>
+                    <span class="slider"></span>
+                </label>
                 <section id="type-section">
                     <input id="typebox" name="typebox" type="text" tabindex="1" autofocus="" onkeydown="beepOne.play()">
                     <div id="timer" class="type-btn"><span>01:00</span></div>
@@ -52,32 +65,34 @@ error_reporting(0);
                         <span id="restart-symbol">↻</span>
                     </button>
                 </section>
-                <div id="auswertung-result" class="hide" style="display: block;">
-                    <h3>
-                        Result
-                    </h3>
-                    <table class="table table-striped" id="result-table">
-                        <tbody>
-                            <tr>
-                                <td id="wpm" class="name" colspan="2" title="Words per Minute: 1 word equals 5 keystrokes">
-                                    <strong class="strong1">72 WPM</strong>
-                                    <small>(words per minute)</small>
-                                </td>
-                            </tr>
-                            <tr id="keystrokes">
-                                <td class="name">Keystrokes</td>
-                                <td class="value"><small>(<span class="correct1"></span> | <span class="wrong"></span>)</small><span class="total"></span></td>
-                            </tr>
-                            <tr id="accuracy">
-                                <td class="name">Accuracy</td>
-                                <td class="value"> <strong class="strong2"></strong></td>
-                            </tr>
-                            <tr id="correct">
-                                <td class="name">Correct words</td>
-                                <td class="value"> <strong class="strong3"></strong></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="Result">
+                    <div id="auswertung-result" class="hide">
+                        <h3>
+                            Result
+                        </h3>
+                        <table class="table table-striped" id="result-table">
+                            <tbody>
+                                <tr>
+                                    <td id="wpm" class="name" colspan="2" title="Words per Minute: 1 word equals 5 keystrokes">
+                                        <strong class="strong1">72 WPM</strong>
+                                        <small>(words per minute)</small>
+                                    </td>
+                                </tr>
+                                <tr id="keystrokes">
+                                    <td class="name">Keystrokes</td>
+                                    <td class="value"><small>(<span class="correct1"></span> | <span class="wrong"></span>)</small><span class="total"></span></td>
+                                </tr>
+                                <tr id="accuracy">
+                                    <td class="name">Accuracy</td>
+                                    <td class="value"> <strong class="strong2"></strong></td>
+                                </tr>
+                                <tr id="correct">
+                                    <td class="name">Correct words</td>
+                                    <td class="value"> <strong class="strong3"></strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -109,19 +124,6 @@ error_reporting(0);
                             <p><a href="./kiemtratocdo.php" class="link-menu" title="Cuộc thi">Kiểm tra tốc độ</a></p>
                             <p><a href="./trochoi.php" class="link-menu" title="Trò chơi">Trò chơi</a></p>
                         </div>
-                        <div class="col-xs-12 col-sm-4 col-md-2 about footer-column">
-                            <h4>Thông tin</h4>
-                            <p><a href="/sharing" class="link-menu" title="Chia sẻ">Chia sẻ</a></p>
-                            <p><a href="/aboutus" title="Về chúng tôi">Về chúng tôi</a></p>
-                            <p><a href="/terms" title="Điều khoản sử dụng">Điều khoản sử dụng</a></p>
-                        </div>
-                        <div class="col-xs-12 col-sm-4 col-md-2 help footer-column">
-                            <h4>Trợ giúp</h4>
-                            <p><a href="/help" title="Hỗ trợ">Hỗ trợ</a></p>
-                            <p><a href="/discussion" title="Thảo luận">Thảo luận</a></p>
-                            <p><a href="mailto:support@codelearn.io" title="Liên hệ với chúng tôi">Liên hệ với chúng
-                                    tôi</a></p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -144,6 +146,7 @@ error_reporting(0);
             }
             if (find.id == "body") {
                 document.querySelector('.container_list').style.display = 'none';
+                window.location.reload();
             }
         }
     </script>

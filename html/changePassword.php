@@ -13,7 +13,7 @@ require "../php/xuly.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/thanh-menu.css?v=<?php echo time() ?>">
     <link rel="stylesheet" href="../css/dangnhap.css?v=<?php echo time() ?>">
-    <title>TYPING</title>
+    <title>Typing_Web-bu</title>
 </head>
 
 <body>

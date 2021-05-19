@@ -12,6 +12,43 @@ const accepted = async () => {
         }
     });
 }
+const raking = () => {
+    $.ajax({
+        type: 'POST',
+        data: {
+            type: 1,
+            lesson: numberLesson.textContent,
+        },
+        url: "../php/acceptLesson.php",
+        success: (data) => {
+            console.log(data)
+            let array = JSON.parse(data);
+            let Rank = `<ul class="guiz-awards-row guiz-awards-header">
+            <li class="guiz-awards-header-star">&nbsp;</li>
+            <li class="guiz-awards-header-name">Tên</li>
+            <li class="guiz-awards-header-user">Username</li>
+            <li class="guiz-awards-header-exactly">Độ chính xác</li>
+            <li class="guiz-awards-header-time">Thời gian</li>
+            <li class="guiz-awards-header-day">Ngày</li>
+             </ul>`;
+            for (let i = 0; i < array.length; i++) {
+                let Top = "nomalstar";
+                if (i == 0) Top = "goldstar";
+                else if (i == 1) Top = "silverstar";
+                else if (i == 2) Top = "bronzestar";
+                Rank += `<ul class="guiz-awards-row guiz-awards-header">
+                <li class="guiz-awards-star"><span class="star ${Top}"></span></li>
+                <li class="guiz-awards-name">${array[i].name}</li>
+                <li class="guiz-awards-user">${array[i].user} </li>
+                <li class="guiz-awards-exactly">${array[i].acc}%</li>
+                <li class="guiz-awards-time">${array[i].time}s</li>
+                <li class="guiz-awards-day">${array[i].day.substring(0, 10)}</li>
+            </ul>`;
+            }
+            document.querySelector(".gui-window-awards").innerHTML = Rank;
+        }
+    });
+}
 function noScroll() {
     window.scrollTo(0, 0);
 }
@@ -62,7 +99,7 @@ let acc = 0;
 let numberOfitem = a.length;
 
 accepted();
-
+raking();
 
 for (let i = 0; i < numberTest; i++) {
     rand += a[Math.floor(Math.random() * numberOfitem)];
@@ -84,10 +121,6 @@ text[0].classList.remove('span');
 window.addEventListener('keydown', (event) => {
     beepOne.play();
 })
-window.addEventListener('resize', () => {
-    location.reload();
-});
-
 // Time 
 let hours = 0;
 let minutes = 0;
@@ -142,7 +175,7 @@ let CountAcc = () => {
             displayAcc = (acc * 100).toString() + ".00";
         }
         else {
-            displayAcc = parseFloat((acc * 10000) / 100).toString();
+            displayAcc = parseFloat((acc * 10000) / 100).toFixed(2).toString();
         }
         document.querySelector('.acc').innerHTML = tmp + "&nbsp;&nbsp;" + displayAcc + " %";
     }
@@ -190,7 +223,7 @@ window.addEventListener('keypress', async (event) => {
                 data: {
                     lesson: numberLesson.textContent,
                     time: hours * 60 * 60 + minutes * 60 + seconds,
-                    acc: parseFloat((acc * 10000) / 100).toString(),
+                    acc: parseFloat((acc * 10000) / 100).toFixed(2).toString(),
                 },
                 success: (data) => {
                     console.log(data);

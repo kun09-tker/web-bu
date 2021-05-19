@@ -10,7 +10,7 @@ require "../php/xuly.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TYPING</title>
+    <title>Typing_Web-bu</title>
     <link rel="stylesheet" href="../css/thanh-menu.css?v=<?php echo time() ?>">
     <link rel="stylesheet" href="../css/NutHang.css?v=<?php echo time() ?>">
     <link rel="stylesheet" href="../css/footer.css?v=<?php echo time() ?>">

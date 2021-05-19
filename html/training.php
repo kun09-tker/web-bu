@@ -15,7 +15,7 @@ require "../php/lesson.php";
     <link href='//fonts.googleapis.com/css?family=Roboto:100,400,300?v=<?php echo time() ?>' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css?v=<?php echo time() ?>">
     <link rel="stylesheet" href="../css/raking-table.css?v=<?php echo time() ?>">
-    <title>Document</title>
+    <title>Typing_Web-bu</title>
 </head>
 
 <body>
@@ -60,81 +60,14 @@ require "../php/lesson.php";
         </div>
     </div>
     <div class="ranking">
-            <div class="quiz-window-header">
-                <div class="quiz-window-title">Bảng xếp hạng</div>
-                <button class="quiz-window-close">&times;</button>
+        <div class="quiz-window-header">
+            <div class="quiz-window-title">Bảng xếp hạng</div>
+        </div>
+        <div class="quiz-window-body">
+            <div class="gui-window-awards">
             </div>
-            <div class="quiz-window-body">
-                <div class="gui-window-awards">
-                    <ul class="guiz-awards-row guiz-awards-header">
-                        <li class="guiz-awards-header-star">&nbsp;</li>
-                        <li class="guiz-awards-header-name">Tên</li>
-                        <li class="guiz-awards-header-user">Username</li>
-                        <li class="guiz-awards-header-exactly">Độ chính xác</li>
-                        <li class="guiz-awards-header-time">Thời gian</li>
-                        <li class="guiz-awards-header-day">Ngày</li>
-                    </ul>
-                    <ul class="guiz-awards-row guiz-awards-row-even">
-                        <li class="guiz-awards-star"><span class="star goldstar"></span></li>
-                        <li class="guiz-awards-name">Golden Star
-                        <div class="guiz-awards-subtitle">90-100% correct answers</div>
-                        </li>
-                        <li class="guiz-awards-user">thiên xạ bặn chim </li>
-                        <li class="guiz-awards-exactly">100%</li>
-                        <li class="guiz-awards-time">12s</li>
-                        <li class="guiz-awards-day">12-10-2020</li>
-                    </ul>
-                    <ul class="guiz-awards-row">
-                        <li class="guiz-awards-star"><span class="star silverstar"></span></li>
-                        <li class="guiz-awards-name">Silver Star
-                            <div class="guiz-awards-subtitle">80-90% correct answers</div>
-                        </li>
-                        <li class="guiz-awards-user"><span class="null"></span></li>
-                        <li class="guiz-awards-exactly"><span class="null"></span></li>
-                        <li class="guiz-awards-time"><span class="null"></span></li>
-                        <li class="guiz-awards-day"><span class="null"></span></li>
-                    </ul>
-                    <ul class="guiz-awards-row guiz-awards-row-even">
-                        <li class="guiz-awards-star"><span class="star bronzestar"></span></li>
-                        <li class="guiz-awards-name">Bronze Star
-                            <div class="guiz-awards-subtitle">70-80% correct answers</div>
-                        </li>
-                        <li class="guiz-awards-user"></li>
-                        <li class="guiz-awards-exactly"></li>
-                        <li class="guiz-awards-time"></li>
-                        <li class="guiz-awards-day"></li>
-                    </ul>
-                    <ul class="guiz-awards-row">
-                        <li class="guiz-awards-star"><span class="star rhodiumstar"></span></li>
-                        <li class="guiz-awards-name">Rhodium Star
-                            <div class="guiz-awards-subtitle">60-70% correct answers</div>
-                        </li>
-                        <li class="guiz-awards-user"><span class="null"></span></li>
-                        <li class="guiz-awards-exactly"><span class="null"></span></li>
-                        <li class="guiz-awards-time"><span class="null"></span></li>
-                        <li class="guiz-awards-day"><span class="null"></span></li>
-                    </ul>
-                    <ul class="guiz-awards-row guiz-awards-row-even">
-                        <li class="guiz-awards-star"><span class="star platinumstar"></span></li>
-                        <li class="guiz-awards-name">Platinum Star
-                            <div class="guiz-awards-subtitle">50-60% correct answers</div>
-                        </li>
-                        <li class="guiz-awards-user"></li>
-                        <li class="guiz-awards-exactly"></li>
-                        <li class="guiz-awards-time"></li>
-                        <li class="guiz-awards-day"></li>
-                    </ul>
-                    <ul class="guiz-awards-row">
-                        <li class="guiz-awards-star"><span class="star"></span></li>
-                        <li class="guiz-awards-name">Star</li>
-                        <li class="guiz-awards-user"><span class="null"></span></li>
-                        <li class="guiz-awards-exactly"><span class="null"></span></li>
-                        <li class="guiz-awards-time"><span class="null"></span></li>
-                        <li class="guiz-awards-day"><span class="null"></span></li>
-                    </ul>
-                </div>
-            </div>
-            </div> <div class="quiz-window"></div>
+        </div>
+    </div>
     <script src='../js/jquery.js?v=<?php echo time() ?>'></script>
     <script src='../js/training.js?v=<?php echo time() ?>'></script>
 </body>
