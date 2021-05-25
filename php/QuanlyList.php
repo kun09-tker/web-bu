@@ -9,7 +9,7 @@ $con = mysqli_connect("localhost", "root", "", "typing");
 if ($type == 0) {
     $id = $_POST["req"];
     if ($id != "") {
-        $select = $con->query("SELECT* From list_test where Name = '%$id%'");
+        $select = $con->query("SELECT* From list_test where Name like '%$id%'");
         if ($select->num_rows == 0) {
             $select = $con->query("SELECT* From list_test where Content like '%$id%'");
             // echo $select->num_rows;
@@ -42,6 +42,8 @@ if ($type == 1) {
 if ($type == 2) {
     $idTest = $_POST["idTest"];
     $Content = $_POST["Content"];
-    $update = "UPDATE list_test SET Content='$Content' WHERE id = '$idTest'";
-    $con->query($update);
+    $update = "UPDATE list_test SET Content= \"$Content\" WHERE id = $idTest";
+    if (!mysqli_query($con, $update)) {
+        print_r(mysqli_error($con));
+    }
 }

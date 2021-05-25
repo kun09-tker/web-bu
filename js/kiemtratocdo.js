@@ -8,6 +8,7 @@ var dem = 0;
 var Name = document.querySelector(".saveName").textContent;
 var a;
 let timeRun;
+const Now = new Date();
 const getData = (N) => {
     const listTest = async (handleData) => {
         await $.ajax({
@@ -84,6 +85,8 @@ const getData = (N) => {
                         dem = 0;
                     }
                 }
+                //  console.log(y.value.trim()+"\n"+span[index].innerText);
+
                 if (y.value.trim() == span[index].innerText) {
                     //$(".span").eq(index).addClass('correct').removeClass('fomat');
                     wpm[2]++;
@@ -135,8 +138,21 @@ const getData = (N) => {
                     let car = document.querySelector(".card-body");
                     car.classList.add("final");
                     car.innerHTML = "Chúc mừng bạn vừa hoàn thành bài kiểm tra !!!"
-                }
+                    console.log("wpm:" + wpm[1] + ", acc:" + wpm[0]);
 
+                    $.ajax({
+                        type: "POST",
+                        url: '../php/luyentap.php',
+                        data: {
+                            wpm: wpm[1],
+                            acc: wpm[0],
+                            day: Now.getFullYear() + "-" + (Now.getMonth() + 1) + "-" + Now.getDate(),
+                        },
+                        success: (data) => {
+                            console.log(data);
+                        }
+                    });
+                }
             } else {
                 let currentTime = "00:" + leadingZero(timer[0]);
                 theTimer.innerHTML = currentTime;
@@ -182,10 +198,26 @@ document.querySelector("#data").onclick = () => {
             getData(Name);
             document.querySelector('.container_list').style.display = 'none';
             document.querySelector('.data').innerHTML = "Bộ test đang dùng: " + Name;
-            window.local.reload();
+            location.reload();
         });
     });
 }
 document.querySelector(".check").onclick = () => {
-    getData(Name);
+    let onlyTest = "false";
+    if (document.querySelector(".check").checked == true) {
+        onlyTest = "true";
+    };
+    console.log(onlyTest);
+    
+    const SaveOnlyTest = async () => {
+        await $.ajax({
+            type: "POST",
+            url: '../php/listTest.php',
+            data: {
+                saveOnlyTest: onlyTest,
+            },
+        });
+    }
+    SaveOnlyTest();
+    location.reload();
 }

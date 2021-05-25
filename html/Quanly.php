@@ -9,7 +9,7 @@ error_reporting(0);
     <meta charset="utf-8">
     <title>Typing_Web-bu</title>
     <link rel="stylesheet" type="text/css" href="../css/thanh-menu.css?v=<?php echo time() ?>" />
-    <link rel="stylesheet" href="../css/raking-table.css?v=<?php echo time() ?>">
+    <link rel="stylesheet" href="../css/Quanly.css?v=<?php echo time() ?>">
 </head>
 
 <body>
@@ -24,7 +24,7 @@ error_reporting(0);
     </div>
 
     <div class="ranking">
-        <div class="search"><label>Tìm kiếm: </label><input class="wordSearch" type="text" style="margin-top: -5px; margin-left: 10px;" placeholder="Nhập thông tin (họ, tên, username, email, wpm) " size="40"><button class="btn-search">Tìm</button></div>
+        <div class="search"><label>Tìm kiếm: </label><input class="wordSearch" type="text" style="margin-top: -5px; margin-left: 10px;" placeholder="Nhập thông tin (id, họ, tên, username, email, wpm, acc) " size="50"><button class="btn-search">Tìm</button></div>
         <div class="quiz-window-header">
             <div class="quiz-window-title">Danh sách người dùng</div>
         </div>

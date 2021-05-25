@@ -20,8 +20,7 @@ if (
     //print_r($check);
     if ($check->num_rows > 0) {
         print_r("update");
-        $update = "UPDATE pass_lesson SET time = '$time', accuracy = '$acc', day = '$date' where id_user = $id AND id_lesson = $lesson";
-        //$con->query(($update));
+        $update = "UPDATE pass_lesson SET time = '$time', accuracy = '$acc', day = '$date' where id_user = '$id' AND id_lesson = '$lesson'";
         if (!mysqli_query($con, $update)) {
             print_r(mysqli_error($con));
         }

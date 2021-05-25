@@ -13,7 +13,7 @@ require "../php/xuly.php";
         <li><a class="none" href="trochoi.php">Trò chơi</a></li>
         <li>
             <div class="Account">
-                <div class="Account_btn">Tài khoản</div>
+                <div class="Account_btn"><img src="../public/avt/0.jpg" class="avt"><label class="UserName" style="margin-left: 2px;"> Tài khoản</label></div>
                 <div class="Account_dropdown">
                     <a class="account_dropdown-item box notUser" href="./dangnhap.php">
                         <div class="item__icon">
@@ -64,10 +64,11 @@ require "../php/xuly.php";
 <?php
 if (isset($_SESSION["userInWeb"])) {
     $id = $_SESSION["userInWeb"];
-    $user = $con->query("SELECT username From user where id = '$id'");
+    $user = $con->query("SELECT* From user where id = '$id'");
     $user = mysqli_fetch_assoc($user);
 ?>
-    <p class="username" style="display:block"><?php echo $user["username"] ?></p>
+    <p class="username" style="display: block;"><?php echo $user["username"] ?></p>
+    <p class="userAvt" style="display: block;"><?php echo $user["avt"] ?></p>
 <?php
     echo
     '
@@ -76,7 +77,8 @@ if (isset($_SESSION["userInWeb"])) {
         document.querySelectorAll(".notUser")[0].style.display = "none";
         document.querySelectorAll(".User")[1].style.display = "flex";
         document.querySelectorAll(".notUser")[1].style.display = "none";
-        document.querySelector(".Account_btn").innerHTML = document.querySelector(".username").textContent;
+        document.querySelector(".UserName").innerHTML = document.querySelector(".username").textContent;
+        document.querySelector(".avt").setAttribute("src",document.querySelector(".userAvt").textContent);
     </script>
     ';
 }

@@ -11,24 +11,26 @@ const raking = (req) => {
 
             let array = JSON.parse(data);
             let Rank = `<ul class="guiz-awards-row guiz-awards-header">
-            <li class="guiz-awards-header-name">id</li>
+            <li class="guiz-awards-header-id">id</li>
             <li class="guiz-awards-header-name">Tên</li>
             <li class="guiz-awards-header-user">Username</li>
             <li class="guiz-awards-header-exactly">Email</li>
-            <li class="guiz-awards-header-time">WPM</li>
-            <li class="guiz-awards-header-day">Khóa</li>
+            <li class="guiz-awards-header-day">WPM</li>
+            <li class="guiz-awards-header-time">Accuracy</li>
+            <li class="guiz-awards-header-name">Khóa</li>
              </ul>`;
             let key = "";
             for (let i = 0; i < array.length; i++) {
                 if (array[i].check != "no verified") key = "checked";
                 else key = "";
                 Rank += `<ul class="guiz-awards-row guiz-awards-header">
-                <li class="guiz-awards-header-name">${array[i].id}</li>
+                <li class="guiz-awards-header-id">${array[i].id}</li>
                 <li class="guiz-awards-name">${array[i].ten}</li>
                 <li class="guiz-awards-user">${array[i].username} </li>
                 <li class="guiz-awards-exactly">${array[i].email}</li>
-                <li class="guiz-awards-time">${array[i].wpm}</li>
-                <li class="guiz-awards-header-day"><input class="Key" data_key="${array[i].id}" type="checkbox" ${key}></li>
+                <li class="guiz-awards-day">${array[i].wpm}</li>
+                <li class="guiz-awards-time">${array[i].acc}%</li>
+                <li class="guiz-awards-header-name"><input class="Key" data_key="${array[i].id}" type="checkbox" ${key}></li>
             </ul>`;
             }
             document.querySelector(".gui-window-awards").innerHTML = Rank;

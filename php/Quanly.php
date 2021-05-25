@@ -27,6 +27,10 @@ if ($type == 0) {
             $select = $con->query("SELECT* From user where id = '$id'");
             // echo $select->num_rows;
         }
+        if ($select->num_rows == 0 && is_numeric($id)) {
+            $select = $con->query("SELECT* From user where acc like '%$id%'");
+            // echo $select->num_rows;
+        }
     } else {
         $select = $con->query("SELECT* From user");
     }
@@ -39,6 +43,7 @@ if ($type == 0) {
                 "wpm"   => $row[7],
                 "check" => $row[4],
                 "id" => $row[0],
+                "acc" => $row[8],
             ));
         }
     }

@@ -26,6 +26,7 @@ error_reporting(0);
         <div class="search"><label>Tìm kiếm: </label><input class="wordSearch" type="text" style="margin-top: -5px; margin-left: 10px;" placeholder="Nhập thông tin (id_user, tên bài, 1 phần nội dung) " size="40"><button class="btn-search">Tìm</button></div>
         <div class="quiz-window-header">
             <div class="quiz-window-title">Danh sách đóng góp</div>
+            <button class="Done" >Cập nhật</button>
         </div>
         <div class="quiz-window-body">
             <div class="gui-window-awards">

@@ -8,6 +8,9 @@ const raking = (req) => {
         url: "../php/QuanlyList.php",
         success: (data) => {
             let array = JSON.parse(data);
+            let Content = [];
+            let id = [];
+            let idDelete = [];
             let Rank = `<ul class="guiz-awards-row guiz-awards-header">
             <li class="guiz-awards-header-name">Id người dùng</li>
             <li class="guiz-awards-header-name">Tên bài</li>
@@ -27,39 +30,72 @@ const raking = (req) => {
             const Key = document.querySelectorAll(".Key");
             for (let i = 0; i < Key.length; i++) {
                 Key[i].onclick = () => {
+                    document.querySelector(".Done").style.display = "flex";
                     let id = Key[i].getAttribute("data_key");
-                    $.ajax({
-                        type: 'POST',
-                        data: {
-                            type: 1,
-                            idChange: id,
-                        },
-                        url: "../php/QuanlyList.php",
-                    });
+                    if (Key[i].checked == true) {
+                        idDelete.push(id);
+                    }
+                    else {
+                        if (idDelete.includes(id)) {
+                            idDelete.splice(idDelete.indexOf(id), 1);
+                        }
+                    }
                 }
             }
             const inputContent = document.querySelectorAll(".inputContent");
             for (let i = 0; i < inputContent.length; i++) {
                 inputContent[i].oninput = () => {
+                    document.querySelector(".Done").style.display = "flex";
                     let content = inputContent[i].value;
                     let idTest = inputContent[i].getAttribute("data_id");
+                    if (id.includes(idTest)) {
+                        Content[id.indexOf(idTest)] = content;
+                    }
+                    else {
+                        id.push(idTest);
+                        Content.push(content);
+                    }
+                }
+
+            }
+            document.querySelector(".Done").onclick = () => {
+                for (let i = 0; i < id.length; i++) {
+                    // console.log(id[i] + "\n" + Content[i]);
+
                     $.ajax({
                         type: 'POST',
                         data: {
                             type: 2,
-                            idTest: idTest,
-                            Content: content,
+                            idTest: id[i],
+                            Content: Content[i],
                         },
                         url: "../php/QuanlyList.php",
-                        success: (data) => {
-                            console.log(data);
+                        // success: (data) => {
+                        //     console.log(data);
 
-                        }
+                        // }
                     });
                 }
+                //console.log(idDelete.length);
+
+                for (let i = 0; i < idDelete.length; i++) {
+                    $.ajax({
+                        type: 'POST',
+                        data: {
+                            type: 1,
+                            idChange: idDelete[i],
+                        },
+                        url: "../php/QuanlyList.php",
+                        // success: (data) => {
+                        //     console.log(data);
+
+                        // }
+                    });
+                }
+               location.reload();
             }
         }
-    });
+    })
 }
 raking(req);
 document.querySelector(".wordSearch").addEventListener("keyup", (e) => {

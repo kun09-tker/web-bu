@@ -25,10 +25,6 @@ button, select, input {
   overflow: hidden;
 }
 .quiz-window-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
   width: 98%;
   padding: 20px 0px;
   text-align:center;
@@ -82,22 +78,29 @@ button, select, input {
   text-align: center;
   padding: 20px 40px;
 }
-.guiz-awards-star, .guiz-awards-exactly,.guiz-awards-time, .guiz-awards-day,
+.guiz-awards-star, .guiz-awards-user, .guiz-awards-exactly, .guiz-awards-day,
 .guiz-awards-header-star, .guiz-awards-header-user, .guiz-awards-header-exactly{
   min-width: 54px;
   text-align: center;
   width: 15%;
 }
+.guiz-awards-time{
+    width: 9%;
+    min-width: 80px;
+    font-size: 18px;
+    line-height: 45px;
+}
 .guiz-awards-name {
-  width: 15%;
-  min-width: 160px;
-  font-size: 18px;
-  font-weight: normal;
-  padding-top: 3px;
+    width: 15%;
+    min-width: 80px;
+    font-size: 18px;
+    line-height: 45px;
 }
 .guiz-awards-header-name {
-  width: 15%;
-  min-width: 160px;
+    width: 15%;
+    min-width: 80px;
+    font-size: 18px;
+    line-height: 45px;
 }
 .guiz-awards-subtitle {
   color: #858585;
@@ -105,40 +108,39 @@ button, select, input {
   font-weight: 300;
 }
 .guiz-awards-user, .guiz-awards-exactly {
-   width: 53%;
+  width: 19%;
   min-width: 80px;
   font-size: 18px;
   line-height: 45px
 }
 .guiz-awards-header-user, .guiz-awards-header-exactly {
-    width: 53%;
-  min-width: 80px;
+    width: 19%;
+    min-width: 80px;
+    font-size: 18px;
+    line-height: 45px;
 }
-.inputContent{
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  text-align:justify;
-  padding: 10px 10px 10px 10px;
-  width: 100%;
-  height: 100%;
+.guiz-awards-day{
+    width: 15%;
+    min-width: 80px;
+    font-size: 18px;
+    line-height: 45px
 }
-.Done{
-  display: none;
-  margin-top: 10px;
-  justify-content: center;
-  width: 30%;
-  background-color: rgb(0, 255, 128);
-  cursor: pointer;
+.guiz-awards-header-time{
+    width: 8%;
+    min-width: 80px;
+    font-size: 18px;
+    line-height: 45px;
 }
-.guiz-awards-time, .guiz-awards-day {
-  width: 15%;
-  min-width: 80px;
-  font-size: 18px;
-  line-height: 45px
+.guiz-awards-header-id{
+    min-width: 80px;
+    font-size: 18px;
+    line-height: 45px;
 }
-.guiz-awards-header-time, .guiz-awards-header-day{
-  width: 15%;
-  min-width: 80px;
+.guiz-awards-header-day{
+    width: 16%;
+    min-width: 80px;
+    font-size: 18px;
+    line-height: 45px;
 }
 .guiz-awards-user .null, .guiz-awards-exactly .null,
 .guiz-awards-time .null, .guiz-awards-day .null {

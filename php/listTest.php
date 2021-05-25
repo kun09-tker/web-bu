@@ -13,3 +13,6 @@ if (
 if (isset($_POST["saveName"])) {
     $_SESSION["saveName"] = $_POST["saveName"];
 }
+if (isset($_POST["saveOnlyTest"])) {
+    $_SESSION["saveOnlyTest"] = $_POST["saveOnlyTest"];
+}

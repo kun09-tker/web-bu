@@ -4,7 +4,6 @@ error_reporting(0);
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +12,6 @@ error_reporting(0);
     <link rel="stylesheet" href="../css/thanh-menu.css?v=<?php echo time() ?>">
     <link rel="stylesheet" href="../css/kiemtratocdo.css?v=<?php echo time() ?>">
     <link rel="stylesheet" href="../css/footer.css?v=<?php echo time() ?>">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css?v=<?php echo time() ?>"> -->
 </head>
 
 <body>
@@ -55,7 +53,7 @@ error_reporting(0);
                 </div>
                 <label>Xuất hiện chữ ngẫu nhiên</label>
                 <label class="switch">
-                    <input class="check" type="checkbox" checked>
+                    <input class="check" type="checkbox" <?php if (isset($_SESSION["saveOnlyTest"]) && $_SESSION["saveOnlyTest"] == "true") echo "checked" ?>>
                     <span class="slider"></span>
                 </label>
                 <section id="type-section">
