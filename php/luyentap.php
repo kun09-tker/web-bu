@@ -31,6 +31,8 @@ if ($id != "") {
         }
     } else {
         print_r("insert");
+        print_r($acc);
+        print_r($wpm);
         // $update = "UPDATE pass_lesson SET password = '$md5password' WHERE email = '$email'";
         $insert = "INSERT INTO practice (id_user,day,wpm,acc) 
         value ('$id','$date','$wpm','$acc')";

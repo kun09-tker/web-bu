@@ -146,7 +146,7 @@ const getData = (N) => {
                         data: {
                             wpm: wpm[1],
                             acc: wpm[0],
-                            day: Now.getFullYear() + "-" + (Now.getMonth() + 1) + "-" + Now.getDate(),
+                            day: Now.getDate() + "/" + (Now.getMonth() + 1) + "/" + Now.getFullYear(),
                         },
                         success: (data) => {
                             console.log(data);
@@ -172,16 +172,121 @@ getData(Name);
 //======================== Bộ test ==========================//
 document.querySelector("#data").onclick = () => {
     $(".data").load("../html/listTest.php", () => {
+        const like = document.querySelector(".like");
+        const unlike = document.querySelector(".unlike");
+        const lb_like = document.querySelector(".lb_like");
+        const lb_dislike = document.querySelector(".lb_dislike");
+        let check_like = [];
+        let check_unlike = [];
+        let count_like = [];
+        let count_dislike = [];
+        let idList = [];
+        let index = 0;
+        const userInWeb = document.querySelector(".userInWeb");
+        const user_add = document.querySelector(".User-add");
+        const user_day = document.querySelector(".day");
+        const info = document.querySelector(".info");
         document.querySelector("#add").addEventListener('click', () => {
             var user = document.querySelector(".user").textContent;
             if (user == "") window.location.href = "./dangnhap.php";
             else window.location.href = "./addTest.php";
         })
+
         const option = document.querySelectorAll(".text-option");
         for (let i = 0; i < option.length; i++) {
+            check_like.push(0);
+            check_unlike.push(0);
+            idList.push(parseInt(option[i].getAttribute("data-id")));
+            count_like.push(parseInt(option[i].getAttribute("data-like")));
+            count_dislike.push(parseInt(option[i].getAttribute("data-dislike")));
+        }
+
+        const eva = document.querySelector(".eva");
+        if (eva.childElementCount > 0) {
+            const eva_data = document.querySelectorAll(".eva_data");
+            for (let i = 0; i < eva_data.length; i++) {
+                const data_id_list = idList.indexOf(parseInt(eva_data[i].getAttribute("data-id_list")));
+                const value = parseInt(eva_data[i].getAttribute("data-value"));
+                if (value == 1) check_like[data_id_list] = 1;
+                else if (value == 0) check_unlike[data_id_list] = 1;
+            }
+        }
+        for (let i = 0; i < option.length; i++) {
             option[i].onclick = () => {
+                const btn_like = like.childNodes[2];
+                const btn_unlike = unlike.childNodes[2];
+                index = i;
                 Name = option[i].getAttribute("data-name");
                 document.querySelector(".content-data").innerHTML = option[i].getAttribute("data-content");
+                info.style.display = "flex";
+                lb_like.innerHTML = count_like[i];
+                lb_dislike.innerHTML = count_dislike[i];
+                user_add.innerHTML = "Người đóng góp: " + option[i].getAttribute("data-user");
+                user_day.innerHTML = "Ngày đóng góp: " + option[i].getAttribute("data-day");
+                if (check_like[i] == 0) {
+                    btn_like.src = "../public/avt/likegray.png";
+                }
+                else {
+                    btn_like.src = "../public/avt/like.png";
+                }
+                if (check_unlike[i] == 0) {
+                    btn_unlike.src = "../public/avt/dislikegray.png";
+                }
+                else {
+                    btn_unlike.src = "../public/avt/dislike.png";
+                }
+            }
+        }
+        ////========================== Like or Dislike  ====================================//
+        like.onclick = () => {
+            const btn_like = like.childNodes[2];
+            const btn_unlike = unlike.childNodes[2];
+            if (userInWeb.textContent == "") {
+                window.location.href = "./dangnhap.php";
+            }
+            else {
+                if (check_like[index] == 0) {
+                    btn_like.src = "../public/avt/like.png";
+                    btn_unlike.src = "../public/avt/dislikegray.png";
+                    count_like[index] += 1;
+                    if (check_unlike[index] == 1) count_dislike[index] = Math.max(0, count_dislike[index] - 1);
+                    lb_like.innerHTML = count_like[index];
+                    lb_dislike.innerHTML = count_dislike[index];
+                    check_like[index] = 1;
+                    check_unlike[index] = 0;
+                }
+                else {
+                    btn_like.src = "../public/avt/likegray.png";
+                    count_like[index] = Math.max(0, count_like[index] - 1)
+                    lb_like.innerHTML = count_like[index];
+                    check_like[index] = 0;
+                }
+            }
+        }
+        unlike.onclick = () => {
+            const btn_like = like.childNodes[2];
+            const btn_unlike = unlike.childNodes[2];
+
+            if (userInWeb.textContent == "") {
+                window.location.href = "./dangnhap.php";
+            }
+            else {
+                if (check_unlike[index] == 0) {
+                    btn_unlike.src = "../public/avt/dislike.png";
+                    btn_like.src = "../public/avt/likegray.png";
+                    count_dislike[index] += 1;
+                    if (check_like[index] == 1) count_like[index] = Math.max(0, count_like[index] - 1);
+                    lb_like.innerHTML = count_like[index];
+                    lb_dislike.innerHTML = count_dislike[index];
+                    check_unlike[index] = 1;
+                    check_like[index] = 0;
+                }
+                else {
+                    btn_unlike.src = "../public/avt/dislikegray.png";
+                    count_dislike[index] = Math.max(0, count_dislike[index] - 1)
+                    lb_dislike.innerHTML = count_dislike[index];
+                    check_unlike[index] = 0;
+                }
             }
         }
         document.querySelector("#deloy").addEventListener('click', () => {
@@ -194,11 +299,50 @@ document.querySelector("#data").onclick = () => {
                     },
                 });
             }
+            const Eva = async (idList, value) => {
+                await $.ajax({
+                    type: "POST",
+                    url: '../php/Evaluate.php',
+                    data: {
+                        idList: idList,
+                        value: value,
+                    },
+                    success: (data) => {
+                        console.log(data);
+
+                    }
+                })
+            }
+            const UpdateEva = async (idList, countLike, countDisLike) => {
+                await $.ajax({
+                    type: "POST",
+                    url: '../php/Evaluate.php',
+                    data: {
+                        index: 1,
+                        countLike: countLike,
+                        countDisLike: countDisLike,
+                        idList: idList,
+                    },
+                    success: (data) => {
+                        console.log(data);
+                    }
+                })
+            }
+            for (let i = 0; i < idList.length; i++) {
+                UpdateEva(idList[i], count_like[i], count_dislike[i]);
+                if (check_like[i] == 1) {
+
+                    Eva(idList[i], 1);
+                }
+                if (check_unlike[i] == 1) {
+                    Eva(idList[i], 0);
+                }
+            }
             SaveName();
             getData(Name);
             document.querySelector('.container_list').style.display = 'none';
             document.querySelector('.data').innerHTML = "Bộ test đang dùng: " + Name;
-            location.reload();
+            // location.reload();
         });
     });
 }
@@ -208,7 +352,7 @@ document.querySelector(".check").onclick = () => {
         onlyTest = "true";
     };
     console.log(onlyTest);
-    
+
     const SaveOnlyTest = async () => {
         await $.ajax({
             type: "POST",

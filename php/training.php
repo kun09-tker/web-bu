@@ -5,17 +5,19 @@ $lesson = "";
 $id = "";
 $time = "";
 $acc = "";
-$date = date("Y/m/d");
+$date = "";
 if (
     isset($_POST["lesson"])
     && isset($_SESSION["userInWeb"])
     && isset($_POST["time"])
     && isset($_POST["acc"])
+    && isset($_POST["day"])
 ) {
     $lesson = $_POST["lesson"];
     $id = $_SESSION["userInWeb"];
     $time = $_POST["time"];
     $acc = $_POST["acc"];
+    $date = $_POST["day"];
     $check = $con->query("SELECT id_user From pass_lesson where id_user = '$id' AND id_lesson = '$lesson'");
     //print_r($check);
     if ($check->num_rows > 0) {

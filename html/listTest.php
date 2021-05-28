@@ -1,7 +1,11 @@
 <?php
 session_start();
 $con = mysqli_connect("localhost", "root", "", "typing");
-$data = $con->query("SELECT* From list_test");
+$data = $con->query("SELECT u.username,l.Name, l.Content, l.thich, l.khong_thich, l.day, l.id FROM list_test l,user u WHERE u.id = l.id_user ORDER BY l.thich DESC, l.khong_thich ASC");
+$user = isset($_SESSION["userInWeb"]) ? $_SESSION["userInWeb"] : "";
+if ($user != "") {
+    $eva = $con->query("SELECT* FROM evaluate WHERE id_user = '$user'");
+}
 ?>
 <style>
     .container_list {
@@ -44,6 +48,7 @@ $data = $con->query("SELECT* From list_test");
         margin-top: 10px;
         justify-content: center;
         width: 87%;
+        cursor: pointer;
     }
 
     .container_list .text-option:focus {
@@ -71,7 +76,7 @@ $data = $con->query("SELECT* From list_test");
 
     .container_list .content-data {
         display: flex;
-        height: 220px;
+        height: 184px;
         width: 94%;
         flex-wrap: wrap;
         overflow-y: scroll;
@@ -80,6 +85,39 @@ $data = $con->query("SELECT* From list_test");
         border: 2px solid #000;
         border-radius: 10px;
         box-shadow: 2px 2px 9px 2px rgba(0, 0, 0, 0.16);
+    }
+
+    .container_list .info {
+        display: none;
+        width: 93%;
+        justify-content: space-between;
+    }
+
+    .container_list .info_evaluate {
+        display: flex;
+        width: 22%;
+        margin-top: 8px;
+    }
+
+    .container_list .like>img {
+        transform: translateY(-3px);
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .container_list .unlike {
+        margin-left: 14%;
+        cursor: pointer;
+    }
+
+    .container_list .like {
+        cursor: pointer;
+    }
+
+    .container_list .unlike>img {
+        transform: translateY(-1px);
+        width: 1rem;
+        height: 1rem;
     }
 </style>
 
@@ -93,16 +131,45 @@ $data = $con->query("SELECT* From list_test");
                 if ($data) {
                     while ($row = mysqli_fetch_row($data)) {
                 ?>
-                        <button class="text-option" data-name="<?php echo $row[2] ?>" data-content="<?php echo $row[3] ?>"><?php echo $row[2] ?></button>
+                        <button class="text-option" data-user="<?php echo $row[0] ?>" data-name="<?php echo $row[1] ?>" data-content="<?php echo $row[2] ?>" data-like="<?php echo $row[3] ?>" data-dislike="<?php echo $row[4] ?> " data-day="<?php echo $row[5] ?>" data-id="<?php echo $row[6] ?>">
+                            <?php echo $row[1] ?>
+                        </button>
                 <?php
                     }
                 }
                 ?>
+                <div class="eva" style="display: block;">
+                    <?php
+                    if ($eva) {
+                        while ($row = mysqli_fetch_row($eva)) {
+                    ?>
+                            <p class="eva_data" data-id_list="<?php echo $row[1] ?>" data-value="<?php echo $row[2] ?>"></p>
+                    <?php
+                        }
+                    }
+                    ?>
+                </div>
             </div>
-            <div class="content">
+            <div class=" content">
                 <div class="content-title">Xem trước</div>
                 <div class="content-data"></div>
-                <button href="./addTest.php" class="text-add" id="deloy">Áp dụng</button>
+                <div class="info">
+                    <div class="info_user">
+                        <p class="userInWeb" style="display: none;"><?php if (isset($_SESSION["userInWeb"])) echo $_SESSION["userInWeb"];
+                                                                    else echo "" ?></p>
+                        <div class="User-add">Người đóng góp: </div>
+                        <div class="day">Ngày đóng góp: </div>
+                    </div>
+                    <div class="info_evaluate">
+                        <div class="like"><label class="lb_like">0</label>
+                            <img src="../public/avt/likegray.png">
+                        </div>
+                        <div class="unlike"><label class="lb_dislike">0</label>
+                            <img src="../public/avt/dislikegray.png">
+                        </div>
+                    </div>
+                </div>
+                <button class="text-add" id="deloy">Áp dụng</button>
             </div>
         </div>
     </header>

@@ -155,14 +155,15 @@ if (isset($_POST["dong_gop"])) {
     $firstname = $_POST["name"];
     $lastname = $_POST["content"];
     $username = $_SESSION["userInWeb"];
+    $today = date("j/n/Y");
     $list = $con->query("SELECT* From list_test where Name = '$firstname'");
     if ($list->num_rows > 0) {
         $erro['name'] = "Tên này đã tồn tại";
         $check = false;
     }
     if (count($erro) == 0) {
-        $sign_up = "INSERT INTO list_test (id_user,Name,Content) 
-        value ('$username','$firstname','$lastname')";
+        $sign_up = "INSERT INTO list_test (id_user,Name,Content,day) 
+        value ('$username','$firstname','$lastname','$today')";
         $con->query($sign_up);
         echo '<script>alert("Thành công!. Cám ơn bạn đã đóng góp");</script>';
     }

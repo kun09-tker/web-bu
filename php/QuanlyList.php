@@ -19,7 +19,7 @@ if ($type == 0) {
             // echo $select->num_rows;
         }
     } else {
-        $select = $con->query("SELECT* From list_test");
+        $select = $con->query("SELECT* From list_test ORDER BY thich DESC, khong_thich ASC");
     }
     if ($select) {
         while ($row = mysqli_fetch_row($select)) {
@@ -28,6 +28,9 @@ if ($type == 0) {
                 "ten"   => $row[2],
                 "content"   => $row[3],
                 "id"   => $row[0],
+                "day" => $row[6],
+                "like" => $row[4],
+                "dislike" => $row[5],
             ));
         }
     }

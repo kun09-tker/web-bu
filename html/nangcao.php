@@ -81,7 +81,7 @@ error_reporting(0);
             <a href="./training.php?lesson=40" class="hangpg__card btn btn-white btn-animated">
                 <div class="hangpg__card-content">
                     <span class="content-number-nc">41</span>
-                    <div class="content-title-nc">ôn tập viết hoa hàng giữa</div>
+                    <div class="content-title-nc">Ôn tập viết hoa hàng giữa</div>
                 </div>
             </a>
             <h1>Viết hoa hàng trên</h1>

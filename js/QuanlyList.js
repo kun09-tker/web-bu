@@ -13,16 +13,29 @@ const raking = (req) => {
             let idDelete = [];
             let Rank = `<ul class="guiz-awards-row guiz-awards-header">
             <li class="guiz-awards-header-name">Id người dùng</li>
-            <li class="guiz-awards-header-name">Tên bài</li>
+            <li class="guiz-awards-header-exactly">Tên bài</li>
             <li class="guiz-awards-header-user">Nội dung</li>
+            <li class="guiz-awards-header-start">Ngày đăng</li>
+            <li class="guiz-awards-header-time">Đánh giá</li>
             <li class="guiz-awards-header-day">Xóa</li>
              </ul>`;
             for (let i = 0; i < array.length; i++) {
                 ;
                 Rank += `<ul class="guiz-awards-row guiz-awards-header">
                 <li class="guiz-awards-header-name">${array[i].idUser}</li>
-                <li class="guiz-awards-name">${array[i].ten}</li>
-                <li class="guiz-awards-user"><textarea class="inputContent" data_id="${array[i].id}">${array[i].content}</textarea></li>
+                <li class="guiz-awards-header-exactly">${array[i].ten}</li>
+                <li class="guiz-awards-header-user"><textarea class="inputContent" data_id="${array[i].id}">${array[i].content}</textarea></li>
+                <li class="guiz-awards-header-start">${array[i].day}</li>
+                <li class="guiz-awards-header-time">                    
+                    <div class="info_evaluate">
+                        <div class="like">${array[i].like}
+                            <img src="../public/avt/like.png">
+                        </div>
+                        <div class="unlike">${array[i].dislike}
+                            <img src="../public/avt/dislike.png">
+                        </div>
+                    </div>
+                </li>
                 <li class="guiz-awards-header-day"><input class="Key" data_key="${array[i].id}" type="checkbox"></li>
             </ul>`;
             }
@@ -92,7 +105,7 @@ const raking = (req) => {
                         // }
                     });
                 }
-               location.reload();
+                location.reload();
             }
         }
     })

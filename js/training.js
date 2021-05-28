@@ -38,7 +38,7 @@ const raking = () => {
                 else if (i == 2) Top = "bronzestar";
                 Rank += `<ul class="guiz-awards-row guiz-awards-header">
                 <li class="guiz-awards-star"><span class="star ${Top}"></span></li>
-                <li class="guiz-awards-name">${array[i].name}</li>
+                <li class="guiz-awards-name"><img class="avt_rank" src="${array[i].avt}">${array[i].name}</li>
                 <li class="guiz-awards-user">${array[i].user} </li>
                 <li class="guiz-awards-exactly">${array[i].acc}%</li>
                 <li class="guiz-awards-time">${array[i].time}s</li>
@@ -97,7 +97,7 @@ let wrong = 0;
 let numberTest = 46;
 let acc = 0;
 let numberOfitem = a.length;
-
+const Now = new Date();
 accepted();
 raking();
 
@@ -224,6 +224,7 @@ window.addEventListener('keypress', async (event) => {
                     lesson: numberLesson.textContent,
                     time: hours * 60 * 60 + minutes * 60 + seconds,
                     acc: parseFloat((acc * 10000) / 100).toFixed(2).toString(),
+                    day: Now.getDate() + "/" + (Now.getMonth() + 1) + "/" + Now.getFullYear(),
                 },
                 success: (data) => {
                     console.log(data);

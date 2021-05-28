@@ -5,8 +5,6 @@ body{
   position: relative;
   height: 100%;
   background: rgba(0,0,0,.3);
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
   font-size: 17px;
   color:#777;
 }
@@ -78,47 +76,29 @@ button, select, input {
   text-align: center;
   padding: 20px 40px;
 }
-.guiz-awards-star, .guiz-awards-user, .guiz-awards-exactly,.guiz-awards-time, .guiz-awards-day,
-.guiz-awards-header-star, .guiz-awards-header-user, .guiz-awards-header-exactly{
-  min-width: 54px;
-  text-align: center;
+.guiz-awards-star,
+.guiz-awards-user,
+.guiz-awards-exactly,
+.guiz-awards-time,
+.guiz-awards-day,
+.guiz-awards-header-star,
+.guiz-awards-header-user, 
+.guiz-awards-header-exactly,
+.guiz-awards-name,
+.guiz-awards-header-name,
+.guiz-awards-user, 
+.guiz-awards-exact,
+.guiz-awards-header-time,
+.guiz-awards-header-day{
   width: 15%;
-}
-.guiz-awards-name {
-  width: 15%;
-  min-width: 160px;
+  min-width: 80px;
   font-size: 18px;
-  font-weight: normal;
-  padding-top: 3px;
-}
-.guiz-awards-header-name {
-  width: 15%;
-  min-width: 160px;
+  line-height: 45px
 }
 .guiz-awards-subtitle {
   color: #858585;
   font-size: 14px;
   font-weight: 300;
-}
-.guiz-awards-user, .guiz-awards-exactly {
-  width: 15%;
-  min-width: 80px;
-  font-size: 18px;
-  line-height: 45px
-}
-.guiz-awards-header-user, .guiz-awards-header-exactly {
-  width: 15%;
-  min-width: 80px;
-}
-.guiz-awards-time, .guiz-awards-day {
-  width: 15%;
-  min-width: 80px;
-  font-size: 18px;
-  line-height: 45px
-}
-.guiz-awards-header-time, .guiz-awards-header-day{
-  width: 15%;
-  min-width: 80px;
 }
 .guiz-awards-user .null, .guiz-awards-exactly .null,
 .guiz-awards-time .null, .guiz-awards-day .null {
@@ -133,232 +113,20 @@ button, select, input {
   background: #f7f7f7;  
 }
 .goldstar {
-  box-shadow:
-  2px 2px 0.5em rgba(122, 98, 0, 0.55),
-  inset 1px 1px 0 rgba(255, 255, 255, 0.9),
-  inset -1px -1px 0 rgba(0, 0, 0, 0.34)
-;
-border: 1px solid #deca73;
-background:
-  -moz-linear-gradient(
-  -72deg,
-  #ffde45,
-  #ffffff 16%,
-  #ffde45 21%,
-  #ffffff 24%,
-  #452100 27%,
-  #ffde45 36%,
-  #ffffff 45%,
-  #ffffff 60%,
-  #ffde45 72%,
-  #ffffff 80%,
-  #ffde45 84%,
-  #452100
-);
-background:
--webkit-linear-gradient(
-  -72deg,
-  #ffde45,
-  #ffffff 16%,
-  #ffde45 21%,
-  #ffffff 24%,
-  #452100 27%,
-  #ffde45 36%,
-  #ffffff 45%,
-  #ffffff 60%,
-  #ffde45 72%,
-  #ffffff 80%,
-  #ffde45 84%,
-  #452100
-);
-background:
--o-linear-gradient(
-  -72deg,
-  #ffde45,
-  #ffffff 16%,
-  #ffde45 21%,
-  #ffffff 24%,
-  #452100 27%,
-  #ffde45 36%,
-  #ffffff 45%,
-  #ffffff 60%,
-  #ffde45 72%,
-  #ffffff 80%,
-  #ffde45 84%,
-  #452100
-);
-background:
-linear-gradient(
-  -72deg,
-  #ffde45,
-  #ffffff 16%,
-  #ffde45 21%,
-  #ffffff 24%,
-  #452100 27%,
-  #ffde45 36%,
-  #ffffff 45%,
-  #ffffff 60%,
-  #ffde45 72%,
-  #ffffff 80%,
-  #ffde45 84%,
-  #452100
-);
+  background-image: url("../public/avt/ichi.png");
+  background-size:cover;
 }
 .silverstar {
-  color: rgba(0, 0, 0, 0.5);
-  text-decoration: none;
-  font-weight: bold;
-  text-shadow: 1px 1px 0 #ffffff;
-  box-shadow:
-    2px 2px 0.5em rgba(122, 122, 122, 0.55),
-    inset 1px 1px 0 rgba(255, 255, 255, 0.9),
-    inset -1px -1px 0 rgba(0, 0, 0, 0.34)
-  ;
-  border: 1px solid #dedede;
-  background:
-    -moz-linear-gradient(
-    -72deg,
-    #dedede,
-    #ffffff 16%,
-    #dedede 21%,
-    #ffffff 24%,
-    #454545 27%,
-    #dedede 36%,
-    #ffffff 45%,
-    #ffffff 60%,
-    #dedede 72%,
-    #ffffff 80%,
-    #dedede 84%,
-    #a1a1a1
-  );
-  background:
-  -webkit-linear-gradient(
-    -72deg,
-    #dedede,
-    #ffffff 16%,
-    #dedede 21%,
-    #ffffff 24%,
-    #454545 27%,
-    #dedede 36%,
-    #ffffff 45%,
-    #ffffff 60%,
-    #dedede 72%,
-    #ffffff 80%,
-    #dedede 84%,
-    #a1a1a1
-  );
-  background:
-  -o-linear-gradient(
-    -72deg,
-    #dedede,
-    #ffffff 16%,
-    #dedede 21%,
-    #ffffff 24%,
-    #454545 27%,
-    #dedede 36%,
-    #ffffff 45%,
-    #ffffff 60%,
-    #dedede 72%,
-    #ffffff 80%,
-    #dedede 84%,
-    #a1a1a1
-  );
-  background:
-  linear-gradient(
-    -72deg,
-    #dedede,
-    #ffffff 16%,
-    #dedede 21%,
-    #ffffff 24%,
-    #454545 27%,
-    #dedede 36%,
-    #ffffff 45%,
-    #ffffff 60%,
-    #dedede 72%,
-    #ffffff 80%,
-    #dedede 84%,
-    #a1a1a1
-  );
+  background-image: url("../public/avt/ni.png");
+  background-size:cover;
 }
 .bronzestar {
-  color: rgba(45, 00, 0, 0.55);
-  text-decoration: none;
-  font-weight: bold;
-  text-shadow: 1px 1px 0 #dea173;
-  box-shadow:
-    2px 2px 0.5em rgba(122, 55, 34, 0.55),
-    inset 1px 1px 0 rgba(255, 255, 255, 0.9),
-    inset -1px -1px 0 rgba(0, 0, 0, 0.5)
-  ;
-  border: 1px solid #dea173;
-  background:
-  -moz-linear-gradient(
-    -72deg,
-    #ca7345,
-    #ffdeca 16%,
-    #ca7345 21%,
-    #ffdeca 24%,
-    #a14521 27%,
-    #ca7345 36%,
-    #ffdeca 45%,
-    #ffdeca 60%,
-    #ca7345 72%,
-    #ffdeca 80%,
-    #ca7345 84%,
-    #732100
-  );
-  background:
-  -webkit-linear-gradient(
-    -72deg,
-    #ca7345,
-    #ffdeca 16%,
-    #ca7345 21%,
-    #ffdeca 24%,
-    #a14521 27%,
-    #ca7345 36%,
-    #ffdeca 45%,
-    #ffdeca 60%,
-    #ca7345 72%,
-    #ffdeca 80%,
-    #ca7345 84%,
-    #732100
-  );
-  background:
-  -o-linear-gradient(
-    -72deg,
-    #ca7345,
-    #ffdeca 16%,
-    #ca7345 21%,
-    #ffdeca 24%,
-    #a14521 27%,
-    #ca7345 36%,
-    #ffdeca 45%,
-    #ffdeca 60%,
-    #ca7345 72%,
-    #ffdeca 80%,
-    #ca7345 84%,
-    #732100
-  );
-  background:
-  linear-gradient(
-    -72deg,
-    #ca7345,
-    #ffdeca 16%,
-    #ca7345 21%,
-    #ffdeca 24%,
-    #a14521 27%,
-    #ca7345 36%,
-    #ffdeca 45%,
-    #ffdeca 60%,
-    #ca7345 72%,
-    #ffdeca 80%,
-    #ca7345 84%,
-    #732100
-  );
+  background-image: url("../public/avt/san.png");
+  background-size:cover;
 }
 .nomalstar {
-  border-color: #abacaa;
-  background:silver;  
+  background-image: url("../public/avt/other.png");
+  background-size:cover;;  
 }
 .guiz-awards-buttons {
   background: #fff;
@@ -389,10 +157,18 @@ linear-gradient(
   position: relative;
   top: 2px;
 }
+.avt_rank{
+  transform: translate(-6px, 8px);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
 .ranking{
   display: flex;
   width: 90vw;
-  max-width: 90vw;
+  min-width: 1000px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
