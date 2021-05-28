@@ -1,4 +1,3 @@
-
 var beepOne = new Audio();
 beepOne.src = "../public/press.mp3";
 var start = 0;

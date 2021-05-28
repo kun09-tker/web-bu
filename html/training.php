@@ -53,9 +53,9 @@ require "../php/lesson.php";
                 <div class="content-elip-shadow2"></div>
             </div>
             <div class="shapButton">
-                <div class="button"><a href="<?php echo $url_prev ?>">Previous</a></div>
-                <div class="button"><a href="<?php echo $url_again ?>">Again</a></div>
-                <div class="button"><a href="<?php echo $url_next ?>">Next</a></div>
+                <a href="<?php echo $url_prev ?>" class="button">Previous</a>
+                <a href="<?php echo $url_again ?>" class="button">Again</a>
+                <a href="<?php echo $url_next ?>" class="button">Next</a>
             </div>
         </div>
     </div>

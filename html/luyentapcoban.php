@@ -11,6 +11,7 @@ error_reporting(0);
     <link rel="stylesheet" type="text/css" href="../css/thanh-menu.css?v=<?php echo time() ?>" />
     <link rel="stylesheet" href="../css/NutHang.css?v=<?php echo time() ?>">
     <link rel="stylesheet" href="../css/footer.css?v=<?php echo time() ?>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
 </head>
 
 <body>
@@ -393,7 +394,16 @@ error_reporting(0);
                             <p><a href="./kiemtratocdo.php" class="link-menu" title="Cuộc thi">Kiểm tra tốc độ</a></p>
                             <p><a href="./trochoi.php" class="link-menu" title="Trò chơi">Trò chơi</a></p>
                         </div>
-                       
+                        <div class="col-xs-12 col-sm-4 col-md-2 about footer-column">
+                            <h4>Thông tin Developers</h4>
+                            <p><a href="" class="link-menu">Lê Tấn Lộc</a></p>
+                            <p><a href="">Huỳnh Mẫn Đạt</a></p>
+                            <p><a href="">Lê Văn Trung</a></p>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-2 help footer-column">
+                            <h4>CONTACTS US</h4>                            
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.6528258849626!2d106.681468153168!3d10.761217042784601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2fb4502ebd044212!2sHo%20Chi%20Minh%20City%20University%20of%20Education!5e0!3m2!1sen!2s!4v1621691175436!5m2!1sen!2s" width="280" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>

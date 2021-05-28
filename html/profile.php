@@ -11,10 +11,14 @@ require "../php/xuly.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/profile.css?v=<?php echo time() ?>">
+    <link rel="stylesheet" href="../css/thanh-menu.css?v=<?php echo time() ?>">
     <title>Typing_Web-bu</title>
 </head>
 
 <body>
+    <?php
+        include './menu.php'
+    ?>
     <div class="pro-name">
         <img src="../public/avt/0.jpg" class="avatar"></img>
         <input type="file" class="inputAvt">
