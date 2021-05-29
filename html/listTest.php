@@ -3,6 +3,7 @@ session_start();
 $con = mysqli_connect("localhost", "root", "", "typing");
 $data = $con->query("SELECT u.username,l.Name, l.Content, l.thich, l.khong_thich, l.day, l.id FROM list_test l,user u WHERE u.id = l.id_user ORDER BY l.thich DESC, l.khong_thich ASC");
 $user = isset($_SESSION["userInWeb"]) ? $_SESSION["userInWeb"] : "";
+$eva = "";
 if ($user != "") {
     $eva = $con->query("SELECT* FROM evaluate WHERE id_user = '$user'");
 }
@@ -140,7 +141,7 @@ if ($user != "") {
                 ?>
                 <div class="eva" style="display: block;">
                     <?php
-                    if ($eva) {
+                    if ($eva != "") {
                         while ($row = mysqli_fetch_row($eva)) {
                     ?>
                             <p class="eva_data" data-id_list="<?php echo $row[1] ?>" data-value="<?php echo $row[2] ?>"></p>
