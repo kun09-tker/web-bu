@@ -10,13 +10,14 @@ if ($type == 1) {
     $select = $con->query("SELECT u.first_name, u.last_name ,u.username, pl.time, pl.accuracy, pl.day, u.avt From pass_lesson pl, user u where pl.id_user =u.id AND pl.id_lesson = '$id'  ORDER BY time, accuracy");
     if ($select) {
         while ($row = mysqli_fetch_row($select)) {
+            $myfile = fopen($row[6], "r") or die("Unable to open file!");
             array_push($RankArr, array(
                 "name" => $row[0] . " " . $row[1],
                 "user" => $row[2],
                 "time"   => $row[3],
                 "acc"   => $row[4],
                 "day"   => $row[5],
-                "avt" => $row[6],
+                "avt" => fread($myfile, filesize($row[6])),
             ));
         }
     }

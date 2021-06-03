@@ -1,5 +1,7 @@
+
 const avt = document.querySelector(".avatar");
 const inputAvt = document.querySelector(".inputAvt");
+const idUser = document.querySelector(".idUser").textContent;
 inputAvt.addEventListener("change", () => {
     const file = inputAvt.files[0];
     if (file) {
@@ -12,9 +14,10 @@ inputAvt.addEventListener("change", () => {
                 data: {
                     type: 1,
                     avt: data,
+                    idUser: idUser,
                 },
                 url: "../php/UploadProfile.php",
-                success: (data)=>{
+                success: (data) => {
                     console.log(data);
                 }
             });

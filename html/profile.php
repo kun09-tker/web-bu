@@ -17,11 +17,13 @@ require "../php/xuly.php";
 
 <body>
     <?php
-        include './menu.php'
+    include './menu.php'
     ?>
     <div class="pro-name">
         <img src="../public/avt/0.jpg" class="avatar"></img>
         <input type="file" class="inputAvt">
+        <p class="idUser" style="display: none;"><?php if (isset($_SESSION["userInWeb"])) echo $_SESSION["userInWeb"];
+                                                    else echo "" ?></p>
         <h2>Name</h2>
         <div class="type">
             <div class="hoat-anh stamp">

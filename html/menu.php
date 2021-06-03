@@ -66,10 +66,12 @@ if (isset($_SESSION["userInWeb"])) {
     $id = $_SESSION["userInWeb"];
     $user = $con->query("SELECT* From user where id = '$id'");
     $user = mysqli_fetch_assoc($user);
+    $myfile = fopen($user["avt"], "r") or die("Unable to open file!");
 ?>
-    <p class="username" style="display: block;"><?php echo $user["username"] ?></p>
-    <p class="userAvt" style="display: block;"><?php echo $user["avt"] ?></p>
+    <p class="username" style="display: none;"><?php echo $user["username"] ?></p>
+    <p class="userAvt" style="display: none;"><?php echo fread($myfile, filesize($user["avt"])) ?></p>
 <?php
+    fclose($myfile);
     echo
     '
     <script>
