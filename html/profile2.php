@@ -102,7 +102,7 @@
                             </div>
                         </div>
                         <div id="cv-center" class="col-md-9 col-sm-12">
-                            <div id="setction-course" class="center-section">
+                            <div id="section-course" class="center-section">
                                 <h7>Hoạt động</h7>
                                 <div class="Luyentap">
                                     <h6>Luyện tập</h6>
@@ -131,7 +131,13 @@
                                             <?php for ($i = 1; $i <= 5; $i++) { ?>
                                                 <tr class="LuyenTaptr">
                                                     <?php for ($j = 2; $j <= 8; $j++) {
-                                                        echo '<td class="LuyenTaptd">';
+                                                        if($i==1 && $j==2){
+                                                            echo '<td class="LuyenTaptd LuyenTapColor"><div class="date">1/4</div><div class="WPM">174 wpm<br>87.23%</div></td>';
+                                                            
+                                                        }
+                                                        else{
+                                                            echo '<td class="LuyenTaptd">';
+                                                        }                                                        
                                                     }
                                                     ?>
                                                 </tr>
@@ -153,18 +159,15 @@
                                                         if ($i == 6 && $j == 5) break;
                                                         $dem++;
                                                         echo '<td class="Hoctaptd">';
-                                                        if($dem==1){
+                                                        if ($dem == 1) {
                                                             echo '<span class="color">';
                                                             echo "$dem";
                                                             echo '</span><div class="percent">99.23% <br> 11/12/2021</div> </td>';
-                                                        }
-                                                        else{
+                                                        } else {
                                                             echo '<span>';
                                                             echo "$dem";
                                                             echo '</span> </td>';
                                                         }
-                                                        
-                                                        
                                                     }
                                                     ?>
                                                 </tr>
@@ -197,6 +200,25 @@
                                     </div>
 
                                 </div>
+                            </div>
+                        </div>
+                        <div id="cv-right" class="col-md-3 col-sm-12">
+                            <h7>Đóng góp</h7>
+                            <div class="Baidonggop">
+                                <div class="TenBai">DF</div><br>
+                                <div>12/12/2021</div>
+                                <div class="likecount">0</div>
+                                <img src="../public/avt/like.png" alt="" class="like">
+                                <div class="dislikecount">0</div>
+                                <img src="../public/avt/dislike.png" alt="" class="dislike">
+                            </div>
+                            <div class="Baidonggop">
+                                <div class="TenBai">DF</div><br>
+                                <div>12/12/2021</div>
+                                <div class="likecount">0</div>
+                                <img src="../public/avt/like.png" alt="" class="like">
+                                <div class="dislikecount">0</div>
+                                <img src="../public/avt/dislike.png" alt="" class="dislike">
                             </div>
                         </div>
                     </div>
