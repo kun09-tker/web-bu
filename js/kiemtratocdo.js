@@ -288,6 +288,55 @@ document.querySelector("#data").onclick = () => {
                 }
             }
         }
+        const Eva = async (idList, value) => {
+            await $.ajax({
+                type: "POST",
+                url: '../php/Evaluate.php',
+                data: {
+                    idList: idList,
+                    value: value,
+                },
+                success: (data) => {
+                    console.log(data);
+
+                }
+            })
+        }
+        const UpdateEva = async (idList, countLike, countDisLike) => {
+            await $.ajax({
+                type: "POST",
+                url: '../php/Evaluate.php',
+                data: {
+                    index: 1,
+                    countLike: countLike,
+                    countDisLike: countDisLike,
+                    idList: idList,
+                },
+                success: (data) => {
+                    console.log(data);
+                }
+            })
+        }
+        document.onclick = (e) => {
+            var find = e.target;
+            while (find.nodeName != "HEADER") {
+                find = find.parentElement;
+            }
+            if (find.id == "body") {
+                document.querySelector('.container_list').style.display = 'none';
+                for (let i = 0; i < idList.length; i++) {
+                    UpdateEva(idList[i], count_like[i], count_dislike[i]);
+                    if (check_like[i] == 1) {
+
+                        Eva(idList[i], 1);
+                    }
+                    if (check_unlike[i] == 1) {
+                        Eva(idList[i], 0);
+                    }
+                }
+                window.location.reload();
+            }
+        }
         document.querySelector("#deloy").addEventListener('click', () => {
             const SaveName = async () => {
                 await $.ajax({
@@ -297,35 +346,6 @@ document.querySelector("#data").onclick = () => {
                         saveName: Name,
                     },
                 });
-            }
-            const Eva = async (idList, value) => {
-                await $.ajax({
-                    type: "POST",
-                    url: '../php/Evaluate.php',
-                    data: {
-                        idList: idList,
-                        value: value,
-                    },
-                    success: (data) => {
-                        console.log(data);
-
-                    }
-                })
-            }
-            const UpdateEva = async (idList, countLike, countDisLike) => {
-                await $.ajax({
-                    type: "POST",
-                    url: '../php/Evaluate.php',
-                    data: {
-                        index: 1,
-                        countLike: countLike,
-                        countDisLike: countDisLike,
-                        idList: idList,
-                    },
-                    success: (data) => {
-                        console.log(data);
-                    }
-                })
             }
             for (let i = 0; i < idList.length; i++) {
                 UpdateEva(idList[i], count_like[i], count_dislike[i]);
@@ -341,7 +361,7 @@ document.querySelector("#data").onclick = () => {
             getData(Name);
             document.querySelector('.container_list').style.display = 'none';
             document.querySelector('.data').innerHTML = "Bộ test đang dùng: " + Name;
-            // location.reload();
+            location.reload();
         });
     });
 }
@@ -350,8 +370,7 @@ document.querySelector(".check").onclick = () => {
     if (document.querySelector(".check").checked == true) {
         onlyTest = "true";
     };
-    console.log(onlyTest);
-
+    // console.log(onlyTest);
     const SaveOnlyTest = async () => {
         await $.ajax({
             type: "POST",

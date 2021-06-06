@@ -4,7 +4,7 @@ require "../php/xuly.php";
 <div class="menu">
     <ul>
         <li>
-            <a href=<?php if (isset($_SESSION["userInWeb"]) && $_SESSION["userInWeb"] == 42) echo "./Quanly.php";
+            <a href=<?php if (isset($_SESSION["userInWeb"]) && ($_SESSION["userInWeb"] == 42 || $_SESSION["userInWeb"] == 48)) echo "./Quanly.php";
                     else echo "./Trangchu.php" ?>><img id="logo" src="../public/614d9ae7c9d44f89ab228c8ae55d3e92.png"></a>
         </li>
         <li><a class="none" href="luyentapcoban.php">Cơ bản</a></li>
@@ -31,7 +31,7 @@ require "../php/xuly.php";
                             <label>Đăng ký</label>
                         </div>
                     </a>
-                    <a class="account_dropdown-item box User" style="display:none" href="./profile.php">
+                    <a class="account_dropdown-item box User" style="display:none" href="./profile2.php">
                         <div class="item__icon">
                             <img src="../public/home.png">
                         </div>

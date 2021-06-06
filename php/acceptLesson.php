@@ -19,6 +19,7 @@ if ($type == 1) {
                 "day"   => $row[5],
                 "avt" => fread($myfile, filesize($row[6])),
             ));
+            fclose($myfile);
         }
     }
     $jsr = json_encode($RankArr);
