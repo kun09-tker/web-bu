@@ -9,7 +9,7 @@ body{
 }
 .col-md-3 {
   width: 23%;
-  height: 929px;
+  height: 942px;
 }
 .container {
   width: 1427px;
@@ -260,7 +260,7 @@ h3 {
   border-radius: 3px;
   box-shadow: 0 5px 15px 0 #dedede;
   width: 743px;
-  height: 921px;
+  height: 934px;
 }
 .user-cv.container .col-md-9,
 .user-cv.container .col-sm-9 {
@@ -318,7 +318,7 @@ h6 {
 #cv-right{
     float:right;
     width: 20%;
-    height: 923px;
+    height: 933px;
     background-color: #d3fedc;
     padding: 10px 10px 0px 10px;
 }

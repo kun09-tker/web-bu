@@ -70,10 +70,10 @@
                                 </h3>
 
                                 <ul id="user-info-section">
-                                    <li><span><i class="cl-icon-envelope"><svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <li><span><a href="../html/kiemtratocdo.php" class="cl-icon-envelope"><svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                                </svg></i></span>
-                                        <span class="name">Huỳnh Mẫn Đạt</span><span class="pull-right"><i class="cl-icon-lock-alt"></i><i class="cl-icon-angle-down"></i></span>
+                                                </svg></a></span>
+                                        <span>Huỳnh Mẫn Đạt</span><span class="pull-right"><i class="cl-icon-lock-alt"></i><i class="cl-icon-angle-down"></i></span>
                                     </li>
                                     <li><span><i class="cl-icon-envelope"><svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -129,20 +129,103 @@
                                             </tr>
                                         </thead>
                                         <tbody class="LuyenTapTbody">
-                                            <?php for ($i = 1; $i <= 5; $i++) { ?>
-                                                <tr class="LuyenTaptr">
-                                                    <?php for ($j = 2; $j <= 8; $j++) {
-                                                        if ($i == 1 && $j == 2) {
-                                                            echo '<td class="LuyenTaptd LuyenTapColor"><div class="date">1/4</div><div class="WPM">174 wpm<br>87.23%</div></td>';
-                                                        } else {
-                                                            echo '<td class="LuyenTaptd">';
-                                                        }
-                                                    }
-                                                    ?>
-                                                </tr>
                                             <?php
+                                            # 1.Khoi tao cac bien can thiet
+                                            # Khoi tao cac bien thang ngay nam
+                                            $date = time();
+                                            $day = date('d', $date);
+                                            $month = date('n', $date);
+                                            $year = date('Y', $date);
+                                            $first_day = mktime(0, 0, 0, $month, 1, $year);
+                                            $title = date('F', $first_day); //january, febuary, march, april...
+                                            # 2.Hien thi cac ngay trong tuan
+                                            $day_of_week = date('D', $first_day);
+                                            switch ($day_of_week) {
+                                                case "Sun":
+                                                    $blank = 6;
+                                                    break;
+                                                case "Mon":
+                                                    $blank = 0;
+                                                    break;
+                                                case "Tue":
+                                                    $blank = 1;
+                                                    break;
+                                                case "Wed":
+                                                    $blank = 2;
+                                                    break;
+                                                case "Thu":
+                                                    $blank = 3;
+                                                    break;
+                                                case "Fri":
+                                                    $blank = 4;
+                                                    break;
+                                                case "Sat":
+                                                    $blank = 5;
+                                                    break;
+                                            }
+                                            //Dem so ngay trong thang hien tai
+                                            $days_in_month = cal_days_in_month(0, $month, $year);
+                                            
+                                            $day_count = 1; //ngay trong tuan
+                                            echo "<tr>";
+                                            while ($blank > 0) //vong lap tao o trong tuan dau
+                                            {
+                                                echo "<td></td>";
+                                                $blank = $blank - 1;
+                                                $day_count++;
+                                            }
+                                            #4.So ngay trong thang
+                                            $day_num = 1; //ngay trong thang
+                                            //Hien thi cho het so ngay cua thang
+                                            while ($day_num <= $days_in_month) {
+                                                if($day_num==1){
+                                                    echo "<td class='LuyenTaptd LuyenTapColor'><div class='date'>$day_num/$month</div><div class='WPM'>174 wpm<br>87.23%</div>  </td>";
+                                                }
+                                                else{
+                                                    echo "<td class='LuyenTaptd'> $day_num/$month </td>";
+                                                }
+                                                $day_num++;
+                                                $day_count++;
+                                                //Ta tao hang moi moi tuan
+                                                if ($day_count > 7) {
+                                                    echo "</tr><tr>";
+                                                    $day_count = 1;
+                                                }
                                             }
                                             ?>
+
+                                            <?php
+                                            $str_search = array(
+                                                "Mon",
+                                                "Tue",
+                                                "Wed",
+                                                "Thu",
+                                                "Fri",
+                                                "Sat",
+                                                "Sun",
+                                                "am",
+                                                "pm",
+                                                ":"
+                                            );
+                                            $str_replace = array(
+                                                "Thứ hai",
+                                                "Thứ ba",
+                                                "Thứ tư",
+                                                "Thứ năm",
+                                                "Thứ sáu",
+                                                "Thứ bảy",
+                                                "Chủ nhật",
+                                                " phút, sáng",
+                                                " phút, chiều",
+                                                " giờ "
+                                            );
+                                            $timenow = gmdate("D, d/m/Y - g:i a.", time() + 7 * 3600);
+                                            $timenow = str_replace($str_search, $str_replace, $timenow);
+                                            echo "Hôm nay, " . $timenow;
+                                            ?>
+
+
+                                           
                                         </tbody>
                                     </table>
                                 </div>
