@@ -75,6 +75,7 @@ button, select, input {
 .guiz-awards-header {
   text-align: center;
   padding: 20px 40px;
+  cursor: pointer;
 }
 .guiz-awards-star,
 .guiz-awards-user,

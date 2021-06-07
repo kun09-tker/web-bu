@@ -7,7 +7,7 @@ $lessonArr = array();
 $RankArr = array();
 if ($type == 1) {
     $id = $_POST["lesson"];
-    $select = $con->query("SELECT u.first_name, u.last_name ,u.username, pl.time, pl.accuracy, pl.day, u.avt From pass_lesson pl, user u where pl.id_user =u.id AND pl.id_lesson = '$id'  ORDER BY time, accuracy");
+    $select = $con->query("SELECT u.first_name, u.last_name ,u.username, pl.time, pl.accuracy, pl.day, u.avt, u.id From pass_lesson pl, user u where pl.id_user =u.id AND pl.id_lesson = '$id'  ORDER BY time, accuracy");
     if ($select) {
         while ($row = mysqli_fetch_row($select)) {
             $myfile = fopen($row[6], "r") or die("Unable to open file!");
@@ -18,6 +18,7 @@ if ($type == 1) {
                 "acc"   => $row[4],
                 "day"   => $row[5],
                 "avt" => fread($myfile, filesize($row[6])),
+                "id" => $row[7],
             ));
             fclose($myfile);
         }
@@ -39,4 +40,7 @@ if ($type == 1) {
     }
     $js = json_encode($lessonArr);
     echo $js;
+} else if ($type == 2) {
+    $_SESSION["userRank"] = $_POST["userRank"];
+    echo $_SESSION["userRank"];
 }

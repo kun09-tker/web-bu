@@ -21,9 +21,10 @@ const raking = () => {
         },
         url: "../php/acceptLesson.php",
         success: (data) => {
-            console.log(data)
             let array = JSON.parse(data);
-            let Rank = `<ul class="guiz-awards-row guiz-awards-header">
+            // console.log(array);
+
+            let Rank = `<ul class="guiz-awards-row guiz-awards-header" >
             <li class="guiz-awards-header-star">&nbsp;</li>
             <li class="guiz-awards-header-name">Tên</li>
             <li class="guiz-awards-header-user">Username</li>
@@ -36,7 +37,7 @@ const raking = () => {
                 if (i == 0) Top = "goldstar";
                 else if (i == 1) Top = "silverstar";
                 else if (i == 2) Top = "bronzestar";
-                Rank += `<ul class="guiz-awards-row guiz-awards-header">
+                Rank += `<ul class="guiz-awards-row guiz-awards-header" data_id="${array[i].id}">
                 <li class="guiz-awards-star"><span class="star ${Top}"></span></li>
                 <li class="guiz-awards-name"><img class="avt_rank" src="${array[i].avt}">${array[i].name}</li>
                 <li class="guiz-awards-user">${array[i].user} </li>
@@ -46,6 +47,28 @@ const raking = () => {
             </ul>`;
             }
             document.querySelector(".gui-window-awards").innerHTML = Rank;
+            const userRank = document.querySelectorAll(".guiz-awards-row");
+            const Getid = async (u) => {
+                await $.ajax({
+                    type: 'POST',
+                    data: {
+                        type: 2,
+                        userRank: u,
+                    },
+                    url: "../php/acceptLesson.php",
+                    success: (data) => {
+                        console.log(data);
+
+                    }
+                }, window.location.href = "../html/profile.php")
+            }
+            for (let i = 1; i < userRank.length; i++) {
+                userRank[i].onclick = () => {
+                    let u = userRank[i].getAttribute("data_id");
+                    // console.log(u);
+                    Getid(u);
+                }
+            }
         }
     });
 }
@@ -56,7 +79,7 @@ var target = "BODY";
 document.body.onclick = function (e) {
     target = e.target.nodeName;
     if (target == "BODY") window.removeEventListener("scroll", noScroll);
-    console.log(target);
+    // console.log(target);
 };
 window.onkeydown = (e) => {
     if (target != "BODY") {

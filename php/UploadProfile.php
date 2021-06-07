@@ -73,4 +73,18 @@ if ($type == 0) {
         $jsr = json_encode($userArray);
         echo $jsr;
     }
+} else if ($type == 4) {
+    $idUser = $_POST["idUser"];
+    if ($idUser != "") {
+        $select = $con->query("SELECT* FROM practice p WHERE p.id_user = '$idUser'");
+        while ($row = mysqli_fetch_row(($select))) {
+            array_push($userArray, array(
+                "day" => $row[1],
+                "wpm" => $row[2],
+                "acc"   => $row[3],
+            ));
+        }
+        $jsr = json_encode($userArray);
+        echo $jsr;
+    }
 }

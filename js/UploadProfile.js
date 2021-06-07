@@ -16,6 +16,7 @@ const bir = document.querySelector(".bir");
 const LessonColor = document.querySelectorAll(".color");
 const LessonPer = document.querySelectorAll(".percent");
 const Baidonggop = document.querySelector("#cv-right");
+const LuyenTaptd = document.querySelectorAll(".prac");
 const getDataUser = async () => {
     await $.ajax({
         type: 'POST',
@@ -28,6 +29,7 @@ const getDataUser = async () => {
             //  console.log(data);
 
             let userArray = JSON.parse(data);
+            console.log(userArray);
             avt.setAttribute("src", userArray[0].avt);
             username.innerHTML = userArray[0].username;
             total.innerHTML = userArray[0].total + "/72";
@@ -54,7 +56,7 @@ const getListTest = async () => {
         url: "../php/UploadProfile.php",
         success: (data) => {
             let ListArray = JSON.parse(data);
-            console.log(ListArray);
+            //  console.log(ListArray);
 
             let datatest = "<h7>Đóng góp</h7>";
             for (let i = 0; i < ListArray.length; i++) {
@@ -92,10 +94,37 @@ const getDataLesson = async () => {
         }
     });
 }
+const getPractice = async () => {
+    await $.ajax({
+        type: 'POST',
+        data: {
+            type: 4,
+            idUser: idUser,
+        },
+        url: "../php/UploadProfile.php",
+        success: (data) => {
+            let PracArray = JSON.parse(data);
+            for (let i = 0; i < PracArray.length; i++) {
+                let color = "#14ff00";
+                let acc = parseFloat(PracArray[i].acc);
+                if (acc < 30) color = "red";
+                else if (acc < 80) color = "orange";
+                //
+                let date = PracArray[i].day;
+                let index = date.substr(0, date.search("/"));
+                LuyenTaptd[index].style.backgroundColor = color;
+                LuyenTaptd[index].innerHTML = `<div class='date'>${date.substr(0, date.lastIndexOf("/"))}</div><div class='WPM'>${PracArray[i].wpm} wpm<br>${PracArray[i].acc}%</div>`;
+
+
+            }
+        }
+    });
+}
 const Start = () => {
     getDataUser();
     getDataLesson();
     getListTest();
+    getPractice();
 }
 Start();
 inputAvt.addEventListener("change", () => {
