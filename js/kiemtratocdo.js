@@ -117,7 +117,13 @@ const getData = (N) => {
                 theTimer.innerHTML = "Time up";
                 if (timeOut) {
                     wpm[1] = Math.round(wpm[4] / 5).toString();
-                    wpm[0] = Math.max(0, (Math.round((wpm[4] / (wpm[4] + wpm[5])) * 10000) / 100)).toString();
+                    wpm[0] = Math.max(0, (Math.round((wpm[4] / (wpm[4] + wpm[5])) * 10000) / 100));
+                    if (isNaN(wpm[0])) {
+                        wpm[0] = 0;
+                    }
+                    else {
+                        wpm[0] = wpm[0].toString();
+                    }
                     //console.log("wpm: " + wpm[1]);
                     document.querySelector(".strong1").innerHTML = wpm[1] + "WPM";
                     //console.log('Correct: ' + wpm[2]);
@@ -207,7 +213,7 @@ const raking = () => {
                     <li class="guiz-awards-name"><img class="avt_rank_1" src="${array[i].avt}">${array[i].name}</li>
                     <li class="guiz-awards-user">${array[i].user} </li>
                     <li class="guiz-awards-exactly">${array[i].wpm} wpm</li>
-                    <li class="guiz-awards-time">${array[i].acc}%</li>
+                    <li class="guiz-awards-time">${parseFloat(array[i].acc).toFixed(2)}%</li>
                     </ul>`;
                 }
             }
@@ -243,6 +249,7 @@ document.querySelector("#data").onclick = () => {
         const user_add = document.querySelector(".User-add");
         const user_day = document.querySelector(".day");
         const info = document.querySelector(".info");
+        const info_user = document.querySelector(".info_user");
         document.querySelector("#add").addEventListener('click', () => {
             var user = document.querySelector(".user").textContent;
             if (user == "") window.location.href = "./dangnhap.php";
@@ -277,7 +284,7 @@ document.querySelector("#data").onclick = () => {
                 Name = option[i].getAttribute("data-name");
                 document.querySelector(".content-data").innerHTML = option[i].getAttribute("data-content");
                 info.style.display = "flex";
-                info.onclick = () => {
+                info_user.onclick = () => {
                     Getid(idUser);
                 }
                 lb_like.innerHTML = count_like[i];

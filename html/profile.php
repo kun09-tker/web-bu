@@ -2,7 +2,6 @@
 session_start();
 error_reporting(0);
 $userRank = $_SESSION["userRank"];
-$_SESSION["userRank"] = null;
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -29,7 +29,9 @@ const getDataUser = async () => {
             //  console.log(data);
 
             let userArray = JSON.parse(data);
-            console.log(userArray);
+            // const wpmUser = userArray[0].wpm;
+            //  const accUser = userArray[0].acc;
+            //console.log(userArray);
             avt.setAttribute("src", userArray[0].avt);
             username.innerHTML = userArray[0].username;
             total.innerHTML = userArray[0].total + "/72";
@@ -37,7 +39,7 @@ const getDataUser = async () => {
             // console.log(parseFloat(parseFloat(userArray[0].total) / 72) + "%");
 
             wpm.innerHTML = userArray[0].wpm + " WPM";
-            acc.innerHTML = "Accuracy: " + userArray[0].acc + "%";
+            acc.innerHTML = "Độ chính xác: " + parseFloat(userArray[0].acc).toFixed(2) + "%";
             Name.innerHTML = userArray[0].name;
             email.innerHTML = userArray[0].email;
             tel.innerHTML = userArray[0].tel;
@@ -112,8 +114,10 @@ const getPractice = async () => {
                 //
                 let date = PracArray[i].day;
                 let index = date.substr(0, date.search("/"));
+
                 LuyenTaptd[index].style.backgroundColor = color;
-                LuyenTaptd[index].innerHTML = `<div class='date'>${date.substr(0, date.lastIndexOf("/"))}</div><div class='WPM'>${PracArray[i].wpm} wpm<br>${PracArray[i].acc}%</div>`;
+                let acc_date = parseFloat(PracArray[i].acc);
+                LuyenTaptd[index].innerHTML = `<div class='date'>${date.substr(0, date.lastIndexOf("/"))}</div><div class='WPM'>${PracArray[i].wpm} wpm<br>${acc_date.toFixed(2)}%</div>`;
 
 
             }

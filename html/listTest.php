@@ -92,6 +92,9 @@ if ($user != "") {
         display: none;
         width: 93%;
         justify-content: space-between;
+    }
+
+    .container_list .info_user {
         cursor: pointer;
     }
 
