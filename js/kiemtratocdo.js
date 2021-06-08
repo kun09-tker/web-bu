@@ -75,14 +75,14 @@ const getData = (N) => {
 
                 span[index + 1].classList.add('fomat');
                 if (start != end) {
-                    dem++;
-                    if (dem == 2) {
-                        for (let i = vitri; i <= index; i++) {
-                            span[i].remove();
-                        }
-                        vitri = index + 1;
-                        dem = 0;
+                    //dem++;
+                    //if (dem == 2) {
+                    for (let i = vitri; i <= index; i++) {
+                        span[i].remove();
                     }
+                    vitri = index + 1;
+                    //  dem = 0;
+                    //}
                 }
                 //  console.log(y.value.trim()+"\n"+span[index].innerText);
 
