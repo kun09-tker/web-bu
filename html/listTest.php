@@ -1,7 +1,7 @@
 <?php
 session_start();
 $con = mysqli_connect("localhost", "root", "", "typing");
-$data = $con->query("SELECT u.username,l.Name, l.Content, l.thich, l.khong_thich, l.day, l.id FROM list_test l,user u WHERE u.id = l.id_user ORDER BY l.thich DESC, l.khong_thich ASC");
+$data = $con->query("SELECT u.username,l.Name, l.Content, l.thich, l.khong_thich, l.day, l.id, u.id FROM list_test l,user u WHERE u.id = l.id_user ORDER BY l.thich DESC, l.khong_thich ASC");
 $user = isset($_SESSION["userInWeb"]) ? $_SESSION["userInWeb"] : "";
 $eva = "";
 if ($user != "") {
@@ -92,6 +92,7 @@ if ($user != "") {
         display: none;
         width: 93%;
         justify-content: space-between;
+        cursor: pointer;
     }
 
     .container_list .info_evaluate {
@@ -132,7 +133,7 @@ if ($user != "") {
                 if ($data) {
                     while ($row = mysqli_fetch_row($data)) {
                 ?>
-                        <button class="text-option" data-user="<?php echo $row[0] ?>" data-name="<?php echo $row[1] ?>" data-content="<?php echo $row[2] ?>" data-like="<?php echo $row[3] ?>" data-dislike="<?php echo $row[4] ?> " data-day="<?php echo $row[5] ?>" data-id="<?php echo $row[6] ?>">
+                        <button class="text-option" data-user="<?php echo $row[0] ?>" data-name="<?php echo $row[1] ?>" data-content="<?php echo $row[2] ?>" data-like="<?php echo $row[3] ?>" data-dislike="<?php echo $row[4] ?> " data-day="<?php echo $row[5] ?>" data-id="<?php echo $row[6] ?>" data-idUser="<?php echo $row[7] ?>">
                             <?php echo $row[1] ?>
                         </button>
                 <?php

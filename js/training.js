@@ -32,19 +32,21 @@ const raking = () => {
             <li class="guiz-awards-header-time">Thời gian</li>
             <li class="guiz-awards-header-day">Ngày</li>
              </ul>`;
-            for (let i = 0; i < array.length; i++) {
-                let Top = "nomalstar";
-                if (i == 0) Top = "goldstar";
-                else if (i == 1) Top = "silverstar";
-                else if (i == 2) Top = "bronzestar";
-                Rank += `<ul class="guiz-awards-row guiz-awards-header" data_id="${array[i].id}">
-                <li class="guiz-awards-star"><span class="star ${Top}"></span></li>
-                <li class="guiz-awards-name"><img class="avt_rank" src="${array[i].avt}">${array[i].name}</li>
-                <li class="guiz-awards-user">${array[i].user} </li>
-                <li class="guiz-awards-exactly">${array[i].acc}%</li>
-                <li class="guiz-awards-time">${array[i].time}s</li>
-                <li class="guiz-awards-day">${array[i].day.substring(0, 10)}</li>
-            </ul>`;
+            for (let i = 0; i < Math.min(array.length, 10); i++) {
+                if (array[i].acc > 0 && array[i].time > 0) {
+                    let Top = "nomalstar";
+                    if (i == 0) Top = "goldstar";
+                    else if (i == 1) Top = "silverstar";
+                    else if (i == 2) Top = "bronzestar";
+                    Rank += `<ul class="guiz-awards-row guiz-awards-header" data_id="${array[i].id}">
+                    <li class="guiz-awards-star"><span class="star ${Top}"></span></li>
+                    <li class="guiz-awards-name"><img class="avt_rank" src="${array[i].avt}">${array[i].name}</li>
+                    <li class="guiz-awards-user">${array[i].user} </li>
+                    <li class="guiz-awards-exactly">${array[i].acc}%</li>
+                    <li class="guiz-awards-time">${array[i].time}s</li>
+                    <li class="guiz-awards-day">${array[i].day.substring(0, 10)}</li>
+                    </ul>`;
+                }
             }
             document.querySelector(".gui-window-awards").innerHTML = Rank;
             const userRank = document.querySelectorAll(".guiz-awards-row");

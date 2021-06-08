@@ -1,16 +1,15 @@
 * {box-sizing: border-box;}
 *:hover, *:focus {outline:0}
 html {height: 100%;}
-body{
+/* body{
   position: relative;
   height: 100%;
   background: rgba(0,0,0,.3);
-  font-size: 17px;
+  
   color:#777;
-}
+} */
 button, select, input {
   font-family: 'Roboto', sans-serif;
-  font-size: 17px;
 }
 .quiz-window {
   position: absolute;
@@ -158,6 +157,12 @@ button, select, input {
   position: relative;
   top: 2px;
 }
+.avt_rank_1{
+  transform: translate(-8px, -4px);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
 .avt_rank{
   transform: translate(-6px, 8px);
   width: 2rem;
@@ -169,6 +174,7 @@ button, select, input {
   width: 90vw;
   min-width: 1000px;
   font-family: 'Roboto', sans-serif;
+  font-size: 17px;
   font-weight: 300;
   justify-content: flex-end;
   align-items: center;

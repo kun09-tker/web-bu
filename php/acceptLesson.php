@@ -7,7 +7,7 @@ $lessonArr = array();
 $RankArr = array();
 if ($type == 1) {
     $id = $_POST["lesson"];
-    $select = $con->query("SELECT u.first_name, u.last_name ,u.username, pl.time, pl.accuracy, pl.day, u.avt, u.id From pass_lesson pl, user u where pl.id_user =u.id AND pl.id_lesson = '$id'  ORDER BY time, accuracy");
+    $select = $con->query("SELECT u.first_name, u.last_name ,u.username, pl.time, pl.accuracy, pl.day, u.avt, u.id From pass_lesson pl, user u where pl.id_user =u.id AND pl.id_lesson = '$id' ORDER BY accuracy DESC, time");
     if ($select) {
         while ($row = mysqli_fetch_row($select)) {
             $myfile = fopen($row[6], "r") or die("Unable to open file!");

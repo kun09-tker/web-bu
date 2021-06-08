@@ -13,6 +13,7 @@ error_reporting(0);
     <link rel="stylesheet" href="../css/thanh-menu.css?v=<?php echo time() ?>">
     <link rel="stylesheet" href="../css/kiemtratocdo.css?v=<?php echo time() ?>">
     <link rel="stylesheet" href="../css/footer.css?v=<?php echo time() ?>">
+    <link rel="stylesheet" href="../css/raking-table.css?v=<?php echo time() ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
 </head>
 
@@ -92,6 +93,15 @@ error_reporting(0);
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+                </div>
+                <div class="ranking">
+                    <div class="quiz-window-header">
+                        <div class="quiz-window-title">Bảng xếp hạng</div>
+                    </div>
+                    <div class="quiz-window-body">
+                        <div class="gui-window-awards">
+                        </div>
                     </div>
                 </div>
             </div>

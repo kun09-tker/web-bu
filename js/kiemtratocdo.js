@@ -165,9 +165,67 @@ const getData = (N) => {
         }
     });
 }
+const Getid = async (u) => {
+    await $.ajax({
+        type: 'POST',
+        data: {
+            type: 2,
+            userRank: u,
+        },
+        url: "../php/acceptLesson.php",
+        success: (data) => {
+            console.log(data);
 
+        }
+    }, window.location.href = "../html/profile.php")
+}
+const raking = () => {
+    $.ajax({
+        type: 'POST',
+        data: {
+            type: 1,
+        },
+        url: "../php/luyentap.php",
+        success: (data) => {
+            let array = JSON.parse(data);
+            //  console.log(array);
+            let Rank = `<ul class="guiz-awards-row guiz-awards-header" >
+            <li class="guiz-awards-header-star">&nbsp;</li>
+            <li class="guiz-awards-header-name">Tên</li>
+            <li class="guiz-awards-header-user">Username</li>
+            <li class="guiz-awards-header-exactly">WPM</li>
+            <li class="guiz-awards-header-time">Độ chính xác</li>
+             </ul>`;
+            for (let i = 0; i < Math.min(array.length, 10); i++) {
+                if (array[i].acc > 0 && array[i].wpm > 0) {
+                    let Top = "nomalstar";
+                    if (i == 0) Top = "goldstar";
+                    else if (i == 1) Top = "silverstar";
+                    else if (i == 2) Top = "bronzestar";
+                    Rank += `<ul class="guiz-awards-row guiz-awards-header" data_id="${array[i].id}">
+                    <li class="guiz-awards-star"><span class="star ${Top}"></span></li>
+                    <li class="guiz-awards-name"><img class="avt_rank_1" src="${array[i].avt}">${array[i].name}</li>
+                    <li class="guiz-awards-user">${array[i].user} </li>
+                    <li class="guiz-awards-exactly">${array[i].wpm} wpm</li>
+                    <li class="guiz-awards-time">${array[i].acc}%</li>
+                    </ul>`;
+                }
+            }
+            document.querySelector(".gui-window-awards").innerHTML = Rank;
+            const userRank = document.querySelectorAll(".guiz-awards-row");
+            for (let i = 1; i < userRank.length; i++) {
+                userRank[i].onclick = () => {
+                    let u = userRank[i].getAttribute("data_id");
+                    // console.log(u);
+                    Getid(u);
+                }
+            }
+        }
+    });
+}
 // ===========================Lấy dữ liệu mặt định ===================//
 getData(Name);
+raking();
 //======================== Bộ test ==========================//
 document.querySelector("#data").onclick = () => {
     $(".data").load("../html/listTest.php", () => {
@@ -214,10 +272,14 @@ document.querySelector("#data").onclick = () => {
             option[i].onclick = () => {
                 const btn_like = like.childNodes[2];
                 const btn_unlike = unlike.childNodes[2];
+                const idUser = option[i].getAttribute("data-idUser");
                 index = i;
                 Name = option[i].getAttribute("data-name");
                 document.querySelector(".content-data").innerHTML = option[i].getAttribute("data-content");
                 info.style.display = "flex";
+                info.onclick = () => {
+                    Getid(idUser);
+                }
                 lb_like.innerHTML = count_like[i];
                 lb_dislike.innerHTML = count_dislike[i];
                 user_add.innerHTML = "Người đóng góp: " + option[i].getAttribute("data-user");

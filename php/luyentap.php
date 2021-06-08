@@ -1,11 +1,13 @@
 <?php
 session_start();
+$type = isset($_POST["type"]) ? $_POST["type"] : 0;
 $con = mysqli_connect("localhost", "root", "", "typing");
 $id = isset($_SESSION["userInWeb"]) ? $_SESSION["userInWeb"] : "";
 $wpm = "";
 $acc = "";
 $date = "";
-if ($id != "") {
+$RankArr = [];
+if ($type == "0" && $id != "") {
     $wpm = $_POST["wpm"];
     $date = $_POST["day"];
     $acc = $_POST["acc"];
@@ -38,4 +40,23 @@ if ($id != "") {
         value ('$id','$date','$wpm','$acc')";
         $con->query($insert);
     }
+}
+if ($type == 1) {
+    $select = $con->query("SELECT * FROM user ORDER BY acc DESC, wpm DESC");
+    if ($select) {
+        while ($row = mysqli_fetch_row($select)) {
+            $myfile = fopen($row[9], "r") or die("Unable to open file!");
+            array_push($RankArr, array(
+                "name" => $row[5] . " " . $row[6],
+                "user" => $row[1],
+                "wpm"   => $row[7],
+                "acc"   => $row[8],
+                "avt" => fread($myfile, filesize($row[9])),
+                "id" => $row[0],
+            ));
+            fclose($myfile);
+        }
+    }
+    $jsr = json_encode($RankArr);
+    echo $jsr;
 }
