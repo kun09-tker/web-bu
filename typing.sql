@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 08, 2021 lúc 02:18 PM
+-- Thời gian đã tạo: Th6 08, 2021 lúc 03:19 PM
 -- Phiên bản máy phục vụ: 10.4.18-MariaDB
 -- Phiên bản PHP: 7.3.27
 
@@ -42,7 +42,8 @@ INSERT INTO `evaluate` (`id_user`, `id_list`, `value`) VALUES
 (42, 2, 0),
 (42, 3, 0),
 (42, 4, 0),
-(42, 5, 1);
+(42, 5, 1),
+(48, 5, 1);
 
 -- --------------------------------------------------------
 
@@ -158,7 +159,7 @@ INSERT INTO `list_test` (`id`, `id_user`, `Name`, `Content`, `thich`, `khong_thi
 (2, 42, 'tmp', 'In this part you will have the chance of practicing how to have a conversation with someone you have just met You will learn new vocabulary which will help you in knowing how to confidently introduce yourself You should be able to provide information about your job explain where you live and give other simple details about your life in order to make new friends. Good luck!', 2, 6, '16/5/2021'),
 (3, 42, 'haha', 'Xe tăng Tiếng Anh là Tank thường được gọi tắt là tăng là loại xe chiến đấu bọc thép được trang bị pháo lớn di chuyển bằng bánh xích được thiết kế cho tấn công và phòng thủ độc lập hoặc cùng các đơn vị chiến đấu khác Hỏa lực này thường được cung cấp bởi 1 pháo chính cỡ nòng lớn với súng máy trong 1 tháp pháo quay có giáp hạng nặng và có khả năng di chuyển trên nhiều loại địa hình nhằm cung cấp sự bảo vệ cho xe tăng và tổ lái cho phép thực hiện tất cả các nhiệm vụ chiến đấu trên chiến trường Nó có thể di chuyển trên nhiều loại địa hình và di chuyển bằng xích', 3, 6, '18/5/2021'),
 (4, 42, 'Otaku', 'Otaku là một từ lóng trong tiếng Nhật dùng ám chỉ một ai đó quá yêu thích, say mê anime, manga, Vocaloid, cosplay, những thứ 2D. Chữ này theo thế giới lại được hiểu chung là những người thích đọc truyện tranh và xem phim hoạt hình, phần lớn mang nghĩa tiêu cực. Theo các nghiên cứu được công bố vào năm 2013, cụm từ này đã trở nên ít tiêu cực hơn và ngày càng có nhiều người bây giờ tự coi mình là otaku, kể cả ở Nhật Bản hay bất cứ nơi nào trên thế giới. Trong một cuộc khảo sát vào năm 2013 với sự tham gia của hơn 137,734 thanh thiếu niên, có 42,2% tự nhận mình là một dạng của otaku. Văn hóa otaku là một chủ đề chính của nhiều anime và các tác phẩm manga, cũng như tài liệu và nghiên cứu học thuật. Thuật ngữ Otaku bắt đầu vào những năm 1980, như một sự chuyển biến trong tâm lý xã hội và nuôi dưỡng những đặc điểm của otaku tại các trường học Nhật Bản, kết hợp với việc những cá nhân như vậy tự rút lui để trở thành những kẻ bị xã hội ruồng bỏ. Sự ra đời của nhóm văn hóa này cùng với sự bùng nổ anime sau khi phát hành tựa phim như Mobile Suit Gundam trước khi nó được phân nhánh thành Comic Market. Tiểu văn hóa otaku tiếp tục phát triển song song với sự bành trướng của Internet và phương tiện thông tin truyền thông, cũng như ngày càng nhiều anime, trò chơi điện tử, chương trình truyền hình và truyện tranh được ra đời.[2] Định nghĩa otaku sau đó đã trở nên phức tạp hơn, và nhiều phân loại của otaku nổi lên. Năm 2005, học viện nghiên cứu Nomura chia otaku thành mười hai nhóm, sau đó ước tính quy mô và tác động của thị trường đối với mỗi nhóm này. Các tổ chức khác đã chia tách nó chi tiết hơn hoặc tập trung vào một mối quan tâm otaku duy nhất. Những ấn bản này, phân loại các nhóm otaku khác nhau, bao gồm anime, manga, máy ảnh, ô tô, thần tượng và otaku điện tử. Tác động kinh tế của otaku đã được ước tính cao tới 2 nghìn tỷ yên (18 tỷ USD)', 0, 2, '19/5/2021'),
-(5, 42, 'Miku', 'Miku is an emotionless looking girl with medium-length brown hair that has strands of hair hanging over the right side of her face . Her notable accessory is a set of wireless headphones that have a triangle-shaped logo on the ear cups (Audio-Technica) [6]. Like her sisters, she has dark blue eyes, an average height, a well-endowed figure and large breasts.\n\nMiku usually wears a long-sleeved sweater that covers her uniform. She also wears black tights and puts on her headphones around her neck. Most of the time, she has part of her bangs cover her right eye. She wears a ranzel', 3, 5, '19/5/2021');
+(5, 42, 'Miku', 'Miku is an emotionless looking girl with medium-length brown hair that has strands of hair hanging over the right side of her face . Her notable accessory is a set of wireless headphones that have a triangle-shaped logo on the ear cups (Audio-Technica) [6]. Like her sisters, she has dark blue eyes, an average height, a well-endowed figure and large breasts.\n\nMiku usually wears a long-sleeved sweater that covers her uniform. She also wears black tights and puts on her headphones around her neck. Most of the time, she has part of her bangs cover her right eye. She wears a ranzel', 4, 5, '19/5/2021');
 
 -- --------------------------------------------------------
 
@@ -170,7 +171,7 @@ CREATE TABLE `pass_lesson` (
   `id_user` int(11) NOT NULL,
   `id_lesson` int(11) NOT NULL,
   `time` int(11) NOT NULL,
-  `accuracy` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `accuracy` float NOT NULL,
   `day` varchar(11) COLLATE utf8mb4_vietnamese_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
@@ -179,19 +180,8 @@ CREATE TABLE `pass_lesson` (
 --
 
 INSERT INTO `pass_lesson` (`id_user`, `id_lesson`, `time`, `accuracy`, `day`) VALUES
-(42, 0, 14, '97.83', '26/5/2021'),
-(42, 1, 24, '89.13', '17/5/2021'),
-(42, 2, 24, '80.43', '29/5/2021'),
-(42, 3, 15, '89', '6/5/2021'),
-(42, 4, 23, '93.48', '8/5/2021'),
-(42, 10, 18, '100', '7/5/2021'),
-(42, 34, 39, '80.43', '8/5/2021'),
-(42, 35, 40, '82.61', '6/6/2021'),
-(42, 36, 24, '89.13', '6/6/2021'),
-(42, 38, 38, '78.26', '17/5/2021'),
-(42, 42, 19, '93.48', '8/5/2021'),
-(42, 43, 40, '0.00', '8/6/2021'),
-(48, 0, 13, '97.83', '7/5/2021');
+(42, 0, 10, 47.83, '8/6/2021'),
+(48, 0, 8, 100, '8/6/2021');
 
 -- --------------------------------------------------------
 
@@ -214,7 +204,8 @@ CREATE TABLE `practice` (
 INSERT INTO `practice` (`id_user`, `day`, `wpm`, `acc`, `count`) VALUES
 (42, '4/6/2021', 18, 75.41, 1),
 (42, '6/6/2021', 32, 93.6, 1),
-(42, '8/6/2021', 8, 23.305, 4);
+(42, '8/6/2021', 8, 23.305, 4),
+(48, '8/6/2021', 40, 86.43, 2);
 
 -- --------------------------------------------------------
 
@@ -248,7 +239,7 @@ INSERT INTO `user` (`id`, `username`, `password`, `email`, `is_verified`, `first
 (42, 'Takumi_kun', 'b98e37166af49dc560697e5c4eab4806', 'ah09program@gmail.com', 'no verified', 'Tấn Lộc', 'Lê', 19, 64.105, '../public/avt/42.txt', '0785607050', '44B/3 tổ 3', '2001-02-13'),
 (43, 'eweq34', 'bcbd678e09ac5d3a2fc4039c1a986fb3', 'takumihoshi0186@gmail.com', 'no verified', 'Lê', 'Lộc', 0, 0, '../public/avt/df.txt', '-', '-', '-'),
 (45, 'dinhle', 'bcbd678e09ac5d3a2fc4039c1a986fb3', 'lehpvinh@gmail.com', 'no verified', 'Vinh', 'Lê', 0, 0, '../public/avt/df.txt', '-', '-', '-'),
-(48, 'mandat110', '6380b8504dadf95a9b9e6b41c0d27e0f', 'JuniorKevin110@gmail.com', 'no verified', 'Đạt', 'Huỳnh', 32, 100, '../public/avt/df.txt', '-', '-', '-');
+(48, 'mandat110', '6380b8504dadf95a9b9e6b41c0d27e0f', 'JuniorKevin110@gmail.com', 'no verified', 'Đạt', 'Huỳnh', 49, 93.18, '../public/avt/48.txt', '-', '-', '-');
 
 --
 -- Chỉ mục cho các bảng đã đổ
