@@ -18,10 +18,10 @@ if ($type == "0" && $id != "") {
     if ($check->num_rows > 0) {
         $info = mysqli_fetch_assoc($check);
         $count = $info["count"] + 1;
-        $wpm = (($count - 1) * $info["wpm"] + $wpm) / ($count);
-        $acc = (($count - 1) * $info["acc"] + $acc) / ($count);
+        $wpm_avg = (($count - 1) * $info["wpm"] + $wpm) / ($count);
+        $acc_avg = (($count - 1) * $info["acc"] + $acc) / ($count);
         print_r("update");
-        $update = "UPDATE practice SET count = '$count', acc = '$acc', wpm ='$wpm' where id_user = '$id' AND day = '$date'";
+        $update = "UPDATE practice SET count = '$count', acc = '$acc_avg', wpm ='$wpm_avg' where id_user = '$id' AND day = '$date'";
         if (!mysqli_query($con, $update)) {
             print_r(mysqli_error($con));
         }
@@ -34,14 +34,15 @@ if ($type == "0" && $id != "") {
         value ('$id','$date','$wpm','$acc','1')";
         $con->query($insert);
     }
-    $total = $con->query("SELECT SUM(p.wpm) as wpm, SUM(p.acc) as acc, COUNT(p.wpm) as total FROM practice p WHERE p.id_user ='$id'");
+    $total = $con->query("SELECT* FROM user WHERE id ='$id'");
     $total = mysqli_fetch_assoc($total);
-    if ($total["total"] > 0) {
-        $wpm_avg = ($total["wpm"]) / ($total["total"]);
-        $acc_avg = ($total["acc"]) / ($total["total"]);
-        $update = "UPDATE user SET acc = '$acc_avg', wpm ='$wpm_avg' where id = '$id'";
+    if ($total) {
+        if ($total["wpm"] > $wpm) {
+            $wpm = $total["wpm"];
+            $acc = $total["acc"];
+        }
+        $update = "UPDATE user SET acc = '$acc', wpm ='$wpm' where id = '$id'";
         $con->query($update);
-        echo $wpm . " " . $acc . " " . $count;
     }
 }
 if ($type == 1) {
