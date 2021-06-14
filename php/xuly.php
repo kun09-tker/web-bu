@@ -162,9 +162,13 @@ if (isset($_POST["dong_gop"])) {
         $check = false;
     }
     if (count($erro) == 0) {
+        $lastname = str_replace('"', '\"', $lastname);
         $sign_up = "INSERT INTO list_test (id_user,Name,Content,day) 
-        value ('$username','$firstname','$lastname','$today')";
-        $con->query($sign_up);
-        echo '<script>alert("Thành công!. Cám ơn bạn đã đóng góp");</script>';
+        value ('$username',\"$firstname\",\"$lastname\",'$today')";
+        if (!mysqli_query($con, $sign_up)) {
+            print_r(mysqli_error($con));
+        } else {
+            echo '<script>alert("Thành công!. Cám ơn bạn đã đóng góp");</script>';
+        }
     }
 }

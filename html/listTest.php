@@ -136,10 +136,11 @@ if ($user != "") {
                 if ($data) {
                     while ($row = mysqli_fetch_row($data)) {
                 ?>
-                        <button class="text-option" data-user="<?php echo $row[0] ?>" data-name="<?php echo $row[1] ?>" data-content="<?php echo $row[2] ?>" data-like="<?php echo $row[3] ?>" data-dislike="<?php echo $row[4] ?> " data-day="<?php echo $row[5] ?>" data-id="<?php echo $row[6] ?>" data-idUser="<?php echo $row[7] ?>">
+                        <button class="text-option" data-user="<?php echo $row[0] ?>" data-name="<?php echo $row[1] ?>" data-content="<?php echo str_replace('"', '&quot;', $row[2]); ?>" data-like="<?php echo $row[3] ?>" data-dislike="<?php echo $row[4] ?> " data-day="<?php echo $row[5] ?>" data-id="<?php echo $row[6] ?>" data-idUser="<?php echo $row[7] ?>">
                             <?php echo $row[1] ?>
                         </button>
                 <?php
+                        // echo $row[2];
                     }
                 }
                 ?>

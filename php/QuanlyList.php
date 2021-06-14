@@ -45,6 +45,7 @@ if ($type == 1) {
 if ($type == 2) {
     $idTest = $_POST["idTest"];
     $Content = $_POST["Content"];
+    $Content = str_replace('"', '\"', $Content);
     $update = "UPDATE list_test SET Content= \"$Content\" WHERE id = $idTest";
     if (!mysqli_query($con, $update)) {
         print_r(mysqli_error($con));

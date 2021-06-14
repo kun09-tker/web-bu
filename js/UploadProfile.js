@@ -115,9 +115,9 @@ const getPractice = async () => {
                 let date = PracArray[i].day;
                 let index = date.substr(0, date.search("/"));
 
-                LuyenTaptd[index].style.backgroundColor = color;
+                LuyenTaptd[index-1].style.backgroundColor = color;
                 let acc_date = parseFloat(PracArray[i].acc);
-                LuyenTaptd[index].innerHTML = `<div class='date'>${date.substr(0, date.lastIndexOf("/"))}</div><div class='WPM'>${PracArray[i].wpm} wpm<br>${acc_date.toFixed(2)}%</div>`;
+                LuyenTaptd[index-1].innerHTML = `<div class='date'>${date.substr(0, date.lastIndexOf("/"))}</div><div class='WPM'>${PracArray[i].wpm} wpm<br>${acc_date.toFixed(2)}%</div>`;
 
 
             }

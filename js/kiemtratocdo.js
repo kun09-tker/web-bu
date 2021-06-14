@@ -53,6 +53,7 @@ const getData = (N) => {
             //  console.log(tmp);
 
             if (tmp == 1) timeRun = window.setInterval(runTimer, 10);
+            // window.clearInterval(timeRun);
             y.oninput = () => {
                 if (y.value != " ") {
                     //console.log(y.value);
@@ -282,7 +283,9 @@ document.querySelector("#data").onclick = () => {
                 const idUser = option[i].getAttribute("data-idUser");
                 index = i;
                 Name = option[i].getAttribute("data-name");
-                document.querySelector(".content-data").innerHTML = option[i].getAttribute("data-content");
+                document.querySelector(".content-data").innerHTML = `${option[i].getAttribute("data-content")}`;
+                console.log(option[i].getAttribute("data-content"));
+
                 info.style.display = "flex";
                 info_user.onclick = () => {
                     Getid(idUser);
