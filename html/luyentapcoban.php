@@ -378,14 +378,14 @@ error_reporting(0);
                             </div> -->
                             <p>
                                 TYPING là nền tảng tương tác trực tuyến hỗ trợ người dùng học đánh máy
-                                và đánh giá kỹ năng đánh máy một cách nhanh chóng và chính xác.
+                                và đánh giá kỹ năng đánh máy một cách nhanh chóng và chính xác.                                
                             </p>
                             <a href="https://www.facebook.com/Web-bu-104521588410916" title="Facebook" target="_blank" class="social-button">
                                 <i class="fab fa-facebook-square icon_social"></i>
                             </a>
                             <a href="https://www.youtube.com/channel/UCpt3dSDGk5fC7uU9OeFG5ig" title="Youtube" target="_blank" class="social-button">
                                 <i class="fab fa-youtube-square icon_social"></i>
-                            </a>
+                            </a>                            
                         </div>
                         <div class="col-xs-12 col-sm-4 col-md-2 links footer-column">
                             <h4>Liên kết</h4>

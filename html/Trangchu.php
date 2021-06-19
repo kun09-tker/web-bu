@@ -16,9 +16,6 @@ require "../php/xuly.php";
 
 <body>
     <header>
-        <div class="logo-box">
-            <img src="" class="logo" alt="logo">
-        </div>
         <div class="text-box">
             <h3 class="heading-primary">
                 <span class="heading-primary-main">TYPING</span>
